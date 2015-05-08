@@ -183,7 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc899d1f59199c41899cce9b357c18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  dampTime: .0199999996
+  target: {fileID: 1802483019}
+  gameManager: {fileID: 197372, guid: a2e66ae984645e548b16d2f6100ab4c6, type: 2}
 --- !u!1 &255305746
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +577,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!4 &1802483019

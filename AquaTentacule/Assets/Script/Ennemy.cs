@@ -12,7 +12,6 @@ public class Ennemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		speed  = (float)(Random.Range(0,speedMax*10)/10);
-		Debug.Log(speed);
 		rb = GetComponent<Rigidbody2D>();
 		GameObject go = GameObject.FindGameObjectWithTag("Player");
 		target = go.transform;

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
 	public float life;
 	public float starving = 2.0f;
-	public Transform startPosition;
+	private Transform startPosition;
 	public int minFood;
 	public int maxFood;
 
@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour {
 		for(int i = 0 ; i<foodNumber; i++){
 			AddFood();
 		}
+		Vector3 playerPos = Player.instance.transform.position;
+		startPosition.position = new Vector3(playerPos.x,playerPos.y,playerPos.z);
+			
 	}
 
 	public void AddFood(){

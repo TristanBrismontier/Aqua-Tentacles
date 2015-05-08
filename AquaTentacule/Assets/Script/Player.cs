@@ -7,11 +7,12 @@ public class Player : MonoBehaviour
 	public static Player instance = null;
 	public float speedRotation;
 	public float force;
-	public float pow;
-	public float slow;
-	private Rigidbody2D rb;
+	public float pushForce;
+	public float slowDown;
+	public float timeVolume;
 
 	public AudioSource musicSource;
+	private Rigidbody2D rb;
 
 	void Awake () {
 		if (instance == null){
@@ -41,26 +42,42 @@ public class Player : MonoBehaviour
 			rb.angularVelocity = 0f;
 		}
 
-		Vector2 forceVect = transform.up * Mathf.Pow (force, pow);
+		Vector2 forceVect = transform.up * Mathf.Pow (force, pushForce);
 
 		if (Input.GetKey (KeyCode.Z)) {
 			rb.AddForce (forceVect);
 		} else if (Input.GetKey (KeyCode.S)) {
 			rb.AddForce (-forceVect);
 		} else {
-			rb.velocity = rb.velocity * slow;
+			rb.velocity = rb.velocity * slowDown;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
 		if(other.gameObject.tag == "Zone1"){
-			musicSource.volume = 1;
+			StartCoroutine (Volumeup(musicSource));
 		}
 	}
-	
+
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Zone1"){
-			musicSource.volume = 0;
+			StartCoroutine (VolumeDown(musicSource));
+		}
+	}
+
+	private IEnumerator Volumeup (AudioSource source) {
+		Debug.Log ("startVol");
+		while(source.volume <1){
+			yield return new WaitForSeconds(timeVolume/100);
+			source.volume = source.volume + timeVolume/100;
+		}
+		Debug.Log ("stopVol");
+	}
+
+	private IEnumerator VolumeDown (AudioSource source) {
+		while(source.volume > 0){
+			yield return new WaitForSeconds(timeVolume/100);
+			source.volume = source.volume - timeVolume/100;
 		}
 	}
 

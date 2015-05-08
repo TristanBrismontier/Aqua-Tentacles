@@ -24,13 +24,15 @@ public class Player : MonoBehaviour
 			rb.angularVelocity = 0f;
 		}
 
+		Vector2 forceVect = transform.up * Mathf.Pow (force, pow);
+
 		if (Input.GetKey (KeyCode.Z)) {
-			rb.AddForce(transform.up * Mathf.Pow(force, pow));
+			rb.AddForce(forceVect);
 		}
 
-		//if (Input.GetKey (KeyCode.S)) {
-		//	rb.AddForce(transform.down * Mathf.Pow(force, pow));
-		//}
+		if (Input.GetKey (KeyCode.S)) {
+			rb.AddForce(-forceVect);
+		}
 
 	}
 }

@@ -267,3 +267,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedRotation: 100
   force: 10
+  pow: 2.5

@@ -115,10 +115,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11410044, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: eatSounds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 450478, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
       propertyPath: m_LocalPosition.x
       value: -28.6200008
@@ -151,14 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11410044, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: eatSounds.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 78347e48cfbb1844fb782639023c43df, type: 3}
-    - target: {fileID: 11410044, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: eatSounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 7e662d7b791755240910de39193b55e4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
   m_IsPrefabParent: 0

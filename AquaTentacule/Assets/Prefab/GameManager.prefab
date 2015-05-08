@@ -39,7 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e9adb4e6e8604ca7ecdf90712c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 0
+  life: 100
+  minFood: 8
+  maxFood: 18
+  maxRange: 40
   food: {fileID: 176562, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
 --- !u!1001 &100100000
 Prefab:

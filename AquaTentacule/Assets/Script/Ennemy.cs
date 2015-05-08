@@ -24,6 +24,10 @@ public class Ennemy : MonoBehaviour {
 			GameManager.instance.eatFood(nutritionFact);
 			Destroy(this.gameObject);
 		}
+		if(coll.gameObject.tag == "InhertElement"){
+			Vector2 randomVector = Random.insideUnitCircle;
+			rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
+		}
+	
 	}
-
 }

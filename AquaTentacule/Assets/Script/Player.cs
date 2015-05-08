@@ -4,9 +4,10 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public float speedRotation = 100.0f;
-	public float force = 10.0f;
-	public float pow = 2.5f;
+	public float speedRotation;
+	public float force;
+	public float pow;
+	public float slow;
 	private Rigidbody2D rb;
 
 	void Start()
@@ -27,11 +28,11 @@ public class Player : MonoBehaviour
 		Vector2 forceVect = transform.up * Mathf.Pow (force, pow);
 
 		if (Input.GetKey (KeyCode.Z)) {
-			rb.AddForce(forceVect);
-		}
-
-		if (Input.GetKey (KeyCode.S)) {
-			rb.AddForce(-forceVect);
+			rb.AddForce (forceVect);
+		} else if (Input.GetKey (KeyCode.S)) {
+			rb.AddForce (-forceVect);
+		} else {
+			rb.velocity = rb.velocity * slow;
 		}
 
 	}

@@ -4,7 +4,9 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	public static GameManager instance = null;
-	public int life;
+	public float life;
+	public float starving = 2.0f;
+
 
 	public GameObject food;
 
@@ -40,4 +42,14 @@ public class GameManager : MonoBehaviour {
 		Debug.Log(life);
 		AddFood ();
 	}
+
+	void Update() {
+		//Life max = 150 pv
+		if (life > 150) {
+			life = 150;
+		}
+		//Each seconds = -2 pv
+		life -= starving * Time.deltaTime;
+	}
+
 }

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 
 	public AudioClip[] eatSounds;
 	public GameObject[] foods;
+	private Player player;
 
 	void Awake () {
 		if (instance == null){
@@ -32,6 +33,10 @@ public class GameManager : MonoBehaviour {
 
 	public void Start(){
 		initGame();
+	}
+
+	public void setPlayer(Player _player){
+		player = _player;
 	}
 
 	public void initGame(){
@@ -66,6 +71,7 @@ public class GameManager : MonoBehaviour {
 		life = life + nutritionFact;
 		Debug.Log(life);
 		AddFood ();
+		player.Eat();
 		SoundManager.instance.RandomizeSfx(eatSounds);
 	}
 

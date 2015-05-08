@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 
 		debugSprite.enabled = false;
+		GameManager.instance.setPlayer(this);
 	}
 	
 	void FixedUpdate ()
@@ -74,6 +75,9 @@ public class Player : MonoBehaviour
 		if(other.gameObject.tag == "Zone1"){
 			StartCoroutine (VolumeDown(musicSource));
 		}
+	}
+	public void Eat(){
+		animator.SetTrigger("eat");
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {

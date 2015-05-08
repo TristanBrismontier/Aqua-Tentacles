@@ -26,10 +26,11 @@ GameObject:
   - 4: {fileID: 450478}
   - 114: {fileID: 11410044}
   - 50: {fileID: 5085110}
-  - 61: {fileID: 6130192}
   - 82: {fileID: 8271090}
   - 82: {fileID: 8299042}
   - 58: {fileID: 5871364}
+  - 58: {fileID: 5841860}
+  - 58: {fileID: 5802060}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -44,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.9500008, y: -51.9399986, z: 0}
+  m_LocalPosition: {x: -28.6200008, y: -48.6500015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485424}
@@ -77,6 +78,32 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!58 &5802060
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165660}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -.620000005, y: -.959999979}
+  serializedVersion: 2
+  m_Radius: 1.12
+--- !u!58 &5841860
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165660}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -.649999976, y: 1.05999994}
+  serializedVersion: 2
+  m_Radius: 1.35000002
 --- !u!58 &5871364
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -90,19 +117,6 @@ CircleCollider2D:
   m_Offset: {x: -.639999986, y: .129999995}
   serializedVersion: 2
   m_Radius: .100000001
---- !u!61 &6130192
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165660}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: -.76212883, y: -.194759369}
-  serializedVersion: 2
-  m_Size: {x: 2.69886112, y: 4.71421814}
 --- !u!82 &8271090
 AudioSource:
   m_ObjectHideFlags: 1

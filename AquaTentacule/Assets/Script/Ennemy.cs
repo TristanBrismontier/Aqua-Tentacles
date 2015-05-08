@@ -17,6 +17,7 @@ public class Ennemy : MonoBehaviour {
 		target = go.transform;
 		Vector2 randomVector = Random.insideUnitCircle;
 		rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
+		transform.Rotate(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {

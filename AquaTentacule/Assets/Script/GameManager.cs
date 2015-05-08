@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 
 
 
-	public GameObject food;
+	public GameObject[] foods;
 
 	void Awake () {
 		if (instance == null){
@@ -56,7 +56,9 @@ public class GameManager : MonoBehaviour {
 		if( Mathf.Abs(deltaY) < 3.1f ){
 			y=y+((deltaY<=0)?-3:3);
 		}
-		Instantiate(food, new Vector3( x, y, 0), Quaternion.identity);
+		GameObject foodChoice = foods[Random.Range (0, foods.Length)];
+		Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity);
+
 	}
 
 	public void eatFood(int nutritionFact){

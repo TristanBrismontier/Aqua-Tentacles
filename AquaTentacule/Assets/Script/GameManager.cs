@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
 		life = life + nutritionFact;
 		Debug.Log(life);
 		AddFood ();
-		SoundManager.instance.PlaySingle(eatSounds[0]);
+		SoundManager.instance.RandomizeSfx(eatSounds);
 	}
 
 	void Update () {

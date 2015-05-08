@@ -1,19 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class Limits
-{
-	public float xMin, xMax, yMin, yMax;
-}
 
 public class Player : MonoBehaviour
 {
 	public float speed = 10;
-	public Limits lim;
+	private Rigidbody2D rb;
 
 	void Start()
 	{
+		rb = GetComponent<Rigidbody2D>();
 	}
 	
 	void FixedUpdate ()
@@ -22,14 +18,9 @@ public class Player : MonoBehaviour
 		float moveVert = Input.GetAxis ("Vertical");
 		
 		Vector3 move = new Vector3 (moveHor, moveVert,0.0f );
-		GetComponent<Rigidbody>().velocity = move * speed;
+		rb.velocity = move * speed;
 		
-		GetComponent<Rigidbody>().position = new Vector3 
-			(
-				Mathf.Clamp (GetComponent<Rigidbody>().position.x, lim.xMin, lim.xMax), 
-				Mathf.Clamp (GetComponent<Rigidbody>().position.y, lim.yMin, lim.yMax),
-				0.0f
-				);
+		rb.position = new Vector3 (rb.position.x, rb.position.y,0.0f);
 
 	}
 }

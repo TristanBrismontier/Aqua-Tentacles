@@ -24,6 +24,7 @@ public class Food : MonoBehaviour {
 		if (coll.gameObject.tag == "Player"){
 			GameManager.instance.eatFood(nutritionFact);
 			Destroy(this.gameObject);
+
 		}
 		if(coll.gameObject.tag == "InhertElement"){
 			Vector2 randomVector = Random.insideUnitCircle;

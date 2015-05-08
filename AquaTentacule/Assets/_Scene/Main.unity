@@ -1232,6 +1232,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!4 &225496507 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 450478, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+  m_PrefabInternal: {fileID: 404093592}
 --- !u!1001 &283432396
 Prefab:
   m_ObjectHideFlags: 0
@@ -1353,10 +1357,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &404093593 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 413738, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-  m_PrefabInternal: {fileID: 404093592}
 --- !u!1 &548384677 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 187778, guid: a45928e908b216042b26c11481b674af, type: 2}
@@ -1403,7 +1403,7 @@ Prefab:
     - target: {fileID: 11435254, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 404093593}
+      objectReference: {fileID: 225496507}
     - target: {fileID: 11435254, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: background
       value: 

@@ -87,10 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &1686358 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 413738, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-  m_PrefabInternal: {fileID: 1053135498}
 --- !u!1 &123764287 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 192000, guid: a45928e908b216042b26c11481b674af, type: 2}
@@ -108,6 +104,10 @@ CircleCollider2D:
   m_Offset: {x: .170000002, y: -23.2999992}
   serializedVersion: 2
   m_Radius: 17.1749992
+--- !u!4 &285739532 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 450478, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+  m_PrefabInternal: {fileID: 1053135498}
 --- !u!1001 &620172336
 Prefab:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ Prefab:
     - target: {fileID: 11435254, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1686358}
+      objectReference: {fileID: 285739532}
     - target: {fileID: 11435254, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: background
       value: 

@@ -3,13 +3,9 @@ using System.Collections;
 
 public class LoadingScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public GameObject gameManager;	
+	void Awake () {
+		if (GameManager.instance == null)
+			Instantiate(gameManager);
 	}
 }

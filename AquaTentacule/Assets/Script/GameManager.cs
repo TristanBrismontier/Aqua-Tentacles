@@ -4,15 +4,13 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	public static GameManager instance = null;
-	public int life;
-	public int minFood;
-	public int maxFood;
-
-	public int maxRange;
-
 	public float life;
 	public float starving = 2.0f;
+	public Transform startPosition;
 
+	public int minFood;
+	public int maxFood;
+	public int maxRange;
 
 
 	public GameObject food;
@@ -61,13 +59,18 @@ public class GameManager : MonoBehaviour {
 		AddFood ();
 	}
 
-	void Update() {
+	void Update () {
 		//Life max = 150 pv
 		if (life > 150) {
 			life = 150;
 		}
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
+		if(life<=0){
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			player.transform.position = startPosition.position;
+		}
+
 	}
 
 }

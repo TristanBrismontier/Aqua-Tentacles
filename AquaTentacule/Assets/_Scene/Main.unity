@@ -87,6 +87,33 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &85381944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 564184382}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 85381945}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &85381945
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 564184382}
+  m_GameObject: {fileID: 85381944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &136949120
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,11 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc899d1f59199c41899cce9b357c18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampTime: .0199999996
-  target: {fileID: 1802483019}
-  paralaxRatio: 10
-  background: {fileID: 828588188}
-  gameManager: {fileID: 197372, guid: a2e66ae984645e548b16d2f6100ab4c6, type: 2}
 --- !u!1 &255305746
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +290,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b5bd41f1f4882842a0c63d2eb69ba46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db27208f50c92f84eb072f85a12c4bc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &512261635
 GameObject:
@@ -683,7 +705,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802483015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954a2b45fbcc1bf4fa7fa809f535889d, type: 3}
+  m_Script: {fileID: 11500000, guid: 82c45a92d29d0a7439bd0d3787949b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speedRotation: 100
+  force: 10
+  pow: 2.5

@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 	public float speedRotation = 100.0f;
 	public float force = 10.0f;
+	public float pow = 2.5f;
 	private Rigidbody2D rb;
 
 	void Start()
@@ -24,8 +25,12 @@ public class Player : MonoBehaviour
 		}
 
 		if (Input.GetKey (KeyCode.Z)) {
-			rb.AddForce(transform.up * (force * force * force * force * force));
+			rb.AddForce(transform.up * Mathf.Pow(force, pow));
 		}
+
+		//if (Input.GetKey (KeyCode.S)) {
+		//	rb.AddForce(transform.down * Mathf.Pow(force, pow));
+		//}
 
 	}
 }

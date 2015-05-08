@@ -30,5 +30,6 @@ public class Player : MonoBehaviour
 				Mathf.Clamp (GetComponent<Rigidbody>().position.y, lim.yMin, lim.yMax),
 				0.0f
 				);
+
 	}
 }

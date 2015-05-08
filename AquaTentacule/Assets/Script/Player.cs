@@ -21,14 +21,14 @@ public class Player : MonoBehaviour
 		float moveHor = Input.GetAxis ("Horizontal");
 		float moveVert = Input.GetAxis ("Vertical");
 		
-		Vector3 move = new Vector3 (moveHor, 0.0f, moveVert);
+		Vector3 move = new Vector3 (moveHor, moveVert,0.0f );
 		GetComponent<Rigidbody>().velocity = move * speed;
 		
 		GetComponent<Rigidbody>().position = new Vector3 
 			(
 				Mathf.Clamp (GetComponent<Rigidbody>().position.x, lim.xMin, lim.xMax), 
-				0.0f, 
-				Mathf.Clamp (GetComponent<Rigidbody>().position.z, lim.zMin, lim.zMax)
+				Mathf.Clamp (GetComponent<Rigidbody>().position.y, lim.zMin, lim.zMax),
+				0.0f
 				);
 	}
 }

@@ -4,7 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class Limits
 {
-	public float xMin, xMax, zMin, zMax;
+	public float xMin, xMax, yMin, yMax;
 }
 
 public class Player : MonoBehaviour
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 		GetComponent<Rigidbody>().position = new Vector3 
 			(
 				Mathf.Clamp (GetComponent<Rigidbody>().position.x, lim.xMin, lim.xMax), 
-				Mathf.Clamp (GetComponent<Rigidbody>().position.y, lim.zMin, lim.zMax),
+				Mathf.Clamp (GetComponent<Rigidbody>().position.y, lim.yMin, lim.yMax),
 				0.0f
 				);
 	}

@@ -180,10 +180,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 136949120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc899d1f59199c41899cce9b357c18c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0285212f426fbe14c9e9a91feee50ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 197372, guid: a2e66ae984645e548b16d2f6100ab4c6, type: 2}
+  gameManager: {fileID: 197372, guid: ac41fccb7cabe59439a968757083fd4f, type: 2}
 --- !u!1 &255305746
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,15 +405,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802483015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954a2b45fbcc1bf4fa7fa809f535889d, type: 3}
+  m_Script: {fileID: 11500000, guid: 82c45a92d29d0a7439bd0d3787949b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 5
   lim:
     xMin: -5
     xMax: 5
-    zMin: -5
-    zMax: 5
+    yMin: -5
+    yMax: 5
 --- !u!54 &1802483021
 Rigidbody:
   m_ObjectHideFlags: 0

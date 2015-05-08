@@ -66,9 +66,9 @@ public class Player : MonoBehaviour
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {
-		Debug.Log ("startVol");
+		Debug.Log ("startVol" + timeVolume/100);
 		while(source.volume <1){
-			yield return new WaitForSeconds(timeVolume/100);
+			yield return new WaitForSeconds(1/100);
 			source.volume = source.volume + timeVolume/100;
 		}
 		Debug.Log ("stopVol");

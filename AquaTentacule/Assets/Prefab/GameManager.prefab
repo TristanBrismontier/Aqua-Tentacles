@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 0
-  food: {fileID: 0}
+  food: {fileID: 176562, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

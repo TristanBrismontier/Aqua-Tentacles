@@ -9,7 +9,7 @@ public class Limits
 
 public class Player : MonoBehaviour
 {
-	public float speed;
+	public float speed = 10;
 	public Limits lim;
 
 	void Start()

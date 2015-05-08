@@ -36,11 +36,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 197372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543dc950be1a7884e8044edb30e14463, type: 3}
+  m_Script: {fileID: 11500000, guid: 920e9adb4e6e8604ca7ecdf90712c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life: 0
-  food: {fileID: 176562, guid: 6cb8e0d772f96f84f94d51539091183d, type: 2}
+  food: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -4,6 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	public static GameManager instance = null;
+<<<<<<< HEAD
 	public float life;
 	public float starving = 2.0f;
 	public Transform startPosition;
@@ -11,6 +12,17 @@ public class GameManager : MonoBehaviour {
 	public int minFood;
 	public int maxFood;
 	public int maxRange;
+=======
+
+	public float life;
+	public float starving = 2.0f;
+
+	public int minFood;
+	public int maxFood;
+
+	public int maxRange;
+
+>>>>>>> origin/master
 
 
 	public GameObject food;

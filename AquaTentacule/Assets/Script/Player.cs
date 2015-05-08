@@ -1,15 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+[System.Serializable]
+public class Limits
+{
+	public float xMin, xMax, zMin, zMax;
+}
 
-	// Use this for initialization
-	void Start () {
-	
+public class Player : MonoBehaviour
+{
+	public float speed;
+	public Limits lim;
+
+	void Start()
+	{
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void FixedUpdate ()
+	{
+		float moveHor = Input.GetAxis ("Horizontal");
+		float moveVert = Input.GetAxis ("Vertical");
+		
+		Vector3 move = new Vector3 (moveHor, 0.0f, moveVert);
+		GetComponent<Rigidbody>().velocity = move * speed;
+		
+		GetComponent<Rigidbody>().position = new Vector3 
+			(
+				Mathf.Clamp (GetComponent<Rigidbody>().position.x, lim.xMin, lim.xMax), 
+				0.0f, 
+				Mathf.Clamp (GetComponent<Rigidbody>().position.z, lim.zMin, lim.zMax)
+				);
 	}
 }

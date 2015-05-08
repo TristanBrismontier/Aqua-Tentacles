@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 	public int maxRange;
 
 
-
+	public AudioClip[] eatSounds;
 	public GameObject[] foods;
 
 	void Awake () {
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour {
 			
 	}
 
+
 	public void AddFood(){
 		float x = (float)(Random.Range(-maxRange,maxRange));
 		float y = (float)(Random.Range(-maxRange,maxRange));
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour {
 		life = life + nutritionFact;
 		Debug.Log(life);
 		AddFood ();
+		SoundManager.instance.RandomizeSfx(eatSounds);
 	}
 
 	void Update () {

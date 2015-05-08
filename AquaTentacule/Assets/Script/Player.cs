@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 
 	private IEnumerator VolumeDown (AudioSource source) {
 		while(source.volume > 0){
-			yield return new WaitForSeconds(timeVolume/100);
+			yield return new WaitForSeconds(1/100);
 			source.volume = source.volume - timeVolume/100;
 		}
 	}

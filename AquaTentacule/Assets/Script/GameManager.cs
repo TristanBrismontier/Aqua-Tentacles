@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
 	public float life;
 	public float starving = 2.0f;
-	private Transform startPosition;
+	public Transform startPosition;
 	public int minFood;
 	public int maxFood;
 

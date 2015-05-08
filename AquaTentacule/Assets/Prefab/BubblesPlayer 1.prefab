@@ -1,47 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &147100
+--- !u!1 &181402
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 492872}
-  - 198: {fileID: 19853274}
-  - 199: {fileID: 19954566}
-  - 82: {fileID: 8222130}
+  - 4: {fileID: 425658}
+  - 198: {fileID: 19885260}
+  - 199: {fileID: 19981962}
+  - 82: {fileID: 8243046}
+  - 114: {fileID: 11438278}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: BubblesPlayer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &492872
+--- !u!4 &425658
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147100}
+  m_GameObject: {fileID: 181402}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -31.4599991, y: -48.0099983, z: -0}
-  m_LocalScale: {x: .600000024, y: .600000024, z: .600000024}
+  m_LocalPosition: {x: -31.4599991, y: -48.0099983, z: 0}
+  m_LocalScale: {x: .600000024, y: .599999964, z: .599999964}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!82 &8222130
+--- !u!82 &8243046
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147100}
+  m_GameObject: {fileID: 181402}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fe0d943c23fbb5a49be286d90cb35740, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .75
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -99,12 +100,24 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!198 &19853274
+--- !u!114 &11438278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ab511f926030d4da084cba986d64c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 450530, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+--- !u!198 &19885260
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147100}
+  m_GameObject: {fileID: 181402}
   lengthInSec: 5
   startDelay: 0
   speed: 1
@@ -1157,12 +1170,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19954566
+--- !u!199 &19981962
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147100}
+  m_GameObject: {fileID: 181402}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1202,5 +1215,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 147100}
+  m_RootGameObject: {fileID: 181402}
   m_IsPrefabParent: 1

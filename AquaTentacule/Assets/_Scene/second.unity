@@ -395,14 +395,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8222130, guid: 02b90b25fe05c1647bf71cded2e701b1, type: 2}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8222130, guid: 02b90b25fe05c1647bf71cded2e701b1, type: 2}
-      propertyPath: m_Volume
-      value: .419999987
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02b90b25fe05c1647bf71cded2e701b1, type: 2}
   m_IsPrefabParent: 0

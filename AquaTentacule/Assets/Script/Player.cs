@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 	public AudioSource musicSource;
 	private Rigidbody2D rb;
 
-	void Awake () {
+	void Awake () {	
 		if (instance == null){
 			instance = this;
 		}
@@ -83,14 +83,14 @@ public class Player : MonoBehaviour
 	private IEnumerator Volumeup (AudioSource source) {
 		while(source.volume <1){
 			yield return new WaitForSeconds(1/100);
-			source.volume = source.volume + timeVolume/100;
+			source.volume = source.volume + 1/(timeVolume*100);
 		}
 	}
 
 	private IEnumerator VolumeDown (AudioSource source) {
 		while(source.volume > 0){
 			yield return new WaitForSeconds(1/100);
-			source.volume = source.volume - timeVolume/100;
+			source.volume = source.volume - 1/(timeVolume*100);
 		}
 	}
 

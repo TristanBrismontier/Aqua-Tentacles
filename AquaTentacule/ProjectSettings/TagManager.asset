@@ -9,7 +9,9 @@ TagManager:
   - InhertElement
   - Zone1
   - Enemy
-
+  - Zone2
+  - Zone3
+  - Zone4
   layers:
   - Default
   - TransparentFX

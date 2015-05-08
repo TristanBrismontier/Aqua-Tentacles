@@ -8,6 +8,8 @@ TagManager:
   - Food
   - InhertElement
   - Zone1
+  - Enemy
+
   layers:
   - Default
   - TransparentFX

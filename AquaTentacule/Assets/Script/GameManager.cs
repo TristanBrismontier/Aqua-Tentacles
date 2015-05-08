@@ -70,8 +70,8 @@ public class GameManager : MonoBehaviour {
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
 		if(life<=0){
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			player.transform.position = startPosition.position;
+			life = 100;
+			Player.instance.transform.position = startPosition.position;
 		}
 
 	}

@@ -4,7 +4,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public float speed = 10;
+	public float speedRotation = 100.0f;
+	public float force = 10.0f;
 	private Rigidbody2D rb;
 
 	void Start()
@@ -14,13 +15,17 @@ public class Player : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		float moveHor = Input.GetAxis ("Horizontal");
-		float moveVert = Input.GetAxis ("Vertical");
-		
-		Vector3 move = new Vector3 (moveHor, moveVert,0.0f );
-		rb.velocity = move * speed;
-		
-		rb.position = new Vector3 (rb.position.x, rb.position.y,0.0f);
+		if (Input.GetKey (KeyCode.Q)) {
+			rb.angularVelocity = speedRotation;
+		} else if (Input.GetKey (KeyCode.D)) {
+			rb.angularVelocity = -speedRotation;
+		} else {
+			rb.angularVelocity = 0f;
+		}
+
+		if (Input.GetKey (KeyCode.Z)) {
+			rb.AddForce(transform.up * (force * force * force * force * force));
+		}
 
 	}
 }

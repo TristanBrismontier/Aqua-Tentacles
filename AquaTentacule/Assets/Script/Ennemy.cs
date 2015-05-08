@@ -14,7 +14,7 @@ public class Ennemy : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		GameObject go = GameObject.FindGameObjectWithTag("Player");
 		target = go.transform;
-		Vector2 randomVector = Random.insideUnitCircle.Normalize();
+		Vector2 randomVector = Random.insideUnitCircle;
 		Debug.Log (randomVector);
 		rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
 	}

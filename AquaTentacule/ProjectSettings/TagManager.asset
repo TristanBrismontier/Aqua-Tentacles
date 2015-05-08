@@ -23,7 +23,7 @@ TagManager:
   - InhertElement
   - Ennemy
   - UI
-  - 
+  - EnnemyForground
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Ennemy
     uniqueID: 1848692603
+    locked: 0
+  - name: EnnemyForground
+    uniqueID: 1919345977
     locked: 0
   - name: InhertElement
     uniqueID: 2016663039

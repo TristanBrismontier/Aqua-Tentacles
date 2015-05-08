@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19853274}
   - 199: {fileID: 19954566}
   m_Layer: 0
-  m_Name: Bubulles trompe
+  m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

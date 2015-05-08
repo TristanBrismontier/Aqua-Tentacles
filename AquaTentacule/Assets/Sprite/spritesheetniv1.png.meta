@@ -1,0 +1,279 @@
+fileFormatVersion: 2
+guid: c334f8cb0eb6c164eb5e841eac3d7096
+timeCreated: 1431112649
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheetniv1_0
+    21300002: spritesheetniv1_1
+    21300004: spritesheetniv1_2
+    21300006: spritesheetniv1_3
+    21300008: spritesheetniv1_4
+    21300010: spritesheetniv1_5
+    21300012: spritesheetniv1_6
+    21300014: spritesheetniv1_7
+    21300016: spritesheetniv1_8
+    21300018: spritesheetniv1_9
+    21300020: spritesheetniv1_10
+    21300022: spritesheetniv1_11
+    21300024: spritesheetniv1_12
+    21300026: spritesheetniv1_13
+    21300028: spritesheetniv1_14
+    21300030: spritesheetniv1_15
+    21300032: spritesheetniv1_16
+    21300034: spritesheetniv1_17
+    21300036: spritesheetniv1_18
+    21300038: spritesheetniv1_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: spritesheetniv1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 975
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 650
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 650
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_10
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 650
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 650
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_12
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 650
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_14
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 325
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 325
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_16
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 325
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_18
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheetniv1_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

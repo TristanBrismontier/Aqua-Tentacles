@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 424244}
+  - 114: {fileID: 11463064}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -26,7 +27,6 @@ GameObject:
   - 33: {fileID: 3375474}
   - 65: {fileID: 6581922}
   - 23: {fileID: 2348284}
-  - 114: {fileID: 11434492}
   - 54: {fileID: 5422592}
   m_Layer: 13
   m_Name: Cube
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.06000137, y: 8.6400032, z: -.300000012}
+  m_LocalPosition: {x: 24.4599991, y: 10.8999996, z: -.300000012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 424244}
@@ -118,19 +118,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11434492
+--- !u!114 &11463064
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189510}
+  m_GameObject: {fileID: 166926}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e5c103b82e3f2d4cb05698018ae10d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  speed: 5
+  speed: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

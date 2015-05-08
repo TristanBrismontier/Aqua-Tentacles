@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 	public float pushForce;
 	public float slowDown;
 	public float timeVolume;
+	private Animator animator;
 
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
+		animator = GetComponent<Animator> ();	
 		musicSource.volume = 0;
 		rb = GetComponent<Rigidbody2D>();
 
@@ -49,10 +51,13 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKey (KeyCode.Z)) {
 			rb.AddForce (forceVect);
+			animator.SetBool("swim",true);
 		} else if (Input.GetKey (KeyCode.S)) {
 			rb.AddForce (-forceVect);
+			animator.SetBool("swim",true);
 		} else {
 			rb.velocity = rb.velocity * slowDown;
+			animator.SetBool("swim",false);
 		}
 	}
 

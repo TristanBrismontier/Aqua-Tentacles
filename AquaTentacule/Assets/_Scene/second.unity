@@ -104,10 +104,6 @@ CircleCollider2D:
   m_Offset: {x: .170000002, y: -23.2999992}
   serializedVersion: 2
   m_Radius: 17.1749992
---- !u!4 &285739532 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 450478, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-  m_PrefabInternal: {fileID: 1053135498}
 --- !u!1001 &1053135498
 Prefab:
   m_ObjectHideFlags: 0
@@ -196,7 +192,7 @@ Prefab:
     - target: {fileID: 11435254, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 285739532}
+      objectReference: {fileID: 0}
     - target: {fileID: 11435254, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: background
       value: 

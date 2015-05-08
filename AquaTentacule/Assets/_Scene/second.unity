@@ -390,6 +390,10 @@ Prefab:
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 240688587}
+    - target: {fileID: 8201426, guid: d13c7e3fc6c554c4c9620460d90f6e43, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d13c7e3fc6c554c4c9620460d90f6e43, type: 2}
   m_IsPrefabParent: 0

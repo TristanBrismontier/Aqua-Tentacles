@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 		musicSource.volume = 0;
 		rb = GetComponent<Rigidbody2D>();
 
-		//debugSprite.enabled = false;
+		debugSprite.enabled = false;
 	}
 	
 	void FixedUpdate ()

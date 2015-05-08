@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 	public float pushForce;
 	public float slowDown;
 	public float timeVolume;
+	public AudioClip[] eatSounds;
 
 	public AudioSource musicSource;
 	private Rigidbody2D rb;
@@ -53,6 +54,14 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	void OnCollisionEnter2D(Collider2D other) {
+		Debug.Log("Collide");
+		if(other.gameObject.tag == "Food"){
+			SoundManager.instance.RandomizeSfx(eatSounds);
+			Debug.Log("Food");
+		}
+	}
+
 	void OnTriggerExit2D(Collider2D other) {
 		if(other.gameObject.tag == "Zone1"){
 			StartCoroutine (Volumeup(musicSource));
@@ -66,12 +75,10 @@ public class Player : MonoBehaviour
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {
-		Debug.Log ("startVol" + timeVolume/100);
 		while(source.volume <1){
 			yield return new WaitForSeconds(1/100);
 			source.volume = source.volume + timeVolume/100;
 		}
-		Debug.Log ("stopVol");
 	}
 
 	private IEnumerator VolumeDown (AudioSource source) {

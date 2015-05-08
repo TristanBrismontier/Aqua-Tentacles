@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11439020}
   m_Layer: 0
   m_Name: Food 2
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 157490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 803f42461a03d1e48ae63303a8663c40, type: 3}
+  m_Script: {fileID: 11500000, guid: 235ec32913942084e9b7dceb9efe5d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nutritionFact: 5
-  speedMax: 6
+  nutritionFact: 0
+  speedMax: 0
 --- !u!212 &21205602
 SpriteRenderer:
   m_ObjectHideFlags: 1

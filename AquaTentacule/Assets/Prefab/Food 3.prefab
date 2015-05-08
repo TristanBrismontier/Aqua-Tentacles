@@ -26,10 +26,10 @@ GameObject:
   - 4: {fileID: 431652}
   - 50: {fileID: 5085852}
   - 61: {fileID: 6149896}
-  - 114: {fileID: 11418392}
+  - 114: {fileID: 11493258}
   m_Layer: 0
   m_Name: Food 3
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ BoxCollider2D:
   m_Offset: {x: -.0148035288, y: -.00793373585}
   serializedVersion: 2
   m_Size: {x: 1.32494855, y: .340403795}
---- !u!114 &11418392
+--- !u!114 &11493258
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 107486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 803f42461a03d1e48ae63303a8663c40, type: 3}
+  m_Script: {fileID: 11500000, guid: 235ec32913942084e9b7dceb9efe5d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nutritionFact: 5
-  speedMax: 6
+  nutritionFact: 0
+  speedMax: 0
 --- !u!212 &21240238
 SpriteRenderer:
   m_ObjectHideFlags: 1

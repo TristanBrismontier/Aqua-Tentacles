@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ennemy : MonoBehaviour {
+public class Food : MonoBehaviour {
 
 	public int nutritionFact;
 	public float speedMax;

@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;
+	public GameObject bubbleExplosionPlop;
 	private Player player;
 
 	void Awake () {
@@ -154,6 +155,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void death(){
 		life = 100;
+		Player.Instantiate(bubbleExplosionPlop, transform.position, transform.rotation);
 		Player.instance.transform.position = startPosition.position;
 	}
 

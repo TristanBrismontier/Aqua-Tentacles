@@ -7,6 +7,7 @@ public class Octopus : MonoBehaviour {
 	public float speed;
 	public float slowDown;
 	public int nutritionFact;
+	public GameObject bubbleExplosion;
 	private Rigidbody2D rb;
 	private float speedDamp;
 	public SpriteRenderer debugSprite;
@@ -39,6 +40,7 @@ public class Octopus : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
 			GameManager.instance.eatOctoPus(nutritionFact);
+			Instantiate (bubbleExplosion, transform.position, transform.rotation);
 			Destroy(this.gameObject);
 			
 		}

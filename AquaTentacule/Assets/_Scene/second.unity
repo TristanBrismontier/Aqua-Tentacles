@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5c103b82e3f2d4cb05698018ae10d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 49.0800018
   speed: 3
 --- !u!1 &123764287 stripped
 GameObject:
@@ -361,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395328560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.03999996, y: -2.24000001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 11.4799995, y: 11.5699997, z: 1}
   m_Children: []
   m_Father: {fileID: 114804517}

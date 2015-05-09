@@ -58,9 +58,6 @@ public class Player : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		if (inverted == -1.0f) {
-			yield return new WaitForSeconds(30);
-		}
 		if (Input.GetKey (KeyCode.Q)) {
 			rb.angularVelocity = speedRotation * inverted;
 		} else if (Input.GetKey (KeyCode.D)) {

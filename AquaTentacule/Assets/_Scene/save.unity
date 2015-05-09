@@ -466,14 +466,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 701264161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0f9ec306d5dc98408ecc7eca123beeb, type: 3}
+  m_Script: {fileID: 11500000, guid: a8e58b0253ff0124aa89fd49d09f2744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampTime: .200000003
-  target: {fileID: 0}
-  paralaxRatio: 0
-  background: {fileID: 0}
-  gameManager: {fileID: 0}
 --- !u!1 &921279949
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +603,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1001 &1053135498
 Prefab:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	public int minFood;
 	public int maxFood;
 	public int octopus;
+	public int FishCount;
 
 	public int maxRange;
 
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip[] eatSounds;
 	public GameObject[] foods;
 	public GameObject Octopus;
+	public GameObject FishEye;
 	private Player player;
 
 	void Awake () {
@@ -49,6 +51,10 @@ public class GameManager : MonoBehaviour {
 
 		for(int i = 0 ; i<octopus; i++){
 			RespawnOctopus();
+		}
+
+		for(int i = 0 ; i<FishCount; i++){
+			RespawnFishEye();
 		}
 
 		Vector3 playerPos = Player.instance.transform.position;
@@ -87,6 +93,21 @@ public class GameManager : MonoBehaviour {
 		Instantiate(Octopus, new Vector3( x, y, 0), Quaternion.identity);
 	}
 
+	public void RespawnFishEye(){
+		float x = (float)(Random.Range(-maxRange,maxRange));
+		float y = (float)(Random.Range(0,maxRange));
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		float deltaX = x  - player.transform.position.x;
+		float deltaY = y  - player.transform.position.y;
+		if( Mathf.Abs(deltaX) < 3.1f ){
+			x=x+((deltaX<=0)?-3:3);
+		}
+		if( Mathf.Abs(deltaY) < 3.1f ){
+			y=y+((deltaY<=0)?-3:3);
+		}
+		Instantiate(FishEye, new Vector3( x, y, 0), Quaternion.identity);
+	}
+
 	public void eatFood(int nutritionFact){
 		AddFood ();
 		eat (nutritionFact);
@@ -95,9 +116,19 @@ public class GameManager : MonoBehaviour {
 		RespawnOctopus();
 		eat (nutritionFact);
 	}
+	public void eatFishEye(int nutritionFact){
+		RespawnFishEye();
+		eat (nutritionFact);
+	}
+
+	public void looseLife(int damage){
+		eat (-damage);
+	}
 
 	private void eat (int nutritionFact){
 		life = life + nutritionFact;
+		if(nutritionFact <0)
+			return;
 		player.Eat();
 		SoundManager.instance.RandomizeSfx(eatSounds);
 	}

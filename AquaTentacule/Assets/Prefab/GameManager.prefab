@@ -45,6 +45,7 @@ MonoBehaviour:
   minFood: 50
   maxFood: 50
   octopus: 3
+  FishCount: 2
   maxRange: 40
   frameCount: 0
   eatSounds:
@@ -57,6 +58,7 @@ MonoBehaviour:
   - {fileID: 157490, guid: 4b9fa89205d39364b8f161d2850f74ae, type: 2}
   - {fileID: 107486, guid: 865e059f11228f042b381f939632adf0, type: 2}
   Octopus: {fileID: 150962, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
+  FishEye: {fileID: 167046, guid: 985efc834ea5df34bb26c65760e66699, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

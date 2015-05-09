@@ -149,6 +149,8 @@ MonoBehaviour:
   rangeDash: 30
   speed: 1.5
   debugSprite: {fileID: 21286544}
+  damage: 15
+  nutritionFact: 66
   life: 3
   bubbleExplosion: {fileID: 0}
   animator: {fileID: 9530108}

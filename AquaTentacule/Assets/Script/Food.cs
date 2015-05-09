@@ -33,6 +33,9 @@ public class Food : MonoBehaviour {
 			Vector2 randomVector = Random.insideUnitCircle;
 			rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
 		}
+		if(coll.gameObject.tag == "Octo"){
+			Destroy(this.gameObject);
+		}
 	
 	}
 }

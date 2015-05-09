@@ -47,25 +47,47 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		if (Input.GetKey (KeyCode.Q)) {
-			rb.angularVelocity = speedRotation;
-		} else if (Input.GetKey (KeyCode.D)) {
-			rb.angularVelocity = -speedRotation;
-		} else {
-			rb.angularVelocity = 0f;
-		}
+		/*if (Collider.){
+			if (Input.GetKey (KeyCode.Q)) {
+				rb.angularVelocity = -speedRotation;
+			} else if (Input.GetKey (KeyCode.D)) {
+				rb.angularVelocity = speedRotation;
+			} else {
+				rb.angularVelocity = 0f;
+			}
+			
+			Vector2 forceVect = transform.up * Mathf.Pow (force, pushForce);
+			
+			if (Input.GetKey (KeyCode.Z)) {
+				rb.AddForce (-forceVect);
+				animator.SetBool("swim",true);
+			} else if (Input.GetKey (KeyCode.S)) {
+				rb.AddForce (forceVect);
+				animator.SetBool("swim",true);
+			} else {
+				rb.velocity = rb.velocity * slowDown;
+				animator.SetBool("swim",false);
+			}
+		} else {*/
+			if (Input.GetKey (KeyCode.Q)) {
+				rb.angularVelocity = speedRotation;
+			} else if (Input.GetKey (KeyCode.D)) {
+				rb.angularVelocity = -speedRotation;
+			} else {
+				rb.angularVelocity = 0f;
+			}
 
-		Vector2 forceVect = transform.up * Mathf.Pow (force, pushForce);
+			Vector2 forceVect = transform.up * Mathf.Pow (force, pushForce);
 
-		if (Input.GetKey (KeyCode.Z)) {
-			rb.AddForce (forceVect);
-			animator.SetBool("swim",true);
-		} else if (Input.GetKey (KeyCode.S)) {
-			rb.AddForce (-forceVect);
-			animator.SetBool("swim",true);
-		} else {
-			rb.velocity = rb.velocity * slowDown;
-			animator.SetBool("swim",false);
+			if (Input.GetKey (KeyCode.Z)) {
+				rb.AddForce (forceVect);
+				animator.SetBool("swim",true);
+			} else if (Input.GetKey (KeyCode.S)) {
+				rb.AddForce (-forceVect);
+				animator.SetBool("swim",true);
+			} else {
+				rb.velocity = rb.velocity * slowDown;
+				animator.SetBool("swim",false);
 		}
 	}
 

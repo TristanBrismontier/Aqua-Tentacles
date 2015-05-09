@@ -48,10 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Script\BubblesFollower.cs" />
      <Compile Include="Assets\Script\Enemys.cs" />
+     <Compile Include="Assets\Script\FishEye.cs" />
      <Compile Include="Assets\Script\Food.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\LoadingScript.cs" />
-     <Compile Include="Assets\Script\Octpus.cs" />
+     <Compile Include="Assets\Script\Octopus.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\SoundManager.cs" />
      <Compile Include="Assets\Script\health.cs" />

@@ -148,10 +148,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 37758750}
---- !u!4 &100084902 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400786, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
-  m_PrefabInternal: {fileID: 1148333404}
 --- !u!1 &123764287 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 192000, guid: a45928e908b216042b26c11481b674af, type: 2}
@@ -371,7 +367,7 @@ GameObject:
   - 114: {fileID: 701264167}
   m_Layer: 0
   m_Name: medusesprites
-  m_TagString: Untagged
+  m_TagString: Meduse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,11 +421,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 701264161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -.00330855674, z: 0, w: .999994516}
   m_LocalPosition: {x: -24.5300007, y: -48.0227051, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1162512299}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
 --- !u!58 &701264165
@@ -469,6 +464,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e58b0253ff0124aa89fd49d09f2744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &750949246
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.73999977
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -48.7999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 428962, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444528, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444528, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 148242, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: m_Name
+      value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064322, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+      propertyPath: orthographic size
+      value: 17.759964
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2e6527aa2a849f742a1f72579863f2be, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &921279949
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1001 &1053135498
 Prefab:
   m_ObjectHideFlags: 0
@@ -757,47 +810,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1162512297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1162512299}
-  - 61: {fileID: 1162512298}
-  m_Layer: 0
-  m_Name: meduse
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &1162512298
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1162512297}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!4 &1162512299
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1162512297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1.35000002, y: 5.1500001, z: 1}
-  m_Children: []
-  m_Father: {fileID: 701264164}
-  m_RootOrder: 0
 --- !u!1 &1222109264
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +897,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 100084902}
+    m_TransformParent: {fileID: 2123513567}
     m_Modifications:
     - target: {fileID: 453988, guid: a45928e908b216042b26c11481b674af, type: 2}
       propertyPath: m_LocalPosition.x
@@ -959,7 +971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
@@ -1251,3 +1263,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!4 &2123513567 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 463906, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
+  m_PrefabInternal: {fileID: 1148333404}

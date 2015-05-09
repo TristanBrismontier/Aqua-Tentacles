@@ -11,10 +11,10 @@ public class Enemys : MonoBehaviour {
 
 	void Update () {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		transform.LookAt (player.transform.position);
-		transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
-		
+		Debug.Log (Vector3.Distance (transform.position, player.transform.position));
 		if (Vector3.Distance (transform.position, player.transform.position) < range) {
+			transform.LookAt (player.transform.position);
+			transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		}
 	}

@@ -5,11 +5,22 @@ public class Octpus : MonoBehaviour {
 	
 	public float range;
 	public float speed;
+
 	
 	void Start () {
 	}
-	
+
 	void Update () {
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		Debug.Log (Vector3.Distance (transform.position, player.transform.position));
+		if (Vector3.Distance (transform.position, player.transform.position) < range) {
+			transform.LookAt (player.transform.position);
+			transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
+			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
+		}
+	}
+/*
+ 	void Update () {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		transform.LookAt (player.transform.position);
 		transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
@@ -18,7 +29,7 @@ public class Octpus : MonoBehaviour {
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		}
 	}
-	
+//*/	
 	public void OnDrawGizmos(){
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position,range);

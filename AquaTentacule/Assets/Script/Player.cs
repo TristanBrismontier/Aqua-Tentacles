@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 	public float slowDown;
 	public float timeVolume;
 	private Animator animator;
+	public float dampTime = 0.8f;
+	private Vector3 velocity = Vector3.zero;
 
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
@@ -84,7 +86,7 @@ public class Player : MonoBehaviour
 	}
 
 	public void setScale(float scaleRatio){
-		transform.localScale = startScale * scaleRatio;
+		transform.localScale =Vector3.SmoothDamp(startScale,  startScale * scaleRatio, ref velocity, dampTime);
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {

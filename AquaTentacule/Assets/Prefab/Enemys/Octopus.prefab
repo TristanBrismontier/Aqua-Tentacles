@@ -149,6 +149,7 @@ MonoBehaviour:
   speed: 1
   slowDown: 0
   nutritionFact: 20
+  bubbleExplosion: {fileID: 126194, guid: 3abc899f7133a944fb6d5d5ce2889ca1, type: 2}
   debugSprite: {fileID: 21287548}
   inkParticule: {fileID: 123372, guid: ae66f866fa837ae40930bfa3c910ff39, type: 2}
 --- !u!212 &21254998

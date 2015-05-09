@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;
+	public GameObject bubbleExplosionPlop;
 	private Player player;
 	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
@@ -160,6 +161,7 @@ public class GameManager : MonoBehaviour {
 	public void death(){
 		life = 100;
 		Player.instance.resetMusique();
+		Player.Instantiate(bubbleExplosionPlop, transform.position, transform.rotation);
 		Player.instance.transform.position = startPosition.position;
 		foreach (GameObject gobj in instanciatesGameObjects)
 		{

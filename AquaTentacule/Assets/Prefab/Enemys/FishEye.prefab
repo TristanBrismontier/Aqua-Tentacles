@@ -113,7 +113,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 167046}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -.144324839, y: .439196706}
   serializedVersion: 2
@@ -146,12 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f5600de9b5eca49af516f1e8072b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeDash: 30
+  rangeDash: 20.0200005
   speed: 1.5
   debugSprite: {fileID: 21286544}
-  damage: 15
+  damage: 83
   nutritionFact: 66
-  life: 3
   bubbleExplosion: {fileID: 0}
   animator: {fileID: 9530108}
 --- !u!212 &21204084

@@ -8,7 +8,6 @@ public class FishEye : MonoBehaviour {
 	public SpriteRenderer debugSprite;
 	public int damage;
 	public int nutritionFact;
-	public int life = 3;
 	public GameObject bubbleExplosion;
 
 
@@ -33,38 +32,24 @@ public class FishEye : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		Debug.Log("COLLLLOOOWLWLJVDS " + other.gameObject.tag);
-		if (other.gameObject.tag == "Player") {
-			Debug.Log("OOOOOO");
-			print ("Ennemi : " + life);
-			animator.SetBool ("Attack", true);
-			life -= 1;
-			if (life <= 0) {
-				Instantiate (bubbleExplosion, transform.position, transform.rotation);
-				GameManager.instance.eatFishEye(nutritionFact);
-				//PlayerController.score++;
-				Destroy (gameObject);
-			}
-			GameManager.instance.looseLife(damage);
-		} else {
-			animator.SetBool ("Attack", false);
-		}
+		checkCollision(other);
+	}
+	
+	void OnCollisionStay2D(Collision2D other) {
+		checkCollision(other);
 	}
 
-	void OnCollisionStay2D(Collision2D other) {
-		Debug.Log("COLLLLOOOWLWLJVDS " + other.gameObject.tag);
+	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
 			Debug.Log("OOOOOO");
-			print ("Ennemi : " + life);
 			animator.SetBool ("Attack", true);
-			life -= 1;
-			if (life <= 0) {
+			if (GameManager.instance.life >=120) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatFishEye(nutritionFact);
 				//PlayerController.score++;
 				Destroy (gameObject);
 			}
-			GameManager.instance.looseLife(damage);
+			GameManager.instance.death();
 		} else {
 			animator.SetBool ("Attack", false);
 		}

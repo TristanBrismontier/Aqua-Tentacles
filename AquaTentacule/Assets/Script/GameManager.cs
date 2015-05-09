@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 	public int frameCount = 0;
 	public AudioClip[] eatSounds;
 	public GameObject[] foods;
+	public GameObject Octopus;
 	private Player player;
 
 	void Awake () {
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviour {
 			
 	}
 
-
 	public void AddFood(){
 		float x = (float)(Random.Range(-maxRange,maxRange));
 		float y = (float)(Random.Range(-maxRange,maxRange));
@@ -64,7 +64,21 @@ public class GameManager : MonoBehaviour {
 		}
 		GameObject foodChoice = foods[Random.Range (0, foods.Length)];
 		Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity);
+	}
 
+	public void RespawnOctopus(){
+		float x = (float)(Random.Range(-maxRange,maxRange));
+		float y = (float)(Random.Range(-25,maxRange));
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		float deltaX = x  - player.transform.position.x;
+		float deltaY = y  - player.transform.position.y;
+		if( Mathf.Abs(deltaX) < 3.1f ){
+			x=x+((deltaX<=0)?-3:3);
+		}
+		if( Mathf.Abs(deltaY) < 3.1f ){
+			y=y+((deltaY<=0)?-3:3);
+		}
+		Instantiate(Octopus, new Vector3( x, y, 0), Quaternion.identity);
 	}
 
 	public void eatFood(int nutritionFact){
@@ -72,7 +86,6 @@ public class GameManager : MonoBehaviour {
 		AddFood ();
 		player.Eat();
 		SoundManager.instance.RandomizeSfx(eatSounds);
-
 	}
 
 	void Update () {

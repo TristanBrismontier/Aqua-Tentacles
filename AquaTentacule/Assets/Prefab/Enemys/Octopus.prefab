@@ -30,7 +30,7 @@ GameObject:
   - 61: {fileID: 6178874}
   m_Layer: 0
   m_Name: Octopus
-  m_TagString: Untagged
+  m_TagString: Octo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150962}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -18.2891426, y: -45.8990707, z: 0}
+  m_LocalPosition: {x: -15.9200001, y: -25.8999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411962}
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 18.6800003
   speed: 2
+  nutritionFact: 0
   debugSprite: {fileID: 21287548}
 --- !u!212 &21254998
 SpriteRenderer:

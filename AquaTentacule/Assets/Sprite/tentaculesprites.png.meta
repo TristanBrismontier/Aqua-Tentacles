@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3b34887f963d49e4490feea6645582ba
-timeCreated: 1431186000
+guid: 2ae677796ac337f43b8faf949349291a
+timeCreated: 1431186993
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -51,7 +51,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings:
   - buildTarget: Web
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     textureFormat: -1
     compressionQuality: 50
   spriteSheet:
@@ -60,9 +60,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 1500
-        height: 320
+        y: 214
+        width: 500
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -70,9 +70,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
-        width: 1500
-        height: 320
+        y: 108
+        width: 500
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -80,9 +80,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1500
-        height: 320
+        y: 2
+        width: 500
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
 	private Rigidbody2D rb;
 	private Vector3 startScale; 
 
+	public GameObject ten1;
+	public GameObject ten2;
+	public GameObject ten3;
+
 	void Awake () {	
 		if (instance == null){
 			instance = this;

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
 
+	private float scaleRatio;
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
 	private Rigidbody2D rb;
@@ -39,13 +40,10 @@ public class Player : MonoBehaviour
 
 		debugSprite.enabled = false;
 		GameManager.instance.setPlayer(this);
-
+		scaleRatio = 1;
 		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
 	}
 
-	void Update (){
-		Debug.Log(startScale);
-	}
 
 	void FixedUpdate ()
 	{
@@ -87,8 +85,9 @@ public class Player : MonoBehaviour
 		animator.SetTrigger("eat");
 	}
 
-	public void setScale(float scaleRatio){
-		transform.localScale =Vector3.SmoothDamp(startScale,  startScale * scaleRatio, ref velocity, dampTime);
+	public void setScale(float adj){
+		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.01f);
+		transform.localScale = startScale * scaleRatio;
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {

@@ -9,11 +9,12 @@ public class FishEye : MonoBehaviour {
 	public int damage;
 	public int nutritionFact;
 	public GameObject bubbleExplosion;
-
+	private Rigidbody2D rb;
 
 	public Animator animator;
 	
 	void Start () {
+		rb = GetComponent<Rigidbody2D>();
 		debugSprite.enabled = false;
 	}
 	
@@ -27,6 +28,7 @@ public class FishEye : MonoBehaviour {
 			transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		} else {
+			rb.velocity = Vector2.zero;
 			animator.SetBool ("Dash", false);
 		}
 	}
@@ -48,8 +50,9 @@ public class FishEye : MonoBehaviour {
 				GameManager.instance.eatFishEye(nutritionFact);
 				//PlayerController.score++;
 				Destroy (gameObject);
+			}else{
+				GameManager.instance.death();
 			}
-			GameManager.instance.death();
 		} else {
 			animator.SetBool ("Attack", false);
 		}

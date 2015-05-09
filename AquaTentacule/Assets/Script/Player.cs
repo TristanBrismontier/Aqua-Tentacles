@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
 	}
 
 	public void setScale(float adj){
-		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.01f);
+		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.05f);
 		transform.localScale = startScale * scaleRatio;
 	}
 

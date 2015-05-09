@@ -376,9 +376,14 @@ MonoBehaviour:
   slowDown: .980000019
   timeVolume: 8
   dampTime: .200000003
+  timetoInverteBack: 10
   scaleRatio: 0
   debugSprite: {fileID: 21214214}
-  musicSource: {fileID: 8275558}
+  musicSource1: {fileID: 0}
+  musicSource2: {fileID: 0}
+  musicSource3: {fileID: 0}
+  musicSource4: {fileID: 0}
+  musicSource5: {fileID: 0}
   ten1: {fileID: 0}
   ten2: {fileID: 0}
   ten3: {fileID: 0}

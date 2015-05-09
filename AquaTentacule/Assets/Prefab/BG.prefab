@@ -11,7 +11,7 @@ GameObject:
   - 58: {fileID: 5847028}
   m_Layer: 0
   m_Name: Zone2
-  m_TagString: Untagged
+  m_TagString: Zone2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - 58: {fileID: 5826810}
   m_Layer: 0
   m_Name: Zone4
-  m_TagString: Untagged
+  m_TagString: Zone4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - 58: {fileID: 5873784}
   m_Layer: 0
   m_Name: Zone3
-  m_TagString: Untagged
+  m_TagString: Zone3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

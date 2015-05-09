@@ -17,7 +17,14 @@ public class Player : MonoBehaviour
 	public int timetoInverteBack = 10;
 	public float scaleRatio;
 	public SpriteRenderer debugSprite;
-	public AudioSource musicSource;
+
+	public AudioSource musicSource1;
+	public AudioSource musicSource2;
+	public AudioSource musicSource3;
+	public AudioSource musicSource4;
+	public AudioSource musicSource5;
+	private int currentZone;
+
 	private Rigidbody2D rb;
 	private Vector3 startScale; 
 
@@ -42,13 +49,21 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		animator = GetComponent<Animator> ();	
-		musicSource.volume = 0;
-		rb = GetComponent<Rigidbody2D>();
 
+		rb = GetComponent<Rigidbody2D>();
+		resetMusique();
 		debugSprite.enabled = false;
 		GameManager.instance.setPlayer(this);
 		scaleRatio = 1;
 		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
+	}
+	public void resetMusique(){
+		musicSource1.volume = 1;
+		musicSource2.volume = 0;
+		musicSource3.volume = 0;
+		musicSource4.volume = 0;
+		musicSource5.volume = 0;
+		currentZone = 1 ;
 	}
 
 	void OnCollisionEnter2d(Collision2D coll){
@@ -89,15 +104,50 @@ public class Player : MonoBehaviour
 
 	void OnTriggerExit2D(Collider2D other) {
 		if(other.gameObject.tag == "Zone1"){
-			StartCoroutine (Volumeup(musicSource));
+			currentZone = 2;
+			StartCoroutine (VolumeDown(musicSource1));
+			StartCoroutine (Volumeup(musicSource2));
+		}
+		if(other.gameObject.tag == "Zone2"){
+			currentZone = 3;
+			StartCoroutine (VolumeDown(musicSource2));
+			StartCoroutine (Volumeup(musicSource3));
+		}
+		if(other.gameObject.tag == "Zone3"){
+			currentZone = 4;
+			StartCoroutine (VolumeDown(musicSource3));
+			StartCoroutine (Volumeup(musicSource4));
+		}
+		if(other.gameObject.tag == "Zone4"){
+			currentZone = 5;
+			StartCoroutine (VolumeDown(musicSource4));
+			StartCoroutine (Volumeup(musicSource5));
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		if(other.gameObject.tag == "Zone1"){
-			StartCoroutine (VolumeDown(musicSource));
+		if(other.gameObject.tag == "Zone1" && currentZone == 2){
+			currentZone = 1;
+			StartCoroutine (Volumeup(musicSource1));
+			StartCoroutine (VolumeDown(musicSource2));
 		}
+		if(other.gameObject.tag == "Zone2" && currentZone == 3){
+			currentZone = 2;
+			StartCoroutine (Volumeup(musicSource2));
+			StartCoroutine (VolumeDown(musicSource3));
+		}
+		if(other.gameObject.tag == "Zone3" && currentZone == 4){
+			currentZone = 3;
+			StartCoroutine (Volumeup(musicSource3));
+			StartCoroutine (VolumeDown(musicSource4));
+		}
+		if(other.gameObject.tag == "Zone4" && currentZone == 5){
+			currentZone = 4;
+			StartCoroutine (Volumeup(musicSource4));
+			StartCoroutine (VolumeDown(musicSource5));
+		}
+
 	}
 
 	public void Eat(){

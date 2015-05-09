@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 	
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject Octopus;
 	public GameObject FishEye;
 	private Player player;
+	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
 	void Awake () {
 		if (instance == null){
@@ -75,7 +77,8 @@ public class GameManager : MonoBehaviour {
 			y=y+((deltaY<=0)?-3:3);
 		}
 		GameObject foodChoice = foods[Random.Range (0, foods.Length)];
-		Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity);
+		GameObject go = Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity)as GameObject;
+		instanciatesGameObjects.Add(go);
 	}
 
 	public void RespawnOctopus(){
@@ -90,7 +93,8 @@ public class GameManager : MonoBehaviour {
 		if( Mathf.Abs(deltaY) < 3.1f ){
 			y=y+((deltaY<=0)?-3:3);
 		}
-		Instantiate(Octopus, new Vector3( x, y, 0), Quaternion.identity);
+		GameObject go = Instantiate(Octopus, new Vector3( x, y, 0), Quaternion.identity) as GameObject;
+		instanciatesGameObjects.Add(go);
 	}
 
 	public void RespawnFishEye(){
@@ -105,7 +109,8 @@ public class GameManager : MonoBehaviour {
 		if( Mathf.Abs(deltaY) < 3.1f ){
 			y=y+((deltaY<=0)?-3:3);
 		}
-		Instantiate(FishEye, new Vector3( x, y, 0), Quaternion.identity);
+		GameObject go = Instantiate(FishEye, new Vector3( x, y, 0), Quaternion.identity) as GameObject;
+		instanciatesGameObjects.Add(go);
 	}
 
 	public void eatFood(int nutritionFact){
@@ -154,7 +159,13 @@ public class GameManager : MonoBehaviour {
 	}
 	public void death(){
 		life = 100;
+		Player.instance.resetMusique();
 		Player.instance.transform.position = startPosition.position;
+		foreach (GameObject gobj in instanciatesGameObjects)
+		{
+			Destroy(gobj);
+		}
+		initGame();
 	}
 
 	private  float Remap (this float value, float from1, float to1, float from2, float to2) {

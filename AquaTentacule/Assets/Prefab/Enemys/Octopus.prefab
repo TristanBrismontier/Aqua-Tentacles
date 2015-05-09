@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 411962}
   - 95: {fileID: 9530736}
   - 212: {fileID: 21254998}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bulle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 114: {fileID: 11409254}
   - 50: {fileID: 5005516}
   - 61: {fileID: 6178874}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Octopus
   m_TagString: Octo
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417948}
   - 212: {fileID: 21287548}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: poulpesprite_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150962}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: 5.80000019, y: -46.7999992, z: 0}
+  m_LocalPosition: {x: 5.80000019, y: -46.7999992, z: -2.95000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411962}
@@ -150,6 +150,7 @@ MonoBehaviour:
   slowDown: 0
   nutritionFact: 20
   debugSprite: {fileID: 21287548}
+  inkParticule: {fileID: 123372, guid: ae66f866fa837ae40930bfa3c910ff39, type: 2}
 --- !u!212 &21254998
 SpriteRenderer:
   m_ObjectHideFlags: 1

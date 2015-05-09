@@ -151,7 +151,7 @@ MonoBehaviour:
   debugSprite: {fileID: 21286544}
   damage: 83
   nutritionFact: 66
-  bubbleExplosion: {fileID: 0}
+  bubbleExplosion: {fileID: 126194, guid: 18d6a99e8749ec244a178be91bace456, type: 2}
   animator: {fileID: 9530108}
 --- !u!212 &21204084
 SpriteRenderer:

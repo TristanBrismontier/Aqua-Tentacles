@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour {
 
 	public void RespawnFishEye(){
 		float x = (float)(Random.Range(-maxRange,maxRange));
-		float y = (float)(Random.Range(0,maxRange));
+		float y = (float)(Random.Range(10,maxRange));
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		float deltaX = x  - player.transform.position.x;
 		float deltaY = y  - player.transform.position.y;
@@ -122,10 +122,11 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void looseLife(int damage){
-		eat (-damage);
+		eat (damage*-1);
 	}
 
 	private void eat (int nutritionFact){
+		Debug.Log(nutritionFact);
 		life = life + nutritionFact;
 		if(nutritionFact <0)
 			return;
@@ -147,10 +148,13 @@ public class GameManager : MonoBehaviour {
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
 		if(life<=0){
-			life = 100;
-			Player.instance.transform.position = startPosition.position;
+			death();
 		}
 
+	}
+	public void death(){
+		life = 100;
+		Player.instance.transform.position = startPosition.position;
 	}
 
 	private  float Remap (this float value, float from1, float to1, float from2, float to2) {

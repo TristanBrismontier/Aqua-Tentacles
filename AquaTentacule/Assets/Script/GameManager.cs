@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour {
 
 		if(life > 100){
 			float scale = Remap(life, 100 , 150, 1,3);
+			Debug.Log(life +"  | "+scale);
 			Player.instance.setScale(scale);
 		}
 

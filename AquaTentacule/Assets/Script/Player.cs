@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
 	private Rigidbody2D rb;
-	private float scaleRatio = 1;
 	private Vector3 startScale; 
 
 	void Awake () {	
@@ -84,8 +83,7 @@ public class Player : MonoBehaviour
 		animator.SetTrigger("eat");
 	}
 
-	public void setScale(float adj){
-		scaleRatio = Mathf.Clamp(scaleRatio +adj, 1 , 3);
+	public void setScale(float scaleRatio){
 		transform.localScale = startScale * scaleRatio;
 	}
 

@@ -5,9 +5,10 @@ public class Octpus : MonoBehaviour {
 	
 	public float range;
 	public float speed;
-
+	public SpriteRenderer debugSprite;
 	
 	void Start () {
+		debugSprite.enabled = false;
 	}
 
 	void Update () {

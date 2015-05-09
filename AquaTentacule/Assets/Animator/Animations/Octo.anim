@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Octopus
+  m_Name: Octo
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,10 +19,12 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
-    - time: .0833333358
+    - time: .416666657
       value: {fileID: 21300002, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
-    - time: .166666672
+    - time: .833333313
       value: {fileID: 21300004, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
+    - time: 1.33333337
+      value: {fileID: 21300000, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,10 +46,11 @@ AnimationClip:
     - {fileID: 21300000, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
     - {fileID: 21300002, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
     - {fileID: 21300004, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
+    - {fileID: 21300000, guid: dd66e4d1d73b8cb4697f64b8bc3d5e10, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .25
+    m_StopTime: 1.41666675
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

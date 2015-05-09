@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	public Transform startPosition;
 	public int minFood;
 	public int maxFood;
+	public int octopus;
 
 	public int maxRange;
 
@@ -45,6 +46,11 @@ public class GameManager : MonoBehaviour {
 		for(int i = 0 ; i<foodNumber; i++){
 			AddFood();
 		}
+
+		for(int i = 0 ; i<octopus; i++){
+			RespawnOctopus();
+		}
+
 		Vector3 playerPos = Player.instance.transform.position;
 		startPosition.position = new Vector3(playerPos.x,playerPos.y,playerPos.z);
 			
@@ -66,8 +72,7 @@ public class GameManager : MonoBehaviour {
 		Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity);
 	}
 
-	public void RespawnOctopus(int nutritionFact){
-		eat (nutritionFact);
+	public void RespawnOctopus(){
 		float x = (float)(Random.Range(-maxRange,maxRange));
 		float y = (float)(Random.Range(-25,maxRange));
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -84,6 +89,10 @@ public class GameManager : MonoBehaviour {
 
 	public void eatFood(int nutritionFact){
 		AddFood ();
+		eat (nutritionFact);
+	}
+	public void eatOctoPus(int nutritionFact){
+		RespawnOctopus();
 		eat (nutritionFact);
 	}
 

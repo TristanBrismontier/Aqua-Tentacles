@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemys : MonoBehaviour {
-
+public class Octpus : MonoBehaviour {
+	
 	public float range;
 	public float speed;
-
+	
 	void Start () {
 	}
-
+	
 	void Update () {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		transform.LookAt (player.transform.position);
@@ -18,7 +18,7 @@ public class Enemys : MonoBehaviour {
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		}
 	}
-
+	
 	public void OnDrawGizmos(){
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position,range);

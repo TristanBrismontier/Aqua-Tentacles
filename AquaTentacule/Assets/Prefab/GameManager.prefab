@@ -55,6 +55,7 @@ MonoBehaviour:
   - {fileID: 146090, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
   - {fileID: 157490, guid: 4b9fa89205d39364b8f161d2850f74ae, type: 2}
   - {fileID: 107486, guid: 865e059f11228f042b381f939632adf0, type: 2}
+  Octopus: {fileID: 150962, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

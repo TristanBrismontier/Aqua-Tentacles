@@ -66,7 +66,8 @@ public class GameManager : MonoBehaviour {
 		Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity);
 	}
 
-	public void RespawnOctopus(){
+	public void RespawnOctopus(int nutritionFact){
+		eat (nutritionFact);
 		float x = (float)(Random.Range(-maxRange,maxRange));
 		float y = (float)(Random.Range(-25,maxRange));
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -82,8 +83,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void eatFood(int nutritionFact){
-		life = life + nutritionFact;
 		AddFood ();
+		eat (nutritionFact);
+	}
+
+	private void eat (int nutritionFact){
+		life = life + nutritionFact;
 		player.Eat();
 		SoundManager.instance.RandomizeSfx(eatSounds);
 	}

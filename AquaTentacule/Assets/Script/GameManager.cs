@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour {
 		AddFood ();
 		player.Eat();
 		SoundManager.instance.RandomizeSfx(eatSounds);
+
 	}
 
 	void Update () {
@@ -80,6 +81,12 @@ public class GameManager : MonoBehaviour {
 		if (life > 150) {
 			life = 150;
 		}
+
+		if(life > 100){
+			float scale = Remap(life, 100 , 150, 1,3);
+			Player.instance.setScale(scale);
+		}
+
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
 		if(life<=0){
@@ -87,6 +94,10 @@ public class GameManager : MonoBehaviour {
 			Player.instance.transform.position = startPosition.position;
 		}
 
+	}
+
+	private  float Remap (this float value, float from1, float to1, float from2, float to2) {
+		return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 	}
 
 }

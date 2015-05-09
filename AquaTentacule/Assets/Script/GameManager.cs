@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 
 	public int maxRange;
 
-
+	public int frameCount = 0;
 	public AudioClip[] eatSounds;
 	public GameObject[] foods;
 	private Player player;
@@ -69,7 +69,6 @@ public class GameManager : MonoBehaviour {
 
 	public void eatFood(int nutritionFact){
 		life = life + nutritionFact;
-		Debug.Log(life);
 		AddFood ();
 		player.Eat();
 		SoundManager.instance.RandomizeSfx(eatSounds);
@@ -81,10 +80,9 @@ public class GameManager : MonoBehaviour {
 		if (life > 150) {
 			life = 150;
 		}
-
-		if(life > 100){
+		frameCount++;
+		if(frameCount %10 == 0 && life > 100){
 			float scale = Remap(life, 100 , 150, 1,3);
-			Debug.Log(life +"  | "+scale);
 			Player.instance.setScale(scale);
 		}
 

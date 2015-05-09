@@ -4,9 +4,9 @@ using System.Collections;
 public class FishEye : MonoBehaviour {
 	
 	public float rangeDash;
-	public float rangeAttack;
 	public float speed;
 	public SpriteRenderer debugSprite;
+	public int life = 3;
 
 	public Animator animator;
 	
@@ -26,19 +26,26 @@ public class FishEye : MonoBehaviour {
 		} else {
 			animator.SetBool ("Dash", false);
 		}
+	}
 
-		if (Vector3.Distance (transform.position, player.transform.position) < rangeAttack) {
+	void OnTriggerEnter2D(Collider2D other) {
+		
+		if (other.gameObject.tag == "Player") {
+			print ("Ennemi : " + life);
 			animator.SetBool ("Attack", true);
-			print("TOUCHE");
+			life -= 1;
+			if (life <= 0) {
+				//Instantiate (bulleExplosions, transform.position, transform.rotation);
+				//PlayerController.score++;
+				Destroy (gameObject);
+			}
 		} else {
-			animator.SetBool("Attack",false);
+			animator.SetBool ("Attack", false);
 		}
 	}
 
 	public void OnDrawGizmos(){
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position,rangeDash);
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(transform.position,rangeAttack);
 	}
 }

@@ -99,10 +99,12 @@ public class Player : MonoBehaviour
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+
 		if(other.gameObject.tag == "Zone1"){
 			StartCoroutine (VolumeDown(musicSource));
 		}
 	}
+
 	public void Eat(){
 		animator.SetTrigger("eat");
 	}

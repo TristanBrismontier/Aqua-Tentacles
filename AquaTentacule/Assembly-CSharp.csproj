@@ -52,6 +52,7 @@
      <Compile Include="Assets\Script\Food.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\LoadingScript.cs" />
+     <Compile Include="Assets\Script\Méduse.cs" />
      <Compile Include="Assets\Script\Octopus.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\SoundManager.cs" />

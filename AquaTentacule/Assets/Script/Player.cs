@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 	public float slowDown;
 	public float timeVolume;
 	private Animator animator;
-	public float dampTime = 0.8f;
+	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
 
 	public SpriteRenderer debugSprite;
@@ -42,7 +42,11 @@ public class Player : MonoBehaviour
 
 		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
 	}
-	
+
+	void Update (){
+		Debug.Log(startScale);
+	}
+
 	void FixedUpdate ()
 	{
 		if (Input.GetKey (KeyCode.Q)) {
@@ -69,14 +73,12 @@ public class Player : MonoBehaviour
 
 
 	void OnTriggerExit2D(Collider2D other) {
-		Debug.Log("Collide");
 		if(other.gameObject.tag == "Zone1"){
 			StartCoroutine (Volumeup(musicSource));
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("Collide");
 		if(other.gameObject.tag == "Zone1"){
 			StartCoroutine (VolumeDown(musicSource));
 		}

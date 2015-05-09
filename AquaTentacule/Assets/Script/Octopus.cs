@@ -42,18 +42,17 @@ public class Octopus : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
-<<<<<<< HEAD
+
 			GameManager.instance.eatOctoPus(nutritionFact);
 			Instantiate (bubbleExplosion, transform.position, transform.rotation);
 			Destroy(this.gameObject);
-=======
+
 			if(GameManager.instance.life > 80){
 				GameManager.instance.eatOctoPus(nutritionFact);
 				Destroy(this.gameObject);
 			}else{
 				ink();
 			}
->>>>>>> origin/master
 			
 		}
 		if(coll.gameObject.tag == "InhertElement"){

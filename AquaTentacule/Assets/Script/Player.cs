@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 	public float speedRotation;
 	public float force;
 	public float pushForce;
-	public float slowDown;
+	public float slowDown;	
 	public float timeVolume;
 	private Animator animator;
 	public float dampTime = 0.2f;

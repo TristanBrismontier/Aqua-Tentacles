@@ -45,6 +45,7 @@ MonoBehaviour:
   minFood: 100
   maxFood: 100
   maxRange: 40
+  frameCount: 0
   eatSounds:
   - {fileID: 8300000, guid: 93dcc28e6f93e1946bdb98173f64cf40, type: 3}
   - {fileID: 8300000, guid: 8c39a10e0b8e0734292721de97d069f9, type: 3}

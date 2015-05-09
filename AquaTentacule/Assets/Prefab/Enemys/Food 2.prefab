@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutritionFact: 8
   speedMax: 9
-  speedRotationMax: 20
+  speedRotationMax: 43.2000008
 --- !u!212 &21205602
 SpriteRenderer:
   m_ObjectHideFlags: 1

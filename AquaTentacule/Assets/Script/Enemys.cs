@@ -3,9 +3,6 @@ using System.Collections;
 
 public class Enemys : MonoBehaviour {
 
-	public Transform Target;
-	//private GameObject Enemy;
-	private GameObject Player;
 	private float range;
 	public float speed;
 
@@ -13,11 +10,14 @@ public class Enemys : MonoBehaviour {
 	}
 
 	void Update () {
-		transform.LookAt (Target.position);
-		transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
+		Gizmos.DrawSphere(transform.position,3f);
 
-		if (Vector3.Distance (transform.position, Target.position) > 1f) {
-			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		if (Vector3.Distance (transform.position, player.transform.position) < 3f) {
+				
+				transform.LookAt (player.transform.position);
+				transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
+				transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		}
 	}
 }

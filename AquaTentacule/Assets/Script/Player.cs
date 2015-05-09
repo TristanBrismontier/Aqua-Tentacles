@@ -24,7 +24,8 @@ public class Player : MonoBehaviour
 	public GameObject ten2;
 	public GameObject ten3;
 
-	private int inverted = 1;
+	private float inverted = 1.0f;
+
 	void Awake () {	
 		if (instance == null){
 			instance = this;
@@ -57,7 +58,7 @@ public class Player : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		if (inverted == 1) {
+		if (inverted == -1.0f) {
 			yield return new WaitForSeconds(30);
 		}
 		if (Input.GetKey (KeyCode.Q)) {

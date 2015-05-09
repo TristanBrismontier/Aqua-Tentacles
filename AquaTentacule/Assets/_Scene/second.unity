@@ -95,9 +95,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 114804517}
+  - 95: {fileID: 114804519}
   - 114: {fileID: 114804518}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Octopus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,17 +120,33 @@ Transform:
 --- !u!114 &114804518
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11463064, guid: 7437412bca78cce4dbf26ce72b07621b,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 114804516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5c103b82e3f2d4cb05698018ae10d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 68eaa9ede3af8a7468b2d7496dbf1f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 49.0800018
+  range: 6
   speed: 3
+--- !u!95 &114804519
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114804516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8490f075347a20498f95d4658e74777, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &123764287 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 192000, guid: a45928e908b216042b26c11481b674af, type: 2}
@@ -205,7 +222,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450530, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 8.013154e-05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 450530, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
       propertyPath: m_LocalRotation.w

@@ -8,6 +8,7 @@ public class Octopus : MonoBehaviour {
 	public float slowDown;
 	public int nutritionFact;
 	private Rigidbody2D rb;
+	private float speedDamp;
 	public SpriteRenderer debugSprite;
 
 	
@@ -16,6 +17,7 @@ public class Octopus : MonoBehaviour {
 		debugSprite.enabled = false;
 		float scale = (float) (Random.Range(50,130)/100);
 		Debug.Log ("Scale : "+ scale);
+		speedDamp = 0;
 		//transform.localScale = new Vector3(scale,scale,scale);
 	}
 
@@ -26,8 +28,11 @@ public class Octopus : MonoBehaviour {
 			transform.LookAt (player.transform.position);
 			transform.Rotate (new Vector3 (0, 90, 0), Space.Self);
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
+			speedDamp = speed;
 		}else{
-			rb.velocity = rb.velocity * slowDown;
+	
+			transform.Translate (new Vector3 (speedDamp * Time.deltaTime, 0, 0));
+			speedDamp = speedDamp * slowDown;
 
 		}
 	}

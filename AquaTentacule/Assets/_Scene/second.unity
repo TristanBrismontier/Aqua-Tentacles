@@ -132,7 +132,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11409254, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
       propertyPath: slowDown
-      value: .999899983
+      value: .99000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409254, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
+      propertyPath: force
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409254, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
+      propertyPath: pushForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409254, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409254, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
+      propertyPath: range
+      value: 9.60000038
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}

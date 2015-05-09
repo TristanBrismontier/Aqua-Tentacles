@@ -11,7 +11,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110759404}
+    m_StateMachine: {fileID: 110746674}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -20,9 +20,9 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_MultiThreadedStateMachine: 1
---- !u!1102 &110225418
+--- !u!1102 &110203576
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -39,24 +39,7 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: c57295f79c7150d4abbf03d77637efde, type: 2}
   m_Tag: 
---- !u!1102 &110244330
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OeilSwim
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 3f5b4def9f4947147afd7b682a06ff73, type: 2}
-  m_Tag: 
---- !u!1102 &110287452
+--- !u!1102 &110229686
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -73,7 +56,24 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: 06bec41655790b54b80f42c015ddf807, type: 2}
   m_Tag: 
---- !u!1107 &110759404
+--- !u!1102 &110291156
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OeilSwim
+  m_Speed: .300000012
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 3f5b4def9f4947147afd7b682a06ff73, type: 2}
+  m_Tag: 
+--- !u!1107 &110746674
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -82,24 +82,24 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 110244330}
-    m_Position: {x: 336, y: 0, z: 0}
+    m_State: {fileID: 110291156}
+    m_Position: {x: 348, y: 0, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110225418}
-    m_Position: {x: 432, y: 60, z: 0}
+    m_State: {fileID: 110203576}
+    m_Position: {x: 348, y: 204, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110287452}
-    m_Position: {x: 360, y: 120, z: 0}
+    m_State: {fileID: 110229686}
+    m_Position: {x: 348, y: 108, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110759404}
+      first: {fileID: 110746674}
       second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 110244330}
+  m_DefaultState: {fileID: 110291156}

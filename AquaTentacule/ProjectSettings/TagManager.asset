@@ -14,6 +14,7 @@ TagManager:
   - Zone4
   - Octo
   - FishEye
+  - meduse
   layers:
   - Default
   - TransparentFX

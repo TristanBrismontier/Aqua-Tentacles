@@ -14,11 +14,13 @@ public class Player : MonoBehaviour
 	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
 
+	public int timetoInverteBack = 10;
 	public float scaleRatio;
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
 	private Rigidbody2D rb;
 	private Vector3 startScale; 
+
 
 	public GameObject ten1;
 	public GameObject ten2;
@@ -50,16 +52,15 @@ public class Player : MonoBehaviour
 	}
 
 	void OnCollisionEnter2d(Collision2D coll){
-		if (coll.gameObject.tag == "player"){
+		if (coll.gameObject.tag == "meduse"){
 			inverted = -1.0f;
+			StartCoroutine(timer());
 		}
 	}
 	
 	void FixedUpdate ()
 	{
-		if (inverted == 1) {
-			yield return new WaitForSeconds(30);
-		}
+
 		if (Input.GetKey (KeyCode.Q)) {
 			rb.angularVelocity = speedRotation * inverted;
 		} else if (Input.GetKey (KeyCode.D)) {
@@ -80,6 +81,10 @@ public class Player : MonoBehaviour
 			rb.velocity = rb.velocity * slowDown;
 			animator.SetBool ("swim", false);
 		}
+	}
+	public IEnumerator timer(){
+		yield return new WaitForSeconds(timetoInverteBack);
+		inverted = 1;
 	}
 
 	void OnTriggerExit2D(Collider2D other) {

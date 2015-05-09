@@ -144,7 +144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!1001 &1053135498
 Prefab:
   m_ObjectHideFlags: 0
@@ -226,6 +226,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8275558, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
       propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210756, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275558, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:

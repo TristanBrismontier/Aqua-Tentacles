@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 	public GameObject ten2;
 	public GameObject ten3;
 
+	private int inverted = 1;
 	void Awake () {	
 		if (instance == null){
 			instance = this;

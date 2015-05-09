@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Méduse : MonoBehaviour {
+public class Meduse : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

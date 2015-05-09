@@ -12,6 +12,7 @@ TagManager:
   - Zone2
   - Zone3
   - Zone4
+  - Octo
   layers:
   - Default
   - TransparentFX

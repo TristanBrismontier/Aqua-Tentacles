@@ -13,7 +13,7 @@ public class Octpus : MonoBehaviour {
 
 	void Update () {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		Debug.Log (Vector3.Distance (transform.position, player.transform.position));
+
 		if (Vector3.Distance (transform.position, player.transform.position) < range) {
 			transform.LookAt (player.transform.position);
 			transform.Rotate (new Vector3 (0, -90, 0), Space.Self);

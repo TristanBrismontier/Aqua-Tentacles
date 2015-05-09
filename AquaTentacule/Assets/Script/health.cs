@@ -4,11 +4,12 @@ using System.Collections;
 
 public class health : MonoBehaviour {
 
-	public Scrollbar HealthBar;
+	public Slider Health;
+	public float HP;
 
-	void Damage (float value)
+	void Update ()
 	{
-		GameManager.instance.life -= value;
-		HealthBar.size = GameManager.instance.life / 100f;
+		HP = GameManager.instance.life;
+		Health.value = Mathf.MoveTowards(Health.value, HP, 1.0f);
 	}
 }

@@ -31,15 +31,14 @@ public class Octopus : MonoBehaviour {
 			speedDamp = speed;
 		}else{
 	
-			transform.Translate (new Vector3 (speedDamp * Time.deltaTime, 0, 0));
-			speedDamp = speedDamp * slowDown;
+		rb.velocity = Vector2.zero;
 
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
-			GameManager.instance.RespawnOctopus(nutritionFact);
+			GameManager.instance.eatOctoPus(nutritionFact);
 			Destroy(this.gameObject);
 			
 		}

@@ -42,8 +42,9 @@ MonoBehaviour:
   life: 100
   starving: 2
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
-  minFood: 100
-  maxFood: 100
+  minFood: 50
+  maxFood: 50
+  octopus: 3
   maxRange: 40
   frameCount: 0
   eatSounds:

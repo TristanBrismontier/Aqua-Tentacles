@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
 
-	private float scaleRatio;
+	public float scaleRatio;
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
 	private Rigidbody2D rb;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Octpus : MonoBehaviour {
+public class Octopus : MonoBehaviour {
 	
 	public float range;
 	public float speed;

@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 	public SpriteRenderer debugSprite;
 	public AudioSource musicSource;
 	private Rigidbody2D rb;
+	private float scaleRatio = 1;
+	private Vector3 startScale; 
 
 	void Awake () {	
 		if (instance == null){
@@ -36,6 +38,8 @@ public class Player : MonoBehaviour
 
 		debugSprite.enabled = false;
 		GameManager.instance.setPlayer(this);
+
+		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
 	}
 	
 	void FixedUpdate ()
@@ -78,6 +82,11 @@ public class Player : MonoBehaviour
 	}
 	public void Eat(){
 		animator.SetTrigger("eat");
+	}
+
+	public void setScale(float adj){
+		scaleRatio = Mathf.Clamp(scaleRatio +adj, 1 , 3);
+		transform.localScale = startScale * scaleRatio;
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {

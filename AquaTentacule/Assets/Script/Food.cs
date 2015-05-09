@@ -19,7 +19,7 @@ public class Food : MonoBehaviour {
 		Vector2 randomVector = Random.insideUnitCircle;
 		rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
 		transform.Rotate(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
-		rb.angularVelocity = (float)(Random.Range(6,speedRotationMax*10)/10);
+		rb.angularVelocity = (float)(Random.Range(10,speedRotationMax*10)/10);
 
 	}
 	

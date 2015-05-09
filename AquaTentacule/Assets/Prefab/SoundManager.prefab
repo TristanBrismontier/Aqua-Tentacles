@@ -40,7 +40,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .349999994
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -52,7 +52,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 108984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20096b08ad77e3e4ba5a4930057b2067, type: 3}
+  m_Script: {fileID: 11500000, guid: c2b57b9756346fd4cafbf5a80e0425d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   efxSource: {fileID: 8296446}

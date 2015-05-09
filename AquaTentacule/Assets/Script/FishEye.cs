@@ -7,6 +7,7 @@ public class FishEye : MonoBehaviour {
 	public float speed;
 	public SpriteRenderer debugSprite;
 	public int life = 3;
+	public GameObject bubbleExplosion;
 
 	public Animator animator;
 	
@@ -35,7 +36,7 @@ public class FishEye : MonoBehaviour {
 			animator.SetBool ("Attack", true);
 			life -= 1;
 			if (life <= 0) {
-				//Instantiate (bulleExplosions, transform.position, transform.rotation);
+				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				//PlayerController.score++;
 				Destroy (gameObject);
 			}

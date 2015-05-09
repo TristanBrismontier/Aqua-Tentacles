@@ -217,6 +217,10 @@ Prefab:
       propertyPath: m_Size.y
       value: 3.58598471
       objectReference: {fileID: 0}
+    - target: {fileID: 11448720, guid: 985efc834ea5df34bb26c65760e66699, type: 2}
+      propertyPath: bubbleExplosion
+      value: 
+      objectReference: {fileID: 126194, guid: 3abc899f7133a944fb6d5d5ce2889ca1, type: 2}
     m_RemovedComponents:
     - {fileID: 9517152, guid: 985efc834ea5df34bb26c65760e66699, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 985efc834ea5df34bb26c65760e66699, type: 2}
@@ -312,7 +316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400786, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 182176, guid: a7c329a726ad6924cb5e1b266ae89249, type: 2}
       propertyPath: m_Name
@@ -370,7 +374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 462508, guid: ae66f866fa837ae40930bfa3c910ff39, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 123372, guid: ae66f866fa837ae40930bfa3c910ff39, type: 2}
       propertyPath: m_IsActive
@@ -1832,7 +1836,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453988, guid: a45928e908b216042b26c11481b674af, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 493568, guid: a45928e908b216042b26c11481b674af, type: 2}
       propertyPath: m_LocalScale.x

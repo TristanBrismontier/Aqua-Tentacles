@@ -45,7 +45,6 @@ GameObject:
   - 114: {fileID: 11448720}
   - 61: {fileID: 6113738}
   - 212: {fileID: 21204084}
-  - 95: {fileID: 9517152}
   m_Layer: 0
   m_Name: FishEye
   m_TagString: FishEye
@@ -114,28 +113,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 167046}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -.453895479, y: -.107103989}
+  m_Offset: {x: -.144324839, y: .439196706}
   serializedVersion: 2
-  m_Size: {x: 3.86917973, y: 2.49338007}
---- !u!95 &9517152
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167046}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Size: {x: 4.48832226, y: 3.58598471}
 --- !u!95 &9530108
 Animator:
   serializedVersion: 3
@@ -165,9 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangeDash: 30
-  rangeAttack: 8
   speed: 1.5
   debugSprite: {fileID: 21286544}
+  life: 3
+  bubbleExplosion: {fileID: 0}
   animator: {fileID: 9530108}
 --- !u!212 &21204084
 SpriteRenderer:

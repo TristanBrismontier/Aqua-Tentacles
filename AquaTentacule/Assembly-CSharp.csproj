@@ -60,6 +60,7 @@
      <Compile Include="Assets\Script\Scaphandre.cs" />
      <Compile Include="Assets\Script\SoundManager.cs" />
      <Compile Include="Assets\Script\Tonneau.cs" />
+     <Compile Include="Assets\Script\UImanager.cs" />
      <Compile Include="Assets\Script\health.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

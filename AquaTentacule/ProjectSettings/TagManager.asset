@@ -15,6 +15,7 @@ TagManager:
   - Octo
   - FishEye
   - Meduse
+  - Tonneau
   layers:
   - Default
   - TransparentFX

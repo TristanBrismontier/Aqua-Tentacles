@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 	public int frameCount = 0;
 	public AudioClip[] eatSounds;
+	public AudioClip[] deadSounds;
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;
@@ -132,7 +133,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void eat (int nutritionFact){
-		Debug.Log(nutritionFact);
 		life = life + nutritionFact;
 		if(nutritionFact <0)
 			return;
@@ -160,8 +160,19 @@ public class GameManager : MonoBehaviour {
 	}
 	public void death(){
 		life = 100;
+		SoundManager.instance.RandomizeSfx(deadSounds);
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		player.transform.localScale = Vector3.zero;
+		Player.Instantiate(bubbleExplosionPlop,new Vector3( player.transform.position.x,player.transform.position.y,player.transform.position.z-1), player.transform.rotation);
+		StartCoroutine(deadPlayer());
+	}
+
+	public IEnumerator deadPlayer(){
+		yield return new WaitForSeconds(2);
+
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		player.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
 		Player.instance.resetMusique();
-		Player.Instantiate(bubbleExplosionPlop, transform.position, transform.rotation);
 		Player.instance.transform.position = startPosition.position;
 		foreach (GameObject gobj in instanciatesGameObjects)
 		{

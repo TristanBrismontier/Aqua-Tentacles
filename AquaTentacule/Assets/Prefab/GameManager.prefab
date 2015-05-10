@@ -53,6 +53,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8c39a10e0b8e0734292721de97d069f9, type: 3}
   - {fileID: 8300000, guid: 43d450c335018914e85a7342d82d0d30, type: 3}
   - {fileID: 8300000, guid: c756efa81de905a42a9691f4c36f8936, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: c2db9a6c426427649afff1025221cf83, type: 3}
+  - {fileID: 8300000, guid: 647e2d6e871240a49b54cdb860f4baad, type: 3}
+  - {fileID: 8300000, guid: a11c4caafcec56b43af85ea28e706121, type: 3}
+  - {fileID: 8300000, guid: c6b86e11163149348928918885fe2c09, type: 3}
+  - {fileID: 8300000, guid: 2db853350f599344dac8f540955201f8, type: 3}
   foods:
   - {fileID: 146090, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
   - {fileID: 157490, guid: 4b9fa89205d39364b8f161d2850f74ae, type: 2}

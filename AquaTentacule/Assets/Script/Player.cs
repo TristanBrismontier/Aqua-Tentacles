@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 	private Animator animator;
 	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
+	public float volumeMaxMusique;
 
 	public int timetoInverteBack = 10;
 	public float scaleRatio;
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour
 		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
 	}
 	public void resetMusique(){
-		musicSource1.volume = 1;
+		musicSource1.volume = volumeMaxMusique;
 		musicSource2.volume = 0;
 		musicSource3.volume = 0;
 		musicSource4.volume = 0;
@@ -160,7 +161,7 @@ public class Player : MonoBehaviour
 	}
 
 	private IEnumerator Volumeup (AudioSource source) {
-		while(source.volume <1){
+		while(source.volume <volumeMaxMusique){
 			yield return new WaitForSeconds(1/100);
 			source.volume = source.volume + 1/(timeVolume*100);
 		}

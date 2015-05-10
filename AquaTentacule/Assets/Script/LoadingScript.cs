@@ -6,10 +6,17 @@ public class LoadingScript : MonoBehaviour {
 	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
 	public Transform target;
+	public float smoothTime = 0.3F;
+	private float yVelocity = 0.0F;
 	public float paralaxRatio;
 
 	public GameObject background;
 	public GameObject gameManager;	
+
+	public float scaleRatio;
+	private float startScale; 
+
+	public Camera camera;
 
 	private Vector3 startPosition;
 	void Awake () {
@@ -18,11 +25,14 @@ public class LoadingScript : MonoBehaviour {
 	}
 
 	void Start () {
+		scaleRatio = 1;
+		startScale = camera.orthographicSize;
 		startPosition = new Vector3(0,0,20);
 	}
 
 	void Update () 
 	{
+		setScale(Player.instance.scaleRatio);
 		if (target)
 		{
 			Vector3 point = GetComponent<UnityEngine.Camera>().WorldToViewportPoint(target.position);
@@ -41,4 +51,11 @@ public class LoadingScript : MonoBehaviour {
 				);
 		}
 	}
+
+	public void setScale(float adj){
+		scaleRatio = Mathf.SmoothDamp(scaleRatio,adj,ref yVelocity, smoothTime);
+		camera.orthographicSize = startScale * scaleRatio;
+	}
+
+
 }

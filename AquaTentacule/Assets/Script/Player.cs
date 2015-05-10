@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 	public float volumeMaxMusique;
 
 	public int timetoInverteBack = 10;
-	public float scaleRatio;
+
 	public SpriteRenderer debugSprite;
 
 	public AudioSource musicSource1;
@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
 	public GameObject tentacool3;
 
 	private Rigidbody2D rb;
+	public float scaleRatio;
 	private Vector3 startScale; 
 	
 	private int countTenta;
@@ -168,7 +169,7 @@ public class Player : MonoBehaviour
 	}
 
 	public void setScale(float adj){
-		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.04f);
+		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.01f);
 		transform.localScale = startScale * scaleRatio;
 	}
 

@@ -55,6 +55,7 @@
      <Compile Include="Assets\Script\LoadingScript.cs" />
      <Compile Include="Assets\Script\Meduse.cs" />
      <Compile Include="Assets\Script\Octopus.cs" />
+     <Compile Include="Assets\Script\Oursins.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Scaphandre.cs" />
      <Compile Include="Assets\Script\SoundManager.cs" />

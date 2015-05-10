@@ -152,6 +152,9 @@ MonoBehaviour:
   damage: 83
   nutritionFact: 66
   bubbleExplosion: {fileID: 126194, guid: 18d6a99e8749ec244a178be91bace456, type: 2}
+  deaths:
+  - {fileID: 8300000, guid: 8cab47595d97b7f44bd44c8d11655eb8, type: 3}
+  - {fileID: 8300000, guid: 3a9cd50abbf1c6e4e9655455a40e4b0d, type: 3}
   animator: {fileID: 9530108}
 --- !u!212 &21204084
 SpriteRenderer:

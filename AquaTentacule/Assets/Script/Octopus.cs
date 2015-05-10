@@ -13,6 +13,9 @@ public class Octopus : MonoBehaviour {
 	public SpriteRenderer debugSprite;
 	public GameObject inkParticule;
 
+	public AudioClip[] crySounds;
+	public AudioClip[] deadSounds;
+
 	
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
@@ -41,6 +44,7 @@ public class Octopus : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
 			if(GameManager.instance.life > 80){
+				SoundManager.instance.RandomizeSfx(deadSounds);
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatOctoPus(nutritionFact);
 				Destroy(this.gameObject);
@@ -57,6 +61,7 @@ public class Octopus : MonoBehaviour {
 	}
 
 	public void ink(){
+		SoundManager.instance.RandomizeSfx(crySounds);
 		transform.Translate (new Vector3 (speed * 4 * Time.deltaTime, 0, 0));
 		GameObject particules = Instantiate(inkParticule, new Vector3(transform.position.x,transform.position.y,-5f), Quaternion.identity) as GameObject;
 		StartCoroutine(DestroyLater(particules));

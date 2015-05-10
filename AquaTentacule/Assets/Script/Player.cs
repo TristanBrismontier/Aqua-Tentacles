@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
 	public GameObject ten2;
 	public GameObject ten3;
 
+	private bool activateMusique;
+
 	private float inverted = 1;
 	void Awake () {	
 		if (instance == null){
@@ -59,12 +61,16 @@ public class Player : MonoBehaviour
 		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
 	}
 	public void resetMusique(){
+		activateMusique = true;
 		musicSource1.volume = volumeMaxMusique;
 		musicSource2.volume = 0;
 		musicSource3.volume = 0;
 		musicSource4.volume = 0;
 		musicSource5.volume = 0;
 		currentZone = 1 ;
+	}
+	public void resetM(){
+		activateMusique = false;
 	}
 
 	void OnCollisionEnter2d(Collision2D coll){
@@ -104,6 +110,8 @@ public class Player : MonoBehaviour
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
+		if(!activateMusique)
+			return;
 		if(other.gameObject.tag == "Zone1"){
 			currentZone = 2;
 			StartCoroutine (VolumeDown(musicSource1));
@@ -127,7 +135,8 @@ public class Player : MonoBehaviour
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-
+		if(!activateMusique)
+			return;
 		if(other.gameObject.tag == "Zone1" && currentZone == 2){
 			currentZone = 1;
 			StartCoroutine (Volumeup(musicSource1));
@@ -162,6 +171,8 @@ public class Player : MonoBehaviour
 
 	private IEnumerator Volumeup (AudioSource source) {
 		while(source.volume <volumeMaxMusique){
+			if(!activateMusique)
+				break;
 			yield return new WaitForSeconds(1/100);
 			source.volume = source.volume + 1/(timeVolume*100);
 		}
@@ -169,6 +180,8 @@ public class Player : MonoBehaviour
 
 	private IEnumerator VolumeDown (AudioSource source) {
 		while(source.volume > 0){
+			if(!activateMusique)
+				break;
 			yield return new WaitForSeconds(1/100);
 			source.volume = source.volume - 1/(timeVolume*100);
 		}

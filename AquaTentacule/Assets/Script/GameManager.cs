@@ -172,8 +172,10 @@ public class GameManager : MonoBehaviour {
 
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		player.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
-		Player.instance.resetMusique();
+		Player.instance.resetM();
 		Player.instance.transform.position = startPosition.position;
+		yield return new WaitForSeconds(0.5f);
+		Player.instance.resetMusique();
 		foreach (GameObject gobj in instanciatesGameObjects)
 		{
 			Destroy(gobj);

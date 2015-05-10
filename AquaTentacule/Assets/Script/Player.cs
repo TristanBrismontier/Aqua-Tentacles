@@ -26,13 +26,15 @@ public class Player : MonoBehaviour
 	public AudioSource musicSource5;
 	private int currentZone;
 
+	
+	public GameObject tentacool1;
+	public GameObject tentacool2;
+	public GameObject tentacool3;
+
 	private Rigidbody2D rb;
 	private Vector3 startScale; 
-
-
-	public GameObject ten1;
-	public GameObject ten2;
-	public GameObject ten3;
+	
+	private int countTenta;
 
 	private bool activateMusique;
 
@@ -68,6 +70,11 @@ public class Player : MonoBehaviour
 		musicSource4.volume = 0;
 		musicSource5.volume = 0;
 		currentZone = 1 ;
+
+		countTenta = 1;
+		tentacool1.transform.localScale = Vector3.zero;
+		tentacool2.transform.localScale = Vector3.zero;
+		tentacool3.transform.localScale = Vector3.zero;
 	}
 	public void resetM(){
 		activateMusique = false;
@@ -82,7 +89,6 @@ public class Player : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-
 		if (Input.GetKey (KeyCode.Q)) {
 			rb.angularVelocity = speedRotation * inverted;
 		} else if (Input.GetKey (KeyCode.D)) {
@@ -178,6 +184,36 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	public void spawnTenta(){
+
+		if(countTenta == 1){
+			Debug.Log("Spawn" + countTenta);
+			StartCoroutine(growTenta(tentacool1));
+			countTenta++;
+		}else if (countTenta == 2){
+			Debug.Log("Spawn" + countTenta);
+			StartCoroutine(growTenta(tentacool2));
+			countTenta++;
+		}else if( countTenta == 3){
+			Debug.Log("Spawn" + countTenta);
+			StartCoroutine(growTenta(tentacool3));
+			countTenta++;
+		}
+	}
+
+	private IEnumerator growTenta (GameObject tenta) {
+
+		float scale = 0;
+		while(scale < 1){
+			if(!activateMusique)
+				break;
+			yield return new WaitForSeconds(1/100);
+			scale += 0.01f;
+			Debug.Log(scale);
+			tenta.transform.localScale = new Vector3(scale,scale,1);
+		}
+	
+	}
 	private IEnumerator VolumeDown (AudioSource source) {
 		while(source.volume > 0){
 			if(!activateMusique)

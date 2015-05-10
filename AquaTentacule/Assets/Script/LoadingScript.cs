@@ -28,7 +28,7 @@ public class LoadingScript : MonoBehaviour {
 			Vector3 point = GetComponent<UnityEngine.Camera>().WorldToViewportPoint(target.position);
 			Vector3 delta = target.position - GetComponent<UnityEngine.Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
 			Vector3 destination = transform.position + delta;
-			destination = new Vector3(Mathf.Clamp(destination.x,-61f,61),Mathf.Clamp(destination.y,-47,52),destination.z);
+			destination = new Vector3(Mathf.Clamp(destination.x,-61f,61),Mathf.Clamp(destination.y,-52,52),destination.z);
 			//transform.position = new Vector3(destination.x, destination.y,transform.position.z);
 			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
 

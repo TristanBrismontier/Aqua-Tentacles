@@ -11,6 +11,7 @@ public class FishEye : MonoBehaviour {
 	public GameObject bubbleExplosion;
 	private Rigidbody2D rb;
 
+	public AudioClip[] deaths;
 	public Animator animator;
 	
 	void Start () {
@@ -49,6 +50,7 @@ public class FishEye : MonoBehaviour {
 			if (GameManager.instance.life >=120) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatFishEye(nutritionFact);
+				SoundManager.instance.RandomizeSfx(deaths);
 				//PlayerController.score++;
 				Destroy (gameObject);
 			}else{

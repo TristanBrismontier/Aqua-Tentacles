@@ -125,6 +125,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
+		Player.instance.spawnTenta();
 		eat (nutritionFact);
 	}
 	public void eatFishEye(int nutritionFact){

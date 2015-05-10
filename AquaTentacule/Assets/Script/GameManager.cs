@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour {
 	private Player player;
 	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
+	private bool canDie;
+
 	void Awake () {
 		if (instance == null){
 			instance = this;
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void initGame(){
+		canDie = true;
 		int foodNumber = Random.Range(minFood,maxFood);
 		for(int i = 0 ; i<foodNumber; i++){
 			AddFood();
@@ -156,20 +159,22 @@ public class GameManager : MonoBehaviour {
 		if(life<=0){
 			death();
 		}
-
 	}
 	public void death(){
-		life = 100;
-		SoundManager.instance.RandomizeSfx(deadSounds);
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		player.transform.localScale = Vector3.zero;
-		Player.Instantiate(bubbleExplosionPlop,new Vector3( player.transform.position.x,player.transform.position.y,player.transform.position.z-1), player.transform.rotation);
-		StartCoroutine(deadPlayer());
+		if(canDie){
+			canDie = false;
+			life = 100;
+			SoundManager.instance.RandomizeSfx(deadSounds);
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			player.transform.localScale = Vector3.zero;
+			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( player.transform.position.x,player.transform.position.y,player.transform.position.z-1), player.transform.rotation) as GameObject;
+			StartCoroutine(deadPlayer(buble));
+		}
 	}
 
-	public IEnumerator deadPlayer(){
+	public IEnumerator deadPlayer(GameObject buble){
 		yield return new WaitForSeconds(2);
-
+		Destroy(buble);
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		player.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
 		Player.instance.resetM();

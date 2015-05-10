@@ -29,6 +29,7 @@ public class FishEye : MonoBehaviour {
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		} else {
 			rb.velocity = Vector2.zero;
+			rb.angularVelocity = 0.0f;
 			animator.SetBool ("Dash", false);
 		}
 	}

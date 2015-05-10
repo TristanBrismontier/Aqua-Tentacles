@@ -32,7 +32,7 @@ public class Octopus : MonoBehaviour {
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 			speedDamp = speed;
 		}else{
-	
+		rb.angularVelocity = 0.0f;
 		rb.velocity = Vector2.zero;
 
 		}

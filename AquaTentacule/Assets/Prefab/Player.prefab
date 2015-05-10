@@ -575,6 +575,7 @@ MonoBehaviour:
   slowDown: .980000019
   timeVolume: 6
   dampTime: .200000003
+  volumeMaxMusique: .200000003
   timetoInverteBack: 10
   scaleRatio: 0
   debugSprite: {fileID: 21214214}

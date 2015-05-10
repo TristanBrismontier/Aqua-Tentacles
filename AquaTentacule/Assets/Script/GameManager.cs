@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour {
 	public void eatFood(int nutritionFact){
 		AddFood ();
 		eat (nutritionFact);
+		SoundManager.instance.RandomizeSfx(eatSounds);
 	}
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
@@ -140,7 +141,7 @@ public class GameManager : MonoBehaviour {
 		if(nutritionFact <0)
 			return;
 		player.Eat();
-		SoundManager.instance.RandomizeSfx(eatSounds);
+
 	}
 
 	void Update () {

@@ -145,13 +145,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68eaa9ede3af8a7468b2d7496dbf1f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15.3400002
+  range: 18.7800007
   speed: 1
   slowDown: 0
   nutritionFact: 20
   bubbleExplosion: {fileID: 126194, guid: 3abc899f7133a944fb6d5d5ce2889ca1, type: 2}
   debugSprite: {fileID: 21287548}
   inkParticule: {fileID: 123372, guid: ae66f866fa837ae40930bfa3c910ff39, type: 2}
+  crySounds:
+  - {fileID: 8300000, guid: 7177069fb35bde743818010535906ea7, type: 3}
+  - {fileID: 8300000, guid: 28c2a06f76e23ed4395e11f6e5f72c7f, type: 3}
+  - {fileID: 8300000, guid: 75bcb1ee86040be4c87b9da937a31234, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: 610ddb68b5a108948bfea60b4180275e, type: 3}
+  - {fileID: 8300000, guid: 1979cfe2ebfab7b4bace91a3ddf58d13, type: 3}
+  - {fileID: 8300000, guid: 604ef95d38d0ba84cb634c83c522598e, type: 3}
 --- !u!212 &21254998
 SpriteRenderer:
   m_ObjectHideFlags: 1

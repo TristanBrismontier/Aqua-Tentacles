@@ -167,6 +167,11 @@ public class Player : MonoBehaviour
 	public void Eat(){
 		animator.SetTrigger("eat");
 	}
+	public void  Hurt(){
+		Debug.Log ("hurt");
+		animator.SetTrigger("hurt");
+	}
+
 
 	public void setScale(float adj){
 		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.01f);

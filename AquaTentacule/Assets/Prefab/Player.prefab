@@ -850,9 +850,9 @@ MonoBehaviour:
   musicSource3: {fileID: 8281160}
   musicSource4: {fileID: 8205246}
   musicSource5: {fileID: 8264710}
-  tentacool1: {fileID: 0}
-  tentacool2: {fileID: 0}
-  tentacool3: {fileID: 0}
+  tentacool1: {fileID: 128422}
+  tentacool2: {fileID: 184218}
+  tentacool3: {fileID: 104020}
 --- !u!212 &21214214
 SpriteRenderer:
   m_ObjectHideFlags: 1

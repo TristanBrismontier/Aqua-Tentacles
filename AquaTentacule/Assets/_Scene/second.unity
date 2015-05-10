@@ -220,13 +220,17 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22436010, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: .530390322
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436010, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &512671345 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 184218, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-  m_PrefabInternal: {fileID: 647703970}
 --- !u!1001 &647703970
 Prefab:
   m_ObjectHideFlags: 0
@@ -266,33 +270,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400560, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: tentacool1
-      value: 
-      objectReference: {fileID: 1308323467}
-    - target: {fileID: 11400560, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: tentacool3
-      value: 
-      objectReference: {fileID: 1060004317}
-    - target: {fileID: 11400560, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: tentacool2
-      value: 
-      objectReference: {fileID: 512671345}
-    - target: {fileID: 21294636, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 492316, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .200000003
       objectReference: {fileID: 0}
-    - target: {fileID: 21272834, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 485736, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .200000003
       objectReference: {fileID: 0}
-    - target: {fileID: 21262626, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21226810, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 444980, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
@@ -385,18 +373,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb1f076474b78d54197090424568dfc9, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1060004317 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 104020, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-  m_PrefabInternal: {fileID: 647703970}
 --- !u!1 &1083893370 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 187778, guid: a45928e908b216042b26c11481b674af, type: 2}
   m_PrefabInternal: {fileID: 1989831115}
---- !u!1 &1308323467 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 128422, guid: db2b152f32fea03488b6acd36aeef824, type: 2}
-  m_PrefabInternal: {fileID: 647703970}
 --- !u!1001 &1379440804
 Prefab:
   m_ObjectHideFlags: 0
@@ -434,7 +414,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}

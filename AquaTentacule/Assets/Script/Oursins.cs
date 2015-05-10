@@ -4,24 +4,11 @@ using System.Collections;
 public class Oursins : MonoBehaviour {
 
 	public double damage;
-	private bool colision;
-
 
 	void OnCollisionEnter2D() {
-		colision = true;
+		Debug.Log("PLOP");
+		GameManager.instance.looseLife ((int)damage);
 	}
-
-	void OnCollisionExit2D(){
-		colision = false;
-	}
-
-	void Update () {
-		if (colision) {
-			print ("Aie");
-			GameManager.instance.looseLife ((int)damage);
-		}
-	}
-
 
 
 }

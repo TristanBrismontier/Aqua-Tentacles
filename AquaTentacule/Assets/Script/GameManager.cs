@@ -139,14 +139,11 @@ public class GameManager : MonoBehaviour {
 
 	private void eat (int nutritionFact){
 		life = life + nutritionFact;
-		if(nutritionFact <0)
-			return;
 		if(nutritionFact > 0){
 			player.Eat();
 		}else{
 			player.Hurt();
 		}
-			
 
 	}
 

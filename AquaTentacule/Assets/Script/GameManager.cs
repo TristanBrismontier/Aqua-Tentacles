@@ -141,10 +141,7 @@ public class GameManager : MonoBehaviour {
 		life = life + nutritionFact;
 		if(nutritionFact > 0){
 			player.Eat();
-		}else{
-			player.Hurt();
 		}
-
 	}
 
 	void Update () {

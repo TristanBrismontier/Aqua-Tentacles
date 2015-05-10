@@ -48,10 +48,14 @@ TextureImporter:
   textureType: 8
   buildTargetSettings:
   - buildTarget: Android
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     textureFormat: -1
-    compressionQuality: 100
+    compressionQuality: 50
   - buildTarget: Web
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: Standalone
     maxTextureSize: 8192
     textureFormat: -1
     compressionQuality: 50

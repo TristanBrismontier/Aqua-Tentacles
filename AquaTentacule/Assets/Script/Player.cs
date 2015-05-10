@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
 	private bool activateMusique;
 
-	private float inverted = 1;
+	private float inverted = 1.0f;
 	void Awake () {	
 		if (instance == null){
 			instance = this;
@@ -72,14 +72,7 @@ public class Player : MonoBehaviour
 	public void resetM(){
 		activateMusique = false;
 	}
-
-	void OnCollisionEnter2d(Collision2D coll){
-		if (coll.gameObject.tag == "meduse"){
-			inverted = -1.0f;
-			StartCoroutine(timer());
-		}
-	}
-	
+		
 	void FixedUpdate ()
 	{
 
@@ -106,7 +99,7 @@ public class Player : MonoBehaviour
 	}
 	public IEnumerator timer(){
 		yield return new WaitForSeconds(timetoInverteBack);
-		inverted = 1;
+		inverted = 1.0f;
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
@@ -156,6 +149,10 @@ public class Player : MonoBehaviour
 			currentZone = 4;
 			StartCoroutine (Volumeup(musicSource4));
 			StartCoroutine (VolumeDown(musicSource5));
+		}
+		if (other.gameObject.tag == "Meduse") {
+			inverted = -1.0f;
+			StartCoroutine(timer());
 		}
 
 	}

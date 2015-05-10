@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453468}
   - 212: {fileID: 21202324}
+  - 114: {fileID: 11412798}
   m_Layer: 0
   m_Name: Oursins
   m_TagString: InhertElement
@@ -264,6 +265,17 @@ BoxCollider2D:
   m_Offset: {x: .0278077126, y: -.111226402}
   serializedVersion: 2
   m_Size: {x: 1.46387231, y: 2.39755249}
+--- !u!114 &11412798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13849e5159510e4189f75fe883874d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21202324
 SpriteRenderer:
   m_ObjectHideFlags: 1

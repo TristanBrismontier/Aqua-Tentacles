@@ -6,7 +6,6 @@ public class UImanager : MonoBehaviour {
 	public GameObject StartMenu;
 	
 	public void NewGame() {
-		print ("ok");
 		Application.LoadLevel("Main");
 	}
 	

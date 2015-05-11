@@ -52,7 +52,7 @@ TextureImporter:
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: Web
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: Standalone

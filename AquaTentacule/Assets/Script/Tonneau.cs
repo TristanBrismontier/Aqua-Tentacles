@@ -39,10 +39,10 @@ public class Tonneau : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
-		
 		if(coll.gameObject.tag == "InhertElement"){
 			Vector2 randomVector = Random.insideUnitCircle;
-			rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
+			if(rb != null)
+				rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
 		}
 		
 	}

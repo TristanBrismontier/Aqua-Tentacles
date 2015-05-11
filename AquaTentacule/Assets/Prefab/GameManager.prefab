@@ -42,9 +42,9 @@ MonoBehaviour:
   life: 100
   starving: 2
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
-  minFood: 75
-  maxFood: 75
-  octopus: 5
+  minFood: 100
+  maxFood: 100
+  octopus: 6
   FishCount: 2
   maxRange: 40
   frameCount: 0
@@ -54,11 +54,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 43d450c335018914e85a7342d82d0d30, type: 3}
   - {fileID: 8300000, guid: c756efa81de905a42a9691f4c36f8936, type: 3}
   deadSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 2db853350f599344dac8f540955201f8, type: 3}
+  - {fileID: 8300000, guid: c6b86e11163149348928918885fe2c09, type: 3}
+  - {fileID: 8300000, guid: a11c4caafcec56b43af85ea28e706121, type: 3}
+  - {fileID: 8300000, guid: 647e2d6e871240a49b54cdb860f4baad, type: 3}
+  - {fileID: 8300000, guid: c2db9a6c426427649afff1025221cf83, type: 3}
   foods:
   - {fileID: 146090, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
   - {fileID: 157490, guid: 4b9fa89205d39364b8f161d2850f74ae, type: 2}

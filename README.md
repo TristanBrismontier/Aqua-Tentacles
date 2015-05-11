@@ -9,14 +9,14 @@ The project was realized with Unity can be imported directly.
 
 ## Credits
 
-Maud Boué - project manager and graphic designer
-Kevin Kerisit - graphic designer
+*Maud Boué - project manager and graphic designer
+*Kevin Kerisit - graphic designer
 
-Antoine Renaud - sound designer
+*Antoine Renaud - sound designer
 
-Julien Bavoysi - developer
-Thomas Picard - developer
-Tristan Brismontier - developer
+*Julien Bavoysi - developer
+*Thomas Picard - developer
+*Tristan Brismontier - developer
 
 ## License
 ![License](https://i.creativecommons.org/l/by/4.0/88x31.png)

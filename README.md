@@ -11,9 +11,7 @@ The project was realized with Unity can be imported directly.
 
 * Maud Boué - project manager and graphic designer
 * Kevin Kerisit - graphic designer
-
 * Antoine Renaud - sound designer
-
 * Julien Bavoysi - developer
 * Thomas Picard - developer
 * Tristan Brismontier - developer

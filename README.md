@@ -7,7 +7,7 @@ This game was develop as part of GameDevParty # 8 . 72h to develop a video game.
 
 The project was realized with Unity can be imported directly.
 
-![preview](https://raw.github.com/TristanBrismontier/TristanBrismontier.github.io/blob/master/images/aqua.png)
+![preview](https://github.com/TristanBrismontier/TristanBrismontier.github.io/blob/master/images/aqua.png)
 
 ## Credits
 

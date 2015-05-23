@@ -83,26 +83,23 @@ public class Player : MonoBehaviour
 		
 	void FixedUpdate ()
 	{
-		if (Input.GetKey (KeyCode.Q)) {
-			rb.angularVelocity = speedRotation * inverted;
-		} else if (Input.GetKey (KeyCode.D)) {
-			rb.angularVelocity = -speedRotation * inverted;
-		} else {
-			rb.angularVelocity = 0f;
+
+		float rotation = Input.GetAxis("Horizontal") * -1 ;
+		if(Mathf.Abs(rotation)>= 0.1f){
+			rb.angularVelocity = rotation * inverted * speedRotation;
+		}else{
+			rb.angularVelocity = 0;
 		}
-		
-		Vector2 forceVect = transform.up * Mathf.Pow (force, pushForce);
-		
-		if (Input.GetKey (KeyCode.Z)) {
+				
+		Vector2 forceVect =Input.GetAxis("Vertical")* transform.up * Mathf.Pow (force, pushForce);
+		if(Mathf.Abs(Input.GetAxis("Vertical"))>= 0.5f){
 			rb.AddForce (forceVect * inverted);
 			animator.SetBool ("swim", true);
-		} else if (Input.GetKey (KeyCode.S)) {
-			rb.AddForce (-forceVect * inverted);
-			animator.SetBool ("swim", true);
-		} else {
+		}else{
 			rb.velocity = rb.velocity * slowDown;
 			animator.SetBool ("swim", false);
 		}
+
 	}
 	public IEnumerator timer(){
 		yield return new WaitForSeconds(timetoInverteBack);

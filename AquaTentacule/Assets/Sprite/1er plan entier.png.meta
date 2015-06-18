@@ -52,11 +52,15 @@ TextureImporter:
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: Web
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: Standalone
     maxTextureSize: 8192
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: WebGL
+    maxTextureSize: 4096
     textureFormat: -1
     compressionQuality: 50
   spriteSheet:

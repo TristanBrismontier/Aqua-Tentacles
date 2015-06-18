@@ -47,19 +47,20 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\BubblesFollower.cs" />
-     <Compile Include="Assets\Script\Enemys.cs" />
-     <Compile Include="Assets\Script\Fastfish.cs" />
-     <Compile Include="Assets\Script\FishEye.cs" />
-     <Compile Include="Assets\Script\Food.cs" />
+     <Compile Include="Assets\Script\Ennemy\Enemys.cs" />
+     <Compile Include="Assets\Script\Ennemy\Fastfish.cs" />
+     <Compile Include="Assets\Script\Ennemy\FishEye.cs" />
+     <Compile Include="Assets\Script\Ennemy\Food.cs" />
+     <Compile Include="Assets\Script\Ennemy\Meduse.cs" />
+     <Compile Include="Assets\Script\Ennemy\Octopus.cs" />
+     <Compile Include="Assets\Script\Ennemy\Oursins.cs" />
+     <Compile Include="Assets\Script\Ennemy\Scaphandre.cs" />
+     <Compile Include="Assets\Script\Ennemy\Tonneau.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\LoadingScript.cs" />
-     <Compile Include="Assets\Script\Meduse.cs" />
-     <Compile Include="Assets\Script\Octopus.cs" />
-     <Compile Include="Assets\Script\Oursins.cs" />
      <Compile Include="Assets\Script\Player.cs" />
-     <Compile Include="Assets\Script\Scaphandre.cs" />
-     <Compile Include="Assets\Script\SoundManager.cs" />
-     <Compile Include="Assets\Script\Tonneau.cs" />
+     <Compile Include="Assets\Script\Sound\MusicManager.cs" />
+     <Compile Include="Assets\Script\Sound\SoundManager.cs" />
      <Compile Include="Assets\Script\UImanager.cs" />
      <Compile Include="Assets\Script\health.cs" />
  <Reference Include="UnityEngine.UI">

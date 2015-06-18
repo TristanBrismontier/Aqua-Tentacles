@@ -43,7 +43,7 @@ public class Octopus : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
-			if(GameManager.instance.life > 80){
+			if(randomStat(10)){
 				SoundManager.instance.RandomizeSfx(deadSounds);
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatOctoPus(nutritionFact);
@@ -51,15 +51,17 @@ public class Octopus : MonoBehaviour {
 			}else{
 				ink();
 			}
-			
 		}
 		if(coll.gameObject.tag == "InhertElement"){
 			Vector2 randomVector = Random.insideUnitCircle;
 			//rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
 		}
-		
 	}
 
+	private bool randomStat(int percent){
+		int random = Random.Range(0,100);
+		return random>=percent;
+	}
 	public void ink(){
 		SoundManager.instance.RandomizeSfx(crySounds);
 		transform.Translate (new Vector3 (speed * 4 * Time.deltaTime, 0, 0));

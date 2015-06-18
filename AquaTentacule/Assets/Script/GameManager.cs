@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	public int maxFood;
 	public int octopus;
 	public int FishCount;
+	public bool playerHasTenta;
 
 	public int maxRange;
 
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void initGame(){
+		playerHasTenta = false;
 		canDie = true;
 		int foodNumber = Random.Range(minFood,maxFood);
 		for(int i = 0 ; i<foodNumber; i++){
@@ -107,6 +109,7 @@ public class GameManager : MonoBehaviour {
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
 		Player.instance.spawnTenta();
+		playerHasTenta = true;
 		eat (nutritionFact);
 	}
 	public void eatFishEye(int nutritionFact){

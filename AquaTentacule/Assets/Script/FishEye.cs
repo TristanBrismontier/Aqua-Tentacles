@@ -23,10 +23,11 @@ public class FishEye : MonoBehaviour {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		
 		if (Vector3.Distance (transform.position, player.transform.position) < rangeDash) {
+			int eatable = (GameManager.instance.playerHasTenta)?-1:1;
 			animator.SetBool ("Dash", true);
 			speed = 4;
 			transform.LookAt (player.transform.position);
-			transform.Rotate (new Vector3 (0, -90, 0), Space.Self);
+			transform.Rotate (new Vector3 (0, -90*eatable, 0), Space.Self);
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		} else {
 			rb.velocity = Vector2.zero;
@@ -45,7 +46,6 @@ public class FishEye : MonoBehaviour {
 
 	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
-			Debug.Log("OOOOOO");
 			animator.SetBool ("Attack", true);
 			if (GameManager.instance.life >=120) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);

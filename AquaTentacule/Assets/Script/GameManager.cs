@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour {
 
 	private void eat(int nutritionFact){
 		life = life + nutritionFact;
+		Debug.Log(life);
 		if(nutritionFact > 0){
 			player.Eat();
 		}
@@ -144,17 +145,20 @@ public class GameManager : MonoBehaviour {
 			canDie = false;
 			life = 100;
 			SoundManager.instance.RandomizeSfx(deadSounds);
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( player.transform.position.x,player.transform.position.y,player.transform.position.z-1), player.transform.rotation) as GameObject;
+			GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+			playerGO.transform.localScale = new Vector3(0f,0f,0f);
+			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( playerGO.transform.position.x,playerGO.transform.position.y,playerGO.transform.position.z-1), playerGO.transform.rotation) as GameObject;
 			StartCoroutine(deadPlayer(buble));
 		}
 	}
 
 	public IEnumerator deadPlayer(GameObject buble){
 		yield return new WaitForSeconds(2);
+	
 		Destroy(buble);
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		player.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
+		GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+		playerGO.SetActive(true);
+		playerGO.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
 		Player.instance.resetM();
 		Player.instance.transform.position = startPosition.position;
 		yield return new WaitForSeconds(0.5f);

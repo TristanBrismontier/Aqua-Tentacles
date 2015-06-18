@@ -47,7 +47,7 @@ public class FishEye : MonoBehaviour {
 	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
 			animator.SetBool ("Attack", true);
-			if (GameManager.instance.life >=120) {
+			if (GameManager.instance.playerHasTenta) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatFishEye(nutritionFact);
 				SoundManager.instance.RandomizeSfx(deaths);

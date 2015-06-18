@@ -60,7 +60,8 @@ public class Octopus : MonoBehaviour {
 
 	private bool randomStat(int percent){
 		int random = Random.Range(0,100);
-		return random>=percent;
+		Debug.Log("##### "+random);
+		return random<=percent;
 	}
 	public void ink(){
 		SoundManager.instance.RandomizeSfx(crySounds);

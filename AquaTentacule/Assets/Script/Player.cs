@@ -171,7 +171,6 @@ public class Player : MonoBehaviour
 
 
 	public void setScale(float adj){
-		scaleRatio = Mathf.MoveTowards(scaleRatio,adj,0.01f);
 		transform.localScale = startScale * scaleRatio;
 	}
 

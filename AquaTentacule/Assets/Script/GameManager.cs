@@ -14,10 +14,10 @@ public class GameManager : MonoBehaviour {
 	public int maxFood;
 	public int octopus;
 	public int FishCount;
+	public bool playerHasTenta;
 
 	public int maxRange;
 
-	public int frameCount = 0;
 	public AudioClip[] eatSounds;
 	public AudioClip[] deadSounds;
 	public GameObject[] foods;
@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void initGame(){
+		playerHasTenta = false;
 		canDie = true;
 		int foodNumber = Random.Range(minFood,maxFood);
 		for(int i = 0 ; i<foodNumber; i++){
@@ -70,6 +71,22 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void AddFood(){
+		GameObject foodChoice = foods[Random.Range (0, foods.Length)];
+		GameObject go = Instantiate(foodChoice,getLimitedRandomPos(), Quaternion.identity)as GameObject;
+		instanciatesGameObjects.Add(go);
+	}
+	
+	public void RespawnOctopus(){
+		GameObject go = Instantiate(Octopus, getLimitedRandomPos(), Quaternion.identity) as GameObject;
+		instanciatesGameObjects.Add(go);
+	}
+
+	public void RespawnFishEye(){
+		GameObject go = Instantiate(FishEye, getLimitedRandomPos(), Quaternion.identity) as GameObject;
+		instanciatesGameObjects.Add(go);
+	}
+
+	private Vector3 getLimitedRandomPos(){
 		float x = (float)(Random.Range(-maxRange,maxRange));
 		float y = (float)(Random.Range(-maxRange,maxRange));
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -81,41 +98,7 @@ public class GameManager : MonoBehaviour {
 		if( Mathf.Abs(deltaY) < 3.1f ){
 			y=y+((deltaY<=0)?-3:3);
 		}
-		GameObject foodChoice = foods[Random.Range (0, foods.Length)];
-		GameObject go = Instantiate(foodChoice, new Vector3( x, y, 0), Quaternion.identity)as GameObject;
-		instanciatesGameObjects.Add(go);
-	}
-
-	public void RespawnOctopus(){
-		float x = (float)(Random.Range(-maxRange,maxRange));
-		float y = (float)(Random.Range(-25,maxRange));
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		float deltaX = x  - player.transform.position.x;
-		float deltaY = y  - player.transform.position.y;
-		if( Mathf.Abs(deltaX) < 3.1f ){
-			x=x+((deltaX<=0)?-3:3);
-		}
-		if( Mathf.Abs(deltaY) < 3.1f ){
-			y=y+((deltaY<=0)?-3:3);
-		}
-		GameObject go = Instantiate(Octopus, new Vector3( x, y, 0), Quaternion.identity) as GameObject;
-		instanciatesGameObjects.Add(go);
-	}
-
-	public void RespawnFishEye(){
-		float x = (float)(Random.Range(-maxRange,maxRange));
-		float y = (float)(Random.Range(10,maxRange));
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		float deltaX = x  - player.transform.position.x;
-		float deltaY = y  - player.transform.position.y;
-		if( Mathf.Abs(deltaX) < 3.1f ){
-			x=x+((deltaX<=0)?-3:3);
-		}
-		if( Mathf.Abs(deltaY) < 3.1f ){
-			y=y+((deltaY<=0)?-3:3);
-		}
-		GameObject go = Instantiate(FishEye, new Vector3( x, y, 0), Quaternion.identity) as GameObject;
-		instanciatesGameObjects.Add(go);
+		return new Vector3( x, y, 0);
 	}
 
 	public void eatFood(int nutritionFact){
@@ -126,6 +109,7 @@ public class GameManager : MonoBehaviour {
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
 		Player.instance.spawnTenta();
+		playerHasTenta = true;
 		eat (nutritionFact);
 	}
 	public void eatFishEye(int nutritionFact){
@@ -137,8 +121,9 @@ public class GameManager : MonoBehaviour {
 		eat (damage*-1);
 	}
 
-	private void eat (int nutritionFact){
+	private void eat(int nutritionFact){
 		life = life + nutritionFact;
+		Debug.Log(life);
 		if(nutritionFact > 0){
 			player.Eat();
 		}
@@ -149,12 +134,6 @@ public class GameManager : MonoBehaviour {
 		if (life > 150) {
 			life = 150;
 		}
-		frameCount++;
-		if(frameCount %10 == 0 && life > 100){
-			float scale = Remap(life, 100 , 150, 1,3);
-			Player.instance.setScale(scale);
-		}
-
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
 		if(life<=0){
@@ -166,31 +145,29 @@ public class GameManager : MonoBehaviour {
 			canDie = false;
 			life = 100;
 			SoundManager.instance.RandomizeSfx(deadSounds);
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			player.transform.localScale = Vector3.zero;
-			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( player.transform.position.x,player.transform.position.y,player.transform.position.z-1), player.transform.rotation) as GameObject;
+			GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+			playerGO.transform.localScale = new Vector3(0f,0f,0f);
+			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( playerGO.transform.position.x,playerGO.transform.position.y,playerGO.transform.position.z-1), playerGO.transform.rotation) as GameObject;
 			StartCoroutine(deadPlayer(buble));
 		}
 	}
 
 	public IEnumerator deadPlayer(GameObject buble){
 		yield return new WaitForSeconds(2);
+	
 		Destroy(buble);
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		player.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
-		Player.instance.resetM();
+		GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+		playerGO.SetActive(true);
+		playerGO.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
+		MusicManager.instance.resetM();
 		Player.instance.transform.position = startPosition.position;
 		yield return new WaitForSeconds(0.5f);
-		Player.instance.resetMusique();
+		Player.instance.resetPlayer();
 		foreach (GameObject gobj in instanciatesGameObjects)
 		{
 			Destroy(gobj);
 		}
 		initGame();
-	}
-
-	private  float Remap (this float value, float from1, float to1, float from2, float to2) {
-		return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 	}
 
 }

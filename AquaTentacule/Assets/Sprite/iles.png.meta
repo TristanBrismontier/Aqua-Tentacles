@@ -48,7 +48,11 @@ TextureImporter:
   textureType: 8
   buildTargetSettings:
   - buildTarget: Web
-    maxTextureSize: 4096
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: WebGL
+    maxTextureSize: 2048
     textureFormat: -1
     compressionQuality: 50
   spriteSheet:

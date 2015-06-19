@@ -40,10 +40,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
-  starving: 2
+  starving: .100000001
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
-  minFood: 100
-  maxFood: 100
+  minFood: 50
+  maxFood: 50
   octopus: 6
   FishCount: 2
   maxRange: 40
@@ -72,7 +72,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: minFood
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxFood
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: starving
+      value: .100000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197372}

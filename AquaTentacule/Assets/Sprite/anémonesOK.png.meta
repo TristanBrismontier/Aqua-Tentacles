@@ -51,6 +51,10 @@ TextureImporter:
     maxTextureSize: 8192
     textureFormat: -1
     compressionQuality: 50
+  - buildTarget: WebGL
+    maxTextureSize: 1024
+    textureFormat: -1
+    compressionQuality: 50
   spriteSheet:
     sprites: []
   spritePackingTag: 

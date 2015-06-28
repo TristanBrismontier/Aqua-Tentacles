@@ -57,8 +57,11 @@
      <Compile Include="Assets\Script\Ennemy\Scaphandre.cs" />
      <Compile Include="Assets\Script\Ennemy\Tonneau.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
+     <Compile Include="Assets\Script\Labyrinth\LabyTileExitCheck.cs" />
+     <Compile Include="Assets\Script\Labyrinth\LabyrinthManager.cs" />
      <Compile Include="Assets\Script\LoadingScript.cs" />
      <Compile Include="Assets\Script\Player.cs" />
+     <Compile Include="Assets\Script\PlayerInfo.cs" />
      <Compile Include="Assets\Script\Sound\MusicManager.cs" />
      <Compile Include="Assets\Script\Sound\SoundManager.cs" />
      <Compile Include="Assets\Script\UImanager.cs" />

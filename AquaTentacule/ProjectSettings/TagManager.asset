@@ -16,7 +16,10 @@ TagManager:
   - FishEye
   - Meduse
   - Tonneau
-  - NE
+  - North
+  - East
+  - South
+  - West
   layers:
   - Default
   - TransparentFX

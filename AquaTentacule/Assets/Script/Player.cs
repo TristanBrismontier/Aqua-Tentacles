@@ -28,9 +28,6 @@ public class Player : MonoBehaviour
 	private Vector3 startScale; 
 	
 	public int countTenta;
-
-
-
 	private float inverted = 1.0f;
 
 	void Start()
@@ -105,17 +102,12 @@ public class Player : MonoBehaviour
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag == "NE"){
-			Debug.Log("Trigger Dude");
-			GameManager.instance.loadNELevel();
-			return;
-		}
 		if(other.gameObject.tag == "Zone1" && currentZone == 2){
 			currentZone = 1;
 		}
 		if(other.gameObject.tag == "Zone2" && currentZone == 3){
 			currentZone = 2;
-		}
+		}	
 		if(other.gameObject.tag == "Zone3" && currentZone == 4){
 			currentZone = 3;
 		}
@@ -161,6 +153,13 @@ public class Player : MonoBehaviour
 			scale += 0.01f;
 			tenta.transform.localScale = new Vector3(scale,scale,1);
 		}
-	
+	}
+
+	public void setVelocity(Vector2 velo){
+		rb.velocity = velo;
+	}
+
+	public Vector2 getVelocity(){
+		return rb.velocity;
 	}
 }

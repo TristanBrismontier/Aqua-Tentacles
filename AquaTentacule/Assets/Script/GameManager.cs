@@ -14,10 +14,9 @@ public class GameManager : MonoBehaviour {
 	public int maxFood;
 	public int octopus;
 	public int FishCount;
-	public bool playerHasTenta;
-	public int tentaCount;
-
 	public int maxRange;
+
+	public PlayerInfo playerInfo = new PlayerInfo();
 
 	public AudioClip[] eatSounds;
 	public AudioClip[] deadSounds;
@@ -26,7 +25,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject FishEye;
 	public GameObject bubbleExplosionPlop;
 	private Player player;
-	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
+		private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
 	private bool canDie;
 
@@ -48,14 +47,14 @@ public class GameManager : MonoBehaviour {
 
 	public void setPlayer(Player _player){
 		player = _player;
-		player.setEvolution(tentaCount);
+		playerInfo.restorePlayerInfo(player);
 		startPosition.position = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
 	}
 
 	public void initGame(){
-		playerHasTenta = false;
+		playerInfo.playerHasTenta = false;
 		canDie = true;
-		tentaCount = 0;
+		playerInfo.tentaCount = 0;
 		int foodNumber = Random.Range(minFood,maxFood);
 		for(int i = 0 ; i<foodNumber; i++){
 			AddFood();
@@ -109,7 +108,7 @@ public class GameManager : MonoBehaviour {
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
 		player.spawnTenta();
-		playerHasTenta = true;
+		playerInfo.playerHasTenta = true;
 		eat (nutritionFact);
 	}
 	public void eatFishEye(int nutritionFact){
@@ -141,10 +140,10 @@ public class GameManager : MonoBehaviour {
 			death();
 		}
 	}
-
-	public void loadNELevel(){
-		tentaCount = player.countTenta;
-		Application.LoadLevel("FourDir");
+	
+	public void loadLevel(string name, Vector3 startPos){
+		playerInfo.saveInfo(player,startPos);
+		Application.LoadLevel(name);
 	}
 
 	public void death(){

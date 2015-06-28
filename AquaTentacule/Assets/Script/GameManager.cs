@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour {
 
 	public void setPlayer(Player _player){
 		player = _player;
+		startPosition.position = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
 	}
 
 	public void initGame(){
@@ -64,10 +65,6 @@ public class GameManager : MonoBehaviour {
 		for(int i = 0 ; i<FishCount; i++){
 			RespawnFishEye();
 		}
-
-		Vector3 playerPos = Player.instance.transform.position;
-		startPosition.position = new Vector3(playerPos.x,playerPos.y,playerPos.z);
-			
 	}
 
 	public void AddFood(){
@@ -108,7 +105,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
-		Player.instance.spawnTenta();
+		player.spawnTenta();
 		playerHasTenta = true;
 		eat (nutritionFact);
 	}
@@ -119,6 +116,7 @@ public class GameManager : MonoBehaviour {
 
 	public void looseLife(int damage){
 		eat (damage*-1);
+		player.Hurt();
 	}
 
 	private void eat(int nutritionFact){
@@ -140,6 +138,12 @@ public class GameManager : MonoBehaviour {
 			death();
 		}
 	}
+
+	public void loadNELevel(){
+		Debug.Log("YEAH FTW");
+		Application.LoadLevel("FourDir");
+	}
+
 	public void death(){
 		if(canDie){
 			canDie = false;
@@ -160,9 +164,9 @@ public class GameManager : MonoBehaviour {
 		playerGO.SetActive(true);
 		playerGO.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
 		MusicManager.instance.resetM();
-		Player.instance.transform.position = startPosition.position;
+		player.transform.position = startPosition.position;
 		yield return new WaitForSeconds(0.5f);
-		Player.instance.resetPlayer();
+		player.resetPlayer();
 		foreach (GameObject gobj in instanciatesGameObjects)
 		{
 			Destroy(gobj);

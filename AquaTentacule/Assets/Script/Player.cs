@@ -4,7 +4,6 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public static Player instance = null;
 	public float speedRotation;
 	public float force;
 	public float pushForce;
@@ -33,17 +32,6 @@ public class Player : MonoBehaviour
 
 
 	private float inverted = 1.0f;
-	void Awake () {	
-		if (instance == null){
-			instance = this;
-		}
-		else if(instance != this)
-		{
-			Destroy(gameObject);
-		}
-		
-		DontDestroyOnLoad(gameObject);
-	}
 
 	void Start()
 	{
@@ -107,6 +95,11 @@ public class Player : MonoBehaviour
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.tag == "NE"){
+			Debug.Log("Trigger Dude");
+			GameManager.instance.loadNELevel();
+			return;
+		}
 		if(other.gameObject.tag == "Zone1" && currentZone == 2){
 			currentZone = 1;
 		}

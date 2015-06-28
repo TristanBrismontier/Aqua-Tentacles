@@ -32,7 +32,6 @@ public class LoadingScript : MonoBehaviour {
 
 	void Update () 
 	{
-		setScale(Player.instance.scaleRatio);
 		if (target)
 		{
 			Vector3 point = GetComponent<UnityEngine.Camera>().WorldToViewportPoint(target.position);

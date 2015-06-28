@@ -31,7 +31,6 @@ public class Tonneau : MonoBehaviour {
 		
 		if (Vector3.Distance (transform.position, player.transform.position) < range) {
 			GameManager.instance.looseLife ((int)dommage);
-			Player.instance.Hurt ();
 			SoundTonneau.volume = 1;
 		} else {
 			SoundTonneau.volume = 0;

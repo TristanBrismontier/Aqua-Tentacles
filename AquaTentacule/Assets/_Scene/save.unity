@@ -185,6 +185,7 @@ GameObject:
   m_PrefabInternal: {fileID: 963130042}
 --- !u!50 &772323707
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -193,11 +194,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &963130042
 Prefab:
   m_ObjectHideFlags: 0
@@ -626,11 +627,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22436010, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .530390322
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22436010, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}

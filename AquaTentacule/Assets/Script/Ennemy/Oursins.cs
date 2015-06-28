@@ -8,8 +8,5 @@ public class Oursins : MonoBehaviour {
 	void OnCollisionEnter2D() {
 		Debug.Log("PLOP");
 		GameManager.instance.looseLife ((int)damage);
-		Player.instance.Hurt();
 	}
-
-
 }

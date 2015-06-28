@@ -16,6 +16,7 @@ TagManager:
   - FishEye
   - Meduse
   - Tonneau
+  - NE
   layers:
   - Default
   - TransparentFX

@@ -559,11 +559,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22436010, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .530390322
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22436010, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 133ca96d9c88b6d4ca4f9ca09498a16f, type: 2}

@@ -43,7 +43,7 @@ public class Octopus : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
-			if(randomStat(10)){
+			if(randomStat(90)){
 				SoundManager.instance.RandomizeSfx(deadSounds);
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatOctoPus(nutritionFact);

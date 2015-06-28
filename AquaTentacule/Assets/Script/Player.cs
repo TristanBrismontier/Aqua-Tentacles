@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 	public float scaleRatio;
 	private Vector3 startScale; 
 	
-	private int countTenta;
+	public int countTenta;
 
 
 
@@ -48,10 +48,20 @@ public class Player : MonoBehaviour
 		currentZone = 1 ;
 		MusicManager.instance.resetMusique();
 
-		countTenta = 1;
+		countTenta = 0;
 		tentacool1.transform.localScale = Vector3.zero;
 		tentacool2.transform.localScale = Vector3.zero;
 		tentacool3.transform.localScale = Vector3.zero;
+	}
+	public void setEvolution(int tenta){
+		countTenta = tenta;
+		if(countTenta >= 1){
+			tentacool1.transform.localScale = new Vector3(1,1,1);
+		}else if (countTenta >= 2){
+			tentacool2.transform.localScale = new Vector3(1,1,1);
+		}else if( countTenta == 3){
+			tentacool3.transform.localScale = new Vector3(1,1,1);
+		}
 	}
 		
 	void FixedUpdate ()
@@ -129,15 +139,15 @@ public class Player : MonoBehaviour
 	}
 
 	public void spawnTenta(){
-		if(countTenta == 1){
+		if(countTenta == 0){
 			Debug.Log("Spawn" + countTenta);
 			StartCoroutine(growTenta(tentacool1));
 			countTenta++;
-		}else if (countTenta == 2){
+		}else if (countTenta == 1){
 			Debug.Log("Spawn" + countTenta);
 			StartCoroutine(growTenta(tentacool2));
 			countTenta++;
-		}else if( countTenta == 3){
+		}else if( countTenta == 2){
 			Debug.Log("Spawn" + countTenta);
 			StartCoroutine(growTenta(tentacool3));
 			countTenta++;
@@ -149,7 +159,6 @@ public class Player : MonoBehaviour
 		while(scale < 1){
 			yield return new WaitForSeconds(1/100);
 			scale += 0.01f;
-			Debug.Log(scale);
 			tenta.transform.localScale = new Vector3(scale,scale,1);
 		}
 	

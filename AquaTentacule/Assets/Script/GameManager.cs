@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
 	public int octopus;
 	public int FishCount;
 	public bool playerHasTenta;
+	public int tentaCount;
 
 	public int maxRange;
 
@@ -47,12 +48,14 @@ public class GameManager : MonoBehaviour {
 
 	public void setPlayer(Player _player){
 		player = _player;
+		player.setEvolution(tentaCount);
 		startPosition.position = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
 	}
 
 	public void initGame(){
 		playerHasTenta = false;
 		canDie = true;
+		tentaCount = 0;
 		int foodNumber = Random.Range(minFood,maxFood);
 		for(int i = 0 ; i<foodNumber; i++){
 			AddFood();
@@ -140,7 +143,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void loadNELevel(){
-		Debug.Log("YEAH FTW");
+		tentaCount = player.countTenta;
 		Application.LoadLevel("FourDir");
 	}
 

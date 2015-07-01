@@ -50,7 +50,7 @@ public class FishEye : MonoBehaviour {
 			if (GameManager.instance.playerInfo.playerHasTenta) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatFishEye(nutritionFact);
-				SoundManager.instance.RandomizeSfx(deaths);
+				SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource ,deaths);
 				//PlayerController.score++;
 				Destroy (gameObject);
 			}else{

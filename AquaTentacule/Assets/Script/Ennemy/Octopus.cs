@@ -44,7 +44,7 @@ public class Octopus : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
 			if(randomStat(90)){
-				SoundManager.instance.RandomizeSfx(deadSounds);
+				SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatOctoPus(nutritionFact);
 				Destroy(this.gameObject);
@@ -64,7 +64,7 @@ public class Octopus : MonoBehaviour {
 		return random<=percent;
 	}
 	public void ink(){
-		SoundManager.instance.RandomizeSfx(crySounds);
+		SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource,crySounds);
 		transform.Translate (new Vector3 (speed * 4 * Time.deltaTime, 0, 0));
 		GameObject particules = Instantiate(inkParticule, new Vector3(transform.position.x,transform.position.y,-5f), Quaternion.identity) as GameObject;
 		StartCoroutine(DestroyLater(particules));

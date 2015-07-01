@@ -115,9 +115,11 @@ public class Player : MonoBehaviour
 			currentZone = 4;
 		}
 		MusicManager.instance.enterZone(currentZone);
+
 		if (other.gameObject.tag == "Meduse") {
 			inverted = -1.0f;
 			StartCoroutine(timer());
+			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, GameManager.instance.meduseSounds);
 		}
 	}
 

@@ -47,7 +47,7 @@ MonoBehaviour:
   octopus: 6
   FishCount: 2
   maxRange: 40
-  frameCount: 0
+  limiteVieHeartbeat: 20
   eatSounds:
   - {fileID: 8300000, guid: 93dcc28e6f93e1946bdb98173f64cf40, type: 3}
   - {fileID: 8300000, guid: 8c39a10e0b8e0734292721de97d069f9, type: 3}
@@ -59,6 +59,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a11c4caafcec56b43af85ea28e706121, type: 3}
   - {fileID: 8300000, guid: 647e2d6e871240a49b54cdb860f4baad, type: 3}
   - {fileID: 8300000, guid: c2db9a6c426427649afff1025221cf83, type: 3}
+  meduseSounds:
+  - {fileID: 8300000, guid: 71601c3d37383ba4ba9eb287a4be5ab9, type: 3}
+  - {fileID: 8300000, guid: 00de2b5d70226a6448fb24baf777bd8e, type: 3}
+  - {fileID: 8300000, guid: 7026c77e2d4ae5247b4f30f123309adb, type: 3}
+  - {fileID: 8300000, guid: 2464925f09a975e4c9a09c7b6b294932, type: 3}
+  - {fileID: 8300000, guid: 467237c50d7821a46b5070d5f4a8e6f2, type: 3}
+  heartbeatSound: {fileID: 8300000, guid: 3101cbcb05b2cad40a9c511904a9635d, type: 3}
   foods:
   - {fileID: 146090, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
   - {fileID: 157490, guid: 4b9fa89205d39364b8f161d2850f74ae, type: 2}
@@ -74,6 +81,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: minFood
       value: 50
       objectReference: {fileID: 0}
@@ -84,6 +95,34 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: starving
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heartbeatSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3101cbcb05b2cad40a9c511904a9635d, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 71601c3d37383ba4ba9eb287a4be5ab9, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 00de2b5d70226a6448fb24baf777bd8e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7026c77e2d4ae5247b4f30f123309adb, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2464925f09a975e4c9a09c7b6b294932, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 467237c50d7821a46b5070d5f4a8e6f2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: limiteVieHeartbeat
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

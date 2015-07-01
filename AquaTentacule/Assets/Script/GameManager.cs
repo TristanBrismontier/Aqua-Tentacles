@@ -15,19 +15,24 @@ public class GameManager : MonoBehaviour {
 	public int octopus;
 	public int FishCount;
 	public int maxRange;
+	public int limiteVieHeartbeat;
 
 	public PlayerInfo playerInfo = new PlayerInfo();
 
 	public AudioClip[] eatSounds;
 	public AudioClip[] deadSounds;
+	public AudioClip[] meduseSounds;
+	public AudioClip heartbeatSound;
+
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;
 	public GameObject bubbleExplosionPlop;
 	private Player player;
-		private List<GameObject> instanciatesGameObjects = new List<GameObject>();
+	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
 	private bool canDie;
+	private bool isPlayingSound;
 
 	void Awake () {
 		if (instance == null){
@@ -42,6 +47,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Start(){
+
+		isPlayingSound = false;
 		initGame();
 	}
 
@@ -103,7 +110,7 @@ public class GameManager : MonoBehaviour {
 	public void eatFood(int nutritionFact){
 		AddFood ();
 		eat (nutritionFact);
-		SoundManager.instance.RandomizeSfx(eatSounds);
+		SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, eatSounds);
 	}
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
@@ -139,6 +146,18 @@ public class GameManager : MonoBehaviour {
 		if(life<=0){
 			death();
 		}
+
+		if(life <=limiteVieHeartbeat && !isPlayingSound)
+		{
+			isPlayingSound = true;
+			SoundManager.instance.PlaySingleLoop(heartbeatSound, SoundManager.instance.interfaceSource, 0.3f);
+			StartCoroutine(SoundManager.instance.FadeIn(SoundManager.instance.interfaceSource, 0.3f));
+		}
+		else if(life >limiteVieHeartbeat && isPlayingSound)
+		{
+			isPlayingSound = false;
+			StartCoroutine(SoundManager.instance.FadeOut(SoundManager.instance.interfaceSource,0.3f));
+		}
 	}
 	
 	public void loadLevel(string name, Vector3 startPos){
@@ -150,7 +169,7 @@ public class GameManager : MonoBehaviour {
 		if(canDie){
 			canDie = false;
 			life = 100;
-			SoundManager.instance.RandomizeSfx(deadSounds);
+			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
 			GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
 			playerGO.transform.localScale = new Vector3(0f,0f,0f);
 			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( playerGO.transform.position.x,playerGO.transform.position.y,playerGO.transform.position.z-1), playerGO.transform.rotation) as GameObject;

@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource ambianceSource;
 	public AudioSource interfaceSource;
 
+	public AudioClip ambianceMain;
+
 	public static SoundManager instance = null;
 	
 	public float lowPitchRange = .85f;
@@ -22,6 +24,12 @@ public class SoundManager : MonoBehaviour {
 			Destroy (gameObject);
 		
 		DontDestroyOnLoad (gameObject);
+	}
+
+	void Start()
+	{
+		PlaySingleLoop(ambianceMain, ambianceSource, 0.10f);
+		StartCoroutine(FadeIn(ambianceSource,0.10f));
 	}
 	
 	public void PlaySingle (AudioClip clip, AudioSource source, float volume){

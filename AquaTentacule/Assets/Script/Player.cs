@@ -130,21 +130,17 @@ public class Player : MonoBehaviour
 	}
 
 	public void  Hurt(){
-		Debug.Log ("hurt");
 		animator.SetTrigger("hurt");
 	}
 
 	public void spawnTenta(){
 		if(countTenta == 0){
-			Debug.Log("Spawn" + countTenta);
 			StartCoroutine(growTenta(tentacool1));
 			countTenta++;
 		}else if (countTenta == 1){
-			Debug.Log("Spawn" + countTenta);
 			StartCoroutine(growTenta(tentacool2));
 			countTenta++;
 		}else if( countTenta == 2){
-			Debug.Log("Spawn" + countTenta);
 			StartCoroutine(growTenta(tentacool3));
 			countTenta++;
 		}

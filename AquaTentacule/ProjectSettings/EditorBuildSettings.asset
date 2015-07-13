@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/_Scene/Main.unity
   - enabled: 1
     path: Assets/_Scene/Labyrinth/FourDir.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/EW.unity

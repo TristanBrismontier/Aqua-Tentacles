@@ -16,7 +16,6 @@ public class Meduse : MonoBehaviour {
 		hitBox = GetComponent<BoxCollider2D>();
 		debugSprite.enabled = false;
 		float scale = (float) (Random.Range(50,130)/100);
-		Debug.Log ("Scale : "+ scale);
 		//transform.localScale = new Vector3(scale,scale,scale);
 	}
 	

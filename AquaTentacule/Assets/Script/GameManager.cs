@@ -130,7 +130,6 @@ public class GameManager : MonoBehaviour {
 
 	private void eat(int nutritionFact){
 		life = life + nutritionFact;
-		Debug.Log(life);
 		if(nutritionFact > 0){
 			player.Eat();
 		}

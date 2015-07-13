@@ -43,7 +43,6 @@ public class Fastfish : MonoBehaviour {
 	
 	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
-			Debug.Log("OOOOOO");
 			animator.SetBool ("Attack", true);
 			if (GameManager.instance.life >=120) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);

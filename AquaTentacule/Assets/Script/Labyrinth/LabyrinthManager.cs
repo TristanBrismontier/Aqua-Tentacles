@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+
 
 public class LabyrinthManager : MonoBehaviour {
 
 
 	public static LabyrinthManager instance = null;
-	private enum PlayerExit {North, East, West, South};
+	private List<LabyTiles> tiles = new List<LabyTiles>();
 	private PlayerExit playerExitTaken;
 
 	void Awake () {
 		if (instance == null){
 			instance = this;
+			tiles.AddRange(new LabyConfigTiles().getPreConfigTiles());
 		}
 		else if(instance != this)
 		{
@@ -22,8 +26,21 @@ public class LabyrinthManager : MonoBehaviour {
 
 	public void loadNextTile(string exitTag){
 		playerExitTaken = (PlayerExit)Enum.Parse(typeof(PlayerExit), exitTag);
-		Debug.Log(playerExitTaken);
-		GameManager.instance.loadLevel("FourDir",adjustPlayerEntrancePostion());
+		LabyTiles nextTile = getRandomFittingTile(tiles);
+		GameManager.instance.loadLevel(nextTile.sceneName,adjustPlayerEntrancePostion());
+	}
+
+	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
+		List<LabyTiles> tilestmp = new List<LabyTiles>();
+		tilestmp.AddRange(tilesParam);
+		LabyTiles tile = tilestmp[UnityEngine.Random.Range(0,tilestmp.Count)] ;
+		if(tile.canFitWithThisExit(playerExitTaken)){
+			return tile;
+		}else{
+			Debug.Log (tile.sceneName + " => Exit " + playerExitTaken);
+			tilestmp.Remove(tile);
+			return getRandomFittingTile(tilestmp);
+		}
 	}
 
 	private Vector3 adjustPlayerEntrancePostion() {

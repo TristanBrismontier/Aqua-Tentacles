@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		animator = GetComponent<Animator> ();	
-
+		speedRotation = speedRotation*-1;
 		rb = GetComponent<Rigidbody2D>();
 		resetPlayer();
 		debugSprite.enabled = false;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 		
 	void FixedUpdate ()
 	{
-		float rotation = Input.GetAxis("Horizontal") * -1 ;
+		float rotation = Input.GetAxis("Horizontal");
 		if(Mathf.Abs(rotation)>= 0.1f){
 			rb.angularVelocity = rotation * inverted * speedRotation;
 		}else{

@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 	public float force;
 	public float pushForce;
 	public float slowDown;	
+	private float forceRatio;
 
 	private Animator animator;
 	public float dampTime = 0.2f;
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
 	{
 		animator = GetComponent<Animator> ();	
 		speedRotation = speedRotation*-1;
+		forceRatio = Mathf.Pow (force, pushForce);
 		rb = GetComponent<Rigidbody2D>();
 		resetPlayer();
 		debugSprite.enabled = false;
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour
 			rb.angularVelocity = 0;
 		}
 				
-		Vector2 forceVect =Input.GetAxis("Vertical")* transform.up * Mathf.Pow (force, pushForce);
+		Vector2 forceVect =Input.GetAxis("Vertical")* transform.up * forceRatio;
 		if(Mathf.Abs(Input.GetAxis("Vertical"))>= 0.5f){
 			rb.AddForce (forceVect * inverted);
 			animator.SetBool ("swim", true);

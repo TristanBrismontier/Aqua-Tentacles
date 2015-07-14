@@ -497,6 +497,7 @@ MonoBehaviour:
   tentacool2: {fileID: 184218}
   tentacool3: {fileID: 104020}
   scaleRatio: 0
+  countTenta: 0
 --- !u!212 &21214214
 SpriteRenderer:
   m_ObjectHideFlags: 1

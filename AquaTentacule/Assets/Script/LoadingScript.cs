@@ -37,7 +37,7 @@ public class LoadingScript : MonoBehaviour {
 			Vector3 point = GetComponent<UnityEngine.Camera>().WorldToViewportPoint(target.position);
 			Vector3 delta = target.position - GetComponent<UnityEngine.Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
 			Vector3 destination = transform.position + delta;
-			if(Mathf.Abs(delta.x) >= 8 || Mathf.Abs(delta.y) >= 8){
+			if(Mathf.Abs(delta.x) >= 15 || Mathf.Abs(delta.y) >= 15){
 				teleportToTarget();
 			}
 			destination = new Vector3(Mathf.Clamp(destination.x,-61f,61),Mathf.Clamp(destination.y,-52,52),destination.z);

@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour {
 		eat (damage*-1);
 		player.Hurt();
 
-		SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
+		//SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
 	}
 
 	private void eat(int nutritionFact){
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour {
 		GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
 		playerGO.SetActive(true);
 		playerGO.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
-		MusicManager.instance.resetM();
+		//MusicManager.instance.resetM();
 		player.transform.position = startPosition.position;
 		yield return new WaitForSeconds(0.5f);
 		player.resetPlayer();

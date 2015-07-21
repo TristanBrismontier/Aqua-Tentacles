@@ -1898,6 +1898,11 @@ Prefab:
       propertyPath: ambianceMain
       value: 
       objectReference: {fileID: 8300000, guid: 4375eccd4e162a947834e81f42995a50, type: 3}
+    - target: {fileID: 8236000, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24387512, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
   m_IsPrefabParent: 0

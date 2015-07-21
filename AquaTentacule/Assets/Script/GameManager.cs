@@ -126,6 +126,8 @@ public class GameManager : MonoBehaviour {
 	public void looseLife(int damage){
 		eat (damage*-1);
 		player.Hurt();
+
+		SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
 	}
 
 	private void eat(int nutritionFact){

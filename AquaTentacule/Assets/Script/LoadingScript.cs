@@ -22,6 +22,7 @@ public class LoadingScript : MonoBehaviour {
 	void Awake () {
 		if (GameManager.instance == null)
 			Instantiate(gameManager);
+
 	}
 
 	void Start () {
@@ -46,7 +47,8 @@ public class LoadingScript : MonoBehaviour {
 
 
 
-			background.transform.position = new Vector3(
+if(background != null)
+				background.transform.position = new Vector3(
 				startPosition.x - (float)(transform.position.x/paralaxRatio),
 				startPosition.y - (float)(transform.position.y/paralaxRatio),
 				startPosition.z

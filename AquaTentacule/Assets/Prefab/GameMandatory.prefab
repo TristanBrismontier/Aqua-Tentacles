@@ -428,7 +428,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .600124359, y: -1.33993149, z: 10}
+  m_LocalPosition: {x: 33, y: 51.4000015, z: 10}
   m_LocalScale: {x: 2.29999995, y: 2.29999995, z: 2.29999995}
   m_Children:
   - {fileID: 440026}
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bf7ef5135cf4d48acc0e1a85acf705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeVolume: 6
+  timeFade: 0
   volumeMaxMusique: .200000003
   musicSource1: {fileID: 8279168}
   musicSource2: {fileID: 8229830}
@@ -1642,6 +1642,11 @@ MonoBehaviour:
   ambianceSource: {fileID: 8248714}
   interfaceSource: {fileID: 8263518}
   ambianceMain: {fileID: 0}
+  eatSounds: []
+  deadSounds: []
+  meduseSounds: []
+  callGeorgeSounds: []
+  heartbeatSound: {fileID: 0}
   lowPitchRange: .850000024
   hightPitchRange: 1.14999998
 --- !u!114 &11453528

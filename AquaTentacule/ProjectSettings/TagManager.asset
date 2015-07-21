@@ -20,6 +20,10 @@ TagManager:
   - East
   - South
   - West
+  - WestSpawn
+  - NorthSpawn
+  - EastSpawn
+  - SouthSpawn
   layers:
   - Default
   - TransparentFX

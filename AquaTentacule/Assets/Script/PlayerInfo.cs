@@ -11,14 +11,14 @@ public class PlayerInfo  {
 	public void restorePlayerInfo(Player player){
 		player.setEvolution(tentaCount);
 		player.transform.rotation = playerRotation;
-		player.transform.position = player.transform.position +startDeltaPosition;
+		player.transform.position = new Vector3(startDeltaPosition.x,startDeltaPosition.y,player.transform.position.z);
 		player.setVelocity(velocity);
 	}
 
-	public void saveInfo(Player player,Vector3 startPos){
+	public void saveInfo(Player player){
 		playerRotation = player.transform.rotation;
 		tentaCount = player.countTenta;
-		startDeltaPosition = startPos;
+		startDeltaPosition = Vector3.zero;
 		velocity = player.getVelocity();
 	}
 }

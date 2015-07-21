@@ -27,12 +27,18 @@ public class LabyrinthManager : MonoBehaviour {
 	}
 
 	public void loadNextTile(string exitTag){
-		lastPlayerExit = playerExitTaken;
+		lastPlayerExit = GameManager.instance.playerExit;
 		playerExitTaken = (PlayerExit)Enum.Parse(typeof(PlayerExit), exitTag);
+		Debug.Log("ExitTag : " + GameManager.instance.playerExit + " palyer " + playerExitTaken);
+		GameManager.instance.playerExit = playerExitTaken;
 		LabyTiles nextTile = getRandomFittingTile(tiles);
 		lastVisitedTile = nextTile;
 		Debug.Log(nextTile.sceneName);
-		GameManager.instance.loadLevel(nextTile.sceneName,adjustPlayerEntrancePostion());
+		GameManager.instance.loadLevel(nextTile.sceneName);
+	}
+
+	public PlayerExit getplayerExit(){
+		return GameManager.instance.playerExit;
 	}
 
 	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
@@ -50,22 +56,4 @@ public class LabyrinthManager : MonoBehaviour {
 			return getRandomFittingTile(tilestmp);
 		}
 	}
-
-
-
-	//Not so good FixMe Please
-	private Vector3 adjustPlayerEntrancePostion() {
-		switch(playerExitTaken){
-			case PlayerExit.North: 
-				return new Vector3(0,-25,0);
-			case PlayerExit.East:
-				return new Vector3(-30,0,0);
-			case PlayerExit.South: 
-				return new Vector3(0,25,0);
-			case PlayerExit.West: 
-				return new Vector3(30,0,0);
-		}
-		return Vector3.zero;
-	}
-
 }

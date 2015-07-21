@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject Octopus;
 	public GameObject FishEye;
 	public GameObject bubbleExplosionPlop;
+	public PlayerExit playerExit;
 	private Player player;
 	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour {
 		}
 		
 		DontDestroyOnLoad(gameObject);
+
 	}
 
 	public void Start(){
@@ -51,6 +53,10 @@ public class GameManager : MonoBehaviour {
 		player = _player;
 		playerInfo.restorePlayerInfo(player);
 		startPosition.position = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
+	}
+
+	public void initPlayerPosition(Transform position){
+		playerInfo.startDeltaPosition = position.position;
 	}
 
 	public void initGame(){
@@ -154,8 +160,8 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 	
-	public void loadLevel(string name, Vector3 startPos){
-		playerInfo.saveInfo(player,startPos);
+	public void loadLevel(string name){
+		playerInfo.saveInfo(player);
 		Application.LoadLevel(name);
 	}
 

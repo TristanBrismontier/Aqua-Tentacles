@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip[] eatSounds;
 	public AudioClip[] deadSounds;
 	public AudioClip[] meduseSounds;
+	public AudioClip[] callGeorgeSounds;
 	public AudioClip heartbeatSound;
 
 	public GameObject[] foods;

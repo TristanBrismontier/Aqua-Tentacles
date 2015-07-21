@@ -65,6 +65,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7026c77e2d4ae5247b4f30f123309adb, type: 3}
   - {fileID: 8300000, guid: 2464925f09a975e4c9a09c7b6b294932, type: 3}
   - {fileID: 8300000, guid: 467237c50d7821a46b5070d5f4a8e6f2, type: 3}
+  callGeorgeSounds:
+  - {fileID: 8300000, guid: 4e300ee43e1c5ed45ac7a633932cbbe2, type: 3}
+  - {fileID: 8300000, guid: f24a46e8f239d24488872ff29d07c9a2, type: 3}
+  - {fileID: 8300000, guid: 6a1e2118aa2d1cf4983bb6c50104c8ae, type: 3}
+  - {fileID: 8300000, guid: 21ed1d0d17f574443a9ad55817c476e1, type: 3}
+  - {fileID: 8300000, guid: 61493f55a03d56241a9a9446000f351b, type: 3}
   heartbeatSound: {fileID: 8300000, guid: 3101cbcb05b2cad40a9c511904a9635d, type: 3}
   foods:
   - {fileID: 146090, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
@@ -82,6 +88,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: meduseSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
@@ -124,6 +134,26 @@ Prefab:
       propertyPath: limiteVieHeartbeat
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e300ee43e1c5ed45ac7a633932cbbe2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f24a46e8f239d24488872ff29d07c9a2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a1e2118aa2d1cf4983bb6c50104c8ae, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21ed1d0d17f574443a9ad55817c476e1, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 61493f55a03d56241a9a9446000f351b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197372}

@@ -255,6 +255,7 @@ MonoBehaviour:
   efxSource: {fileID: 8296446}
   ambianceSource: {fileID: 8280488}
   interfaceSource: {fileID: 8298218}
+  ambianceMain: {fileID: 8300000, guid: 4375eccd4e162a947834e81f42995a50, type: 3}
   lowPitchRange: .850000024
   hightPitchRange: 1.14999998
 --- !u!1001 &100100000
@@ -277,6 +278,10 @@ Prefab:
       propertyPath: ambianceSource
       value: 
       objectReference: {fileID: 8280488}
+    - target: {fileID: 0}
+      propertyPath: ambianceMain
+      value: 
+      objectReference: {fileID: 8300000, guid: 4375eccd4e162a947834e81f42995a50, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108984}

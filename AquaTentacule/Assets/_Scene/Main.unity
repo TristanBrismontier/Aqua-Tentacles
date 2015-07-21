@@ -1869,6 +1869,35 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8277814, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24314562, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
+        type: 2}
+    - target: {fileID: 8202196, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24314562, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
+        type: 2}
+    - target: {fileID: 8242756, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24314562, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
+        type: 2}
+    - target: {fileID: 8229830, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24314562, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
+        type: 2}
+    - target: {fileID: 8279168, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24314562, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
+        type: 2}
+    - target: {fileID: 11443030, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: ambianceMain
+      value: 
+      objectReference: {fileID: 8300000, guid: 4375eccd4e162a947834e81f42995a50, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
   m_IsPrefabParent: 0

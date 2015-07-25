@@ -8,6 +8,10 @@ public class LabyConfigTiles{
 
 		tiles.Add( new LabyTiles("FourDir",PlayerExit.North,PlayerExit.East,PlayerExit.South,PlayerExit.West));
 		tiles.Add( new LabyTiles("EW",PlayerExit.East,PlayerExit.West));
+		tiles.Add( new LabyTiles("EWS",PlayerExit.East,PlayerExit.South,PlayerExit.West));
+		tiles.Add( new LabyTiles("FourDir2",PlayerExit.North,PlayerExit.East,PlayerExit.South,PlayerExit.West));
+		tiles.Add( new LabyTiles("EWN",PlayerExit.North,PlayerExit.East,PlayerExit.West));
+		tiles.Add( new LabyTiles("NSE",PlayerExit.North,PlayerExit.East,PlayerExit.South));
 
 
 

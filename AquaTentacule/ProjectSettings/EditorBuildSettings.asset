@@ -11,3 +11,11 @@ EditorBuildSettings:
     path: Assets/_Scene/Labyrinth/FourDir.unity
   - enabled: 1
     path: Assets/_Scene/Labyrinth/EW.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/EWN.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/EWS.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/FourDir2.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/NSE.unity

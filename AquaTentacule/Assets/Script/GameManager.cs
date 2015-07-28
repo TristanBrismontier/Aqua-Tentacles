@@ -19,12 +19,6 @@ public class GameManager : MonoBehaviour {
 
 	public PlayerInfo playerInfo = new PlayerInfo();
 
-	public AudioClip[] eatSounds;
-	public AudioClip[] deadSounds;
-	public AudioClip[] meduseSounds;
-	public AudioClip[] callGeorgeSounds;
-	public AudioClip heartbeatSound;
-
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;
@@ -111,7 +105,7 @@ public class GameManager : MonoBehaviour {
 	public void eatFood(int nutritionFact){
 		AddFood ();
 		eat (nutritionFact);
-		SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, eatSounds);
+		SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, SoundManager.instance.eatSounds);
 	}
 	public void eatOctoPus(int nutritionFact){
 		RespawnOctopus();
@@ -127,8 +121,6 @@ public class GameManager : MonoBehaviour {
 	public void looseLife(int damage){
 		eat (damage*-1);
 		player.Hurt();
-
-		//SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
 	}
 
 	private void eat(int nutritionFact){
@@ -152,7 +144,7 @@ public class GameManager : MonoBehaviour {
 		if(life <=limiteVieHeartbeat && !isPlayingSound)
 		{
 			isPlayingSound = true;
-			SoundManager.instance.PlaySingleLoop(heartbeatSound, SoundManager.instance.interfaceSource, 0.3f);
+			SoundManager.instance.PlaySingleLoop(SoundManager.instance.heartbeatSound, SoundManager.instance.interfaceSource, 0.3f);
 			StartCoroutine(SoundManager.instance.FadeIn(SoundManager.instance.interfaceSource, 0.3f));
 		}
 		else if(life >limiteVieHeartbeat && isPlayingSound)
@@ -171,7 +163,7 @@ public class GameManager : MonoBehaviour {
 		if(canDie){
 			canDie = false;
 			life = 100;
-			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, deadSounds);
+			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource,SoundManager.instance.deadSounds);
 			GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
 			playerGO.transform.localScale = new Vector3(0f,0f,0f);
 			GameObject buble = Instantiate(bubbleExplosionPlop,new Vector3( playerGO.transform.position.x,playerGO.transform.position.y,playerGO.transform.position.z-1), playerGO.transform.rotation) as GameObject;

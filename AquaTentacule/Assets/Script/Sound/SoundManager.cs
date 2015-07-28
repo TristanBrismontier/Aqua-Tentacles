@@ -9,6 +9,11 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource interfaceSource;
 
 	public AudioClip ambianceMain;
+	public AudioClip[] eatSounds;
+	public AudioClip[] deadSounds;
+	public AudioClip[] meduseSounds;
+	public AudioClip[] callGeorgeSounds;
+	public AudioClip heartbeatSound;
 
 	public static SoundManager instance = null;
 	

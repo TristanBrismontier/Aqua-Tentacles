@@ -113,7 +113,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: .349999994
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -256,6 +256,30 @@ MonoBehaviour:
   ambianceSource: {fileID: 8280488}
   interfaceSource: {fileID: 8298218}
   ambianceMain: {fileID: 8300000, guid: 4375eccd4e162a947834e81f42995a50, type: 3}
+  eatSounds:
+  - {fileID: 8300000, guid: 93dcc28e6f93e1946bdb98173f64cf40, type: 3}
+  - {fileID: 8300000, guid: 8c39a10e0b8e0734292721de97d069f9, type: 3}
+  - {fileID: 8300000, guid: 43d450c335018914e85a7342d82d0d30, type: 3}
+  - {fileID: 8300000, guid: c756efa81de905a42a9691f4c36f8936, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: c2db9a6c426427649afff1025221cf83, type: 3}
+  - {fileID: 8300000, guid: 647e2d6e871240a49b54cdb860f4baad, type: 3}
+  - {fileID: 8300000, guid: a11c4caafcec56b43af85ea28e706121, type: 3}
+  - {fileID: 8300000, guid: c6b86e11163149348928918885fe2c09, type: 3}
+  - {fileID: 8300000, guid: 2db853350f599344dac8f540955201f8, type: 3}
+  meduseSounds:
+  - {fileID: 8300000, guid: 71601c3d37383ba4ba9eb287a4be5ab9, type: 3}
+  - {fileID: 8300000, guid: 00de2b5d70226a6448fb24baf777bd8e, type: 3}
+  - {fileID: 8300000, guid: 7026c77e2d4ae5247b4f30f123309adb, type: 3}
+  - {fileID: 8300000, guid: 2464925f09a975e4c9a09c7b6b294932, type: 3}
+  - {fileID: 8300000, guid: 467237c50d7821a46b5070d5f4a8e6f2, type: 3}
+  callGeorgeSounds:
+  - {fileID: 8300000, guid: 4e300ee43e1c5ed45ac7a633932cbbe2, type: 3}
+  - {fileID: 8300000, guid: f24a46e8f239d24488872ff29d07c9a2, type: 3}
+  - {fileID: 8300000, guid: 6a1e2118aa2d1cf4983bb6c50104c8ae, type: 3}
+  - {fileID: 8300000, guid: 21ed1d0d17f574443a9ad55817c476e1, type: 3}
+  - {fileID: 8300000, guid: 61493f55a03d56241a9a9446000f351b, type: 3}
+  heartbeatSound: {fileID: 8300000, guid: 3101cbcb05b2cad40a9c511904a9635d, type: 3}
   lowPitchRange: .850000024
   hightPitchRange: 1.14999998
 --- !u!1001 &100100000
@@ -265,6 +289,22 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: eatSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: deadSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: interfaceSource
       value: 
@@ -282,6 +322,90 @@ Prefab:
       propertyPath: ambianceMain
       value: 
       objectReference: {fileID: 8300000, guid: 4375eccd4e162a947834e81f42995a50, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eatSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 93dcc28e6f93e1946bdb98173f64cf40, type: 3}
+    - target: {fileID: 0}
+      propertyPath: eatSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c39a10e0b8e0734292721de97d069f9, type: 3}
+    - target: {fileID: 0}
+      propertyPath: eatSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43d450c335018914e85a7342d82d0d30, type: 3}
+    - target: {fileID: 0}
+      propertyPath: eatSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: c756efa81de905a42a9691f4c36f8936, type: 3}
+    - target: {fileID: 0}
+      propertyPath: deadSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c2db9a6c426427649afff1025221cf83, type: 3}
+    - target: {fileID: 0}
+      propertyPath: deadSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 647e2d6e871240a49b54cdb860f4baad, type: 3}
+    - target: {fileID: 0}
+      propertyPath: deadSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a11c4caafcec56b43af85ea28e706121, type: 3}
+    - target: {fileID: 0}
+      propertyPath: deadSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: c6b86e11163149348928918885fe2c09, type: 3}
+    - target: {fileID: 0}
+      propertyPath: deadSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2db853350f599344dac8f540955201f8, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 71601c3d37383ba4ba9eb287a4be5ab9, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 00de2b5d70226a6448fb24baf777bd8e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7026c77e2d4ae5247b4f30f123309adb, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2464925f09a975e4c9a09c7b6b294932, type: 3}
+    - target: {fileID: 0}
+      propertyPath: meduseSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 467237c50d7821a46b5070d5f4a8e6f2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e300ee43e1c5ed45ac7a633932cbbe2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f24a46e8f239d24488872ff29d07c9a2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a1e2118aa2d1cf4983bb6c50104c8ae, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21ed1d0d17f574443a9ad55817c476e1, type: 3}
+    - target: {fileID: 0}
+      propertyPath: callGeorgeSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 61493f55a03d56241a9a9446000f351b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: heartbeatSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3101cbcb05b2cad40a9c511904a9635d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108984}

@@ -5,7 +5,7 @@ public class MusicManager : MonoBehaviour {
 
 	public static MusicManager instance = null;
 
-	public float timeVolume;
+	public float timeFade;
 	public float volumeMaxMusique;
 	public AudioSource musicSource1;
 	public AudioSource musicSource2;
@@ -14,6 +14,27 @@ public class MusicManager : MonoBehaviour {
 	public AudioSource musicSource5;
 	private bool activateMusique;
 
+	private IEnumerator fadeInZone1;
+	private IEnumerator fadeInZone2;
+	private IEnumerator fadeInZone3;
+	private IEnumerator fadeInZone4;
+	private IEnumerator fadeInZone5;
+
+	private IEnumerator fadeOutZone1;
+	private IEnumerator fadeOutZone2;
+	private IEnumerator fadeOutZone3;
+	private IEnumerator fadeOutZone4;
+	private IEnumerator fadeOutZone5;
+
+
+
+	private float privateTimeFade
+	{
+		get
+		{
+			return Mathf.Pow (10, -Mathf.Clamp(timeFade, 1, 4));
+		}
+	}
 
 	void Awake () {
 		if (instance == null)
@@ -24,9 +45,25 @@ public class MusicManager : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 	}
 
+	void Start()
+	{
+		fadeInZone1 = FadeInEqualGain(musicSource1);
+		fadeInZone2 = FadeInEqualGain(musicSource2);
+		fadeInZone3 = FadeInEqualGain(musicSource3);
+		fadeInZone4 = FadeInEqualGain(musicSource4);
+		fadeInZone5 = FadeInEqualGain(musicSource5);
+
+		fadeOutZone1 = FadeOutEqualGain(musicSource1);
+		fadeOutZone2 = FadeOutEqualGain(musicSource2);
+		fadeOutZone3 = FadeOutEqualGain(musicSource3);
+		fadeOutZone4 = FadeOutEqualGain(musicSource4);
+		fadeOutZone5 = FadeOutEqualGain(musicSource5);
+
+	}
+
 	public void resetMusique(){
 		activateMusique = true;
-		musicSource1.volume = volumeMaxMusique;
+		musicSource1.volume = 0;
 		musicSource2.volume = 0;
 		musicSource3.volume = 0;
 		musicSource4.volume = 0;
@@ -37,70 +74,100 @@ public class MusicManager : MonoBehaviour {
 		activateMusique = false;
 	}
 
-	public void exitZone(int zone){
-		if(!activateMusique)
-			return;
+	public void exitZone(int zone)
+	{
 
 		switch (zone)
 		{
 		case 1:
-			StartCoroutine (VolumeDown(musicSource1));
-			StartCoroutine (Volumeup(musicSource2));
+			StopCoroutine(fadeInZone1);
+			fadeInZone1 = FadeInEqualGain(musicSource1);
+			StartCoroutine (fadeOutZone1);
 			break;
 		case 2:
-			StartCoroutine (VolumeDown(musicSource2));
-			StartCoroutine (Volumeup(musicSource3));
+			StopCoroutine(fadeInZone2);
+			fadeInZone2 = FadeInEqualGain(musicSource2);
+			StartCoroutine (fadeOutZone2);
 			break;
 		case 3:
-			StartCoroutine (VolumeDown(musicSource3));
-			StartCoroutine (Volumeup(musicSource4));
+			StopCoroutine(fadeInZone3);
+			fadeInZone3 = FadeInEqualGain(musicSource3);
+			StartCoroutine (fadeOutZone3);
 			break;
 		case 4:
-			StartCoroutine (VolumeDown(musicSource4));
-			StartCoroutine (Volumeup(musicSource5));
+			StopCoroutine(fadeInZone4);
+			fadeInZone4 = FadeInEqualGain(musicSource4);
+			StartCoroutine (fadeOutZone4);
 			break;
 		}
 	}
-	public void enterZone(int zone){
-		if(!activateMusique)
-			return;
-		
+	public void enterZone(int zone)
+	{
+
 		switch (zone)
 		{
 		case 1:
-			StartCoroutine (Volumeup(musicSource1));
-			StartCoroutine (VolumeDown(musicSource2));
+			StopCoroutine(fadeOutZone1);
+			fadeOutZone1 = FadeOutEqualGain(musicSource1);
+			StartCoroutine (fadeInZone1);
 			break;
 		case 2:
-			StartCoroutine (Volumeup(musicSource2));
-			StartCoroutine (VolumeDown(musicSource3));
+			StopCoroutine(fadeOutZone2);
+			fadeOutZone2 = FadeOutEqualGain(musicSource2);
+			StartCoroutine (fadeInZone2);
 			break;
 		case 3:
-			StartCoroutine (Volumeup(musicSource3));
-			StartCoroutine (VolumeDown(musicSource4));
+			StopCoroutine(fadeOutZone3);
+			fadeOutZone3 = FadeOutEqualGain(musicSource3);
+			StartCoroutine (fadeInZone3);
 			break;
 		case 4:
-			StartCoroutine (Volumeup(musicSource4));
-			StartCoroutine (VolumeDown(musicSource5));
+			StopCoroutine(fadeOutZone4);
+			fadeOutZone4 = FadeOutEqualGain(musicSource4);
+			StartCoroutine (fadeInZone4);
 			break;
 		}
 	}
 
-	private IEnumerator Volumeup (AudioSource source) {
-		while(source.volume <volumeMaxMusique){
-			if(!activateMusique)
-				break;
-			yield return new WaitForSeconds(1/100);
-			source.volume = source.volume + 1/(timeVolume*100);
+
+	IEnumerator FadeInEqualPower(AudioSource audioSource)
+	{
+		float startVolume = audioSource.volume;
+		for(float i=0; i<=1f; i=i+privateTimeFade)
+		{
+			yield return 0;
+			audioSource.volume = startVolume+(1-Mathf.Pow((i-1),2f));
 		}
 	}
 
-	private IEnumerator VolumeDown (AudioSource source) {
-		while(source.volume > 0){
-			if(!activateMusique)
-				break;
-			yield return new WaitForSeconds(1/100);
-			source.volume = source.volume - 1/(timeVolume*100);
+
+	IEnumerator FadeOutEqualPower(AudioSource audioSource)
+	{
+		float startVolume=audioSource.volume;
+		for(float i=0; i<=1f; i=i+privateTimeFade)
+		{
+			yield return 0;
+			audioSource.volume = startVolume-Mathf.Pow(i, 2f);
+		}
+	}
+
+	IEnumerator FadeInEqualGain(AudioSource audioSource)
+	{
+		float startVolume = audioSource.volume;
+		for(float i=0; i<=1f; i=i+privateTimeFade)
+		{
+			yield return 0;
+			audioSource.volume = startVolume+i;
+		}
+	}
+
+	IEnumerator FadeOutEqualGain(AudioSource audioSource)
+	{
+		float startVolume=audioSource.volume;
+		for(float i=0; i<=1f; i=i+privateTimeFade)
+		{
+			yield return 0;
+			audioSource.volume = startVolume-i;
 		}
 	}
 }

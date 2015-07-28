@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
 	public SpriteRenderer debugSprite;
 	private int currentZone;
+	private int leftZone;
 		
 	public GameObject tentacool1;
 	public GameObject tentacool2;
@@ -44,8 +45,9 @@ public class Player : MonoBehaviour
 		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
 	}
 	public void resetPlayer(){
-		currentZone = 1 ;
-		MusicManager.instance.resetMusique();
+		currentZone = 1;
+		leftZone = 0;
+		//MusicManager.instance.resetMusique();
 
 		countTenta = 0;
 		tentacool1.transform.localScale = Vector3.zero;
@@ -80,48 +82,75 @@ public class Player : MonoBehaviour
 			rb.velocity = rb.velocity * slowDown;
 			animator.SetBool ("swim", false);
 		}
-
 	}
 	public IEnumerator timer(){
 		yield return new WaitForSeconds(timetoInverteBack);
 		inverted = 1.0f;
 	}
 
-	void OnTriggerExit2D(Collider2D other) {
-		MusicManager.instance.exitZone(currentZone);
-		if(other.gameObject.tag == "Zone1"){
-			currentZone = 2;
+	void OnTriggerExit2D(Collider2D other)
+	{	
+		switch(other.gameObject.tag)
+		{
+		case "Zone1":
+			leftZone = 1;
+			break;
+
+		case "Zone2":
+			leftZone = 2;
+			break;
+
+		case "Zone3":
+			leftZone = 3;
+			break;
+
+		case "Zone4":
+			leftZone = 4;
+			break;
+
+		case "Zone5":
+			leftZone = 5;
+			break;
+
+		default:
+			break;
 		}
-		if(other.gameObject.tag == "Zone2"){
-			currentZone = 3;
-		}
-		if(other.gameObject.tag == "Zone3"){
-			currentZone = 4;
-		}
-		if(other.gameObject.tag == "Zone4"){
-			currentZone = 5;
-		}
+
+
+		MusicManager.instance.exitZone(leftZone);
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag == "Zone1" && currentZone == 2){
+	void OnTriggerEnter2D(Collider2D other)
+	{
+
+		switch(other.gameObject.tag)
+		{
+		case "Zone1":
 			currentZone = 1;
-		}
-		if(other.gameObject.tag == "Zone2" && currentZone == 3){
+			break;
+		case "Zone2":
 			currentZone = 2;
-		}	
-		if(other.gameObject.tag == "Zone3" && currentZone == 4){
+			break;
+		case "Zone3":
 			currentZone = 3;
-		}
-		if(other.gameObject.tag == "Zone4" && currentZone == 5){
+			break;
+		case "Zone4":
 			currentZone = 4;
+			break;
+		case "Zone5":
+			currentZone = 5;
+			break;
+		default:
+			break;
 		}
+
 		MusicManager.instance.enterZone(currentZone);
 
-		if (other.gameObject.tag == "Meduse") {
+		if (other.gameObject.tag == "Meduse")
+		{
 			inverted = -1.0f;
 			StartCoroutine(timer());
-			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, GameManager.instance.meduseSounds);
+			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, SoundManager.instance.meduseSounds);
 		}
 	}
 

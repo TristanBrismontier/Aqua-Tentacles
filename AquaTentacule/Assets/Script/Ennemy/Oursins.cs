@@ -10,7 +10,7 @@ public class Oursins : MonoBehaviour {
 		if(collision.gameObject.tag == "Player")
 		{
 			GameManager.instance.looseLife ((int)damage);
-			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, GameManager.instance.deadSounds);
+			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource, SoundManager.instance.deadSounds);
 		}
 	}
 }

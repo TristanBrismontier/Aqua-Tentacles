@@ -14,7 +14,7 @@ public class GeogeCalling : MonoBehaviour {
 			transform.position = target.position;
 			if (Input.GetKeyDown("space"))
 			{
-			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource ,GameManager.instance.callGeorgeSounds);
+			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource ,SoundManager.instance.callGeorgeSounds);
 				StartCoroutine(showGeorgeBubble());
 			}
 

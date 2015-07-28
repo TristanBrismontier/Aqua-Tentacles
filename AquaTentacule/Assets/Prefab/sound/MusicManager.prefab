@@ -413,6 +413,10 @@ Prefab:
       value: 
       objectReference: {fileID: 24314562, guid: 8a3f87b7b2fc56c4abacf733b9b435e7,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: musicSource1
+      value: 
+      objectReference: {fileID: 8296296}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 172876}

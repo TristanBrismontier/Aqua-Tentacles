@@ -13,11 +13,7 @@ public class GeogeCalling : MonoBehaviour {
 		void Update () {
 			transform.position = target.position;
 			if (Input.GetKeyDown("space"))
-			{
-			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource ,SoundManager.instance.callGeorgeSounds);
 				StartCoroutine(showGeorgeBubble());
-			}
-
 		}
 		
 		public IEnumerator showGeorgeBubble(){

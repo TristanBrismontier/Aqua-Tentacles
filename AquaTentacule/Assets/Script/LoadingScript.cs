@@ -12,6 +12,7 @@ public class LoadingScript : MonoBehaviour {
 
 	public GameObject background;
 	public GameObject gameManager;	
+	public GameObject labyManager;
 
 	public float scaleRatio;
 	private float startScale; 
@@ -22,6 +23,8 @@ public class LoadingScript : MonoBehaviour {
 	void Awake () {
 		if (GameManager.instance == null)
 			Instantiate(gameManager);
+		if(LabyrinthManager.instance == null)
+			Instantiate(labyManager);
 
 	}
 

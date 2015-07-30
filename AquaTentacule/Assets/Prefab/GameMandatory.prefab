@@ -36,22 +36,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &123778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 480460}
-  - 114: {fileID: 11453528}
-  m_Layer: 0
-  m_Name: LabyrinthManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &125836
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +412,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33, y: 51.4000015, z: 10}
+  m_LocalPosition: {x: 13.9700003, y: 19.1700001, z: 10}
   m_LocalScale: {x: 2.29999995, y: 2.29999995, z: 2.29999995}
   m_Children:
   - {fileID: 440026}
@@ -470,7 +454,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.7001228, y: -51.56007, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421428}
@@ -478,7 +462,6 @@ Transform:
   - {fileID: 463418}
   - {fileID: 491366}
   - {fileID: 432230}
-  - {fileID: 480460}
   - {fileID: 22430572}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -581,18 +564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 450516}
   m_RootOrder: 0
---- !u!4 &480460
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.7001228, y: 43.0697632, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 435180}
-  m_RootOrder: 5
 --- !u!4 &480862
 Transform:
   m_ObjectHideFlags: 1
@@ -1625,6 +1596,7 @@ MonoBehaviour:
   paralaxRatio: 10
   background: {fileID: 0}
   gameManager: {fileID: 197372, guid: f12fa4a957f2acb4fa365d9d635d29f2, type: 2}
+  labyManager: {fileID: 156044, guid: ca10552dca26ccf43845dc3a6429d978, type: 2}
   scaleRatio: 0
   camera: {fileID: 2018528}
 --- !u!114 &11443030
@@ -1649,17 +1621,6 @@ MonoBehaviour:
   heartbeatSound: {fileID: 0}
   lowPitchRange: .850000024
   hightPitchRange: 1.14999998
---- !u!114 &11453528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1f7699beef2244a8a5a88797de9302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11454130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3112,7 +3073,7 @@ RectTransform:
   - {fileID: 22455112}
   - {fileID: 22485560}
   m_Father: {fileID: 435180}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}

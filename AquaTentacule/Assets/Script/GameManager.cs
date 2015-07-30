@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
 	public GameObject Octopus;
 	public GameObject FishEye;
 	public GameObject bubbleExplosionPlop;
-	public PlayerExit playerExit;
 	private Player player;
 	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
@@ -32,6 +31,7 @@ public class GameManager : MonoBehaviour {
 
 	void Awake () {
 		if (instance == null){
+			Debug.Log ("New Instance GM");
 			instance = this;
 		}
 		else if(instance != this)

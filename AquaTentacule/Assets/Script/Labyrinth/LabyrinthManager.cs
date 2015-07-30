@@ -15,6 +15,7 @@ public class LabyrinthManager : MonoBehaviour {
 
 	void Awake () {
 		if (instance == null){
+			Debug.Log ("New Instance Laby");
 			instance = this;
 			tiles.AddRange(new LabyConfigTiles().getPreConfigTiles());
 		}
@@ -27,10 +28,8 @@ public class LabyrinthManager : MonoBehaviour {
 	}
 
 	public void loadNextTile(string exitTag){
-		lastPlayerExit = GameManager.instance.playerExit;
+		lastPlayerExit = playerExitTaken;
 		playerExitTaken = (PlayerExit)Enum.Parse(typeof(PlayerExit), exitTag);
-		Debug.Log("ExitTag : " + GameManager.instance.playerExit + " palyer " + playerExitTaken);
-		GameManager.instance.playerExit = playerExitTaken;
 		LabyTiles nextTile = getRandomFittingTile(tiles);
 		lastVisitedTile = nextTile;
 		Debug.Log(nextTile.sceneName);
@@ -38,7 +37,7 @@ public class LabyrinthManager : MonoBehaviour {
 	}
 
 	public PlayerExit getplayerExit(){
-		return GameManager.instance.playerExit;
+		return playerExitTaken;
 	}
 
 	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){

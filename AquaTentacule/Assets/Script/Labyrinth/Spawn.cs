@@ -18,16 +18,12 @@ public class Spawn : MonoBehaviour {
 		Debug.Log(playerExit);
 		switch(playerExit){
 		case PlayerExit.North: 
-			Debug.Log("S");
 			return southSpawn;
 		case PlayerExit.East:
-			Debug.Log("W");
 			return westSpawn;
 		case PlayerExit.South:
-			Debug.Log("N");
 			return northSpawn;
 		case PlayerExit.West:
-			Debug.Log("E");
 			return eastSpawn;
 		}
 		return southSpawn;

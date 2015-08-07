@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour {
 	
 	public static GameManager instance = null;
 
-
 	public float life;
 	public float starving = 2.0f;
 	public Transform startPosition;
@@ -38,13 +37,10 @@ public class GameManager : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-		
 		DontDestroyOnLoad(gameObject);
-
 	}
 
 	public void Start(){
-
 		isPlayingSound = false;
 		initGame();
 	}
@@ -184,7 +180,6 @@ public class GameManager : MonoBehaviour {
 		GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
 		playerGO.SetActive(true);
 		playerGO.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
-		//MusicManager.instance.resetM();
 		player.transform.position = startPosition.position;
 		yield return new WaitForSeconds(0.5f);
 		player.resetPlayer();
@@ -194,5 +189,4 @@ public class GameManager : MonoBehaviour {
 		}
 		initGame();
 	}
-
 }

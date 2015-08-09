@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 	public int limiteVieHeartbeat;
 
 	public PlayerInfo playerInfo = new PlayerInfo();
-
+	public Bounds cameraBound;
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;

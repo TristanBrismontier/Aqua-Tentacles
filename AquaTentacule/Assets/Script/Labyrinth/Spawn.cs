@@ -13,7 +13,8 @@ public class Spawn : MonoBehaviour {
 	void Start () {
 		GameManager.instance.initPlayerPosition(adjustPlayerEntrancePostion());
 		Collider2D cod = GetComponent<Collider2D>();
-		GameManager.instance.cameraBound = (cod == null)? null : cod.bounds;
+		if(cod !=null)
+			GameManager.instance.cameraBound = cod.bounds;
 	}
 	
 	

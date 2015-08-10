@@ -1401,14 +1401,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 421428, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 32.2200012
-      objectReference: {fileID: 0}
-    - target: {fileID: 421428, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 52.0999985
-      objectReference: {fileID: 0}
     - target: {fileID: 11442088, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: background
       value: 

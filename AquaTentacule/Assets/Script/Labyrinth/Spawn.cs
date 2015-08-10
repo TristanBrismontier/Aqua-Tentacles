@@ -33,4 +33,12 @@ public class Spawn : MonoBehaviour {
 		}
 		return southSpawn;
 	}
+
+	public void OnDrawGizmos(){
+		Gizmos.color = Color.red;
+		Collider2D cod = GetComponent<Collider2D>();
+		if(cod != null)
+		Gizmos.DrawWireCube(cod.bounds.center,cod.bounds.size);
+	}
+
 }

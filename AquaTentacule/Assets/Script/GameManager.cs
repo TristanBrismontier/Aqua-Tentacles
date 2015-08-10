@@ -121,6 +121,8 @@ public class GameManager : MonoBehaviour {
 	}
 	public void eatFishEye(int nutritionFact){
 		RespawnFishEye();
+		player.spawnEye();
+		playerInfo.playerHasEye = true;
 		eat (nutritionFact);
 	}
 
@@ -139,7 +141,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		//Life max = 150 pv
 		if (life > 150) {
-			life = 150;
+			//life = 150;
 		}
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
@@ -168,7 +170,7 @@ public class GameManager : MonoBehaviour {
 	public void death(){
 		if(canDie){
 			canDie = false;
-			life = 100;
+			life = 100000;
 			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource,SoundManager.instance.deadSounds);
 			GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
 			playerGO.transform.localScale = new Vector3(0f,0f,0f);

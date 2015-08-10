@@ -25,11 +25,17 @@ public class Player : MonoBehaviour
 	public GameObject tentacool2;
 	public GameObject tentacool3;
 
+	public GameObject eye1;
+	public GameObject eye2;
+	public GameObject eye3;
+
 	private Rigidbody2D rb;
 	public float scaleRatio;
 	private Vector3 startScale; 
 	
 	public int countTenta;
+	public int countEyes;
+
 	private float inverted = 1.0f;
 
 	void Start()
@@ -53,6 +59,11 @@ public class Player : MonoBehaviour
 		tentacool1.transform.localScale = Vector3.zero;
 		tentacool2.transform.localScale = Vector3.zero;
 		tentacool3.transform.localScale = Vector3.zero;
+
+		countEyes = 0;
+		eye1.transform.localScale = Vector3.zero;
+		eye2.transform.localScale = Vector3.zero;
+		eye3.transform.localScale = Vector3.zero;
 	}
 	public void setEvolution(int tenta){
 		countTenta = tenta;
@@ -62,6 +73,20 @@ public class Player : MonoBehaviour
 			tentacool2.transform.localScale = new Vector3(1,1,1);
 		}else if( countTenta == 3){
 			tentacool3.transform.localScale = new Vector3(1,1,1);
+		}
+	}
+
+	public void setEvolutionEye(int eye){
+		countEyes = eye;
+		if(countEyes >= 1){
+			eye1.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}else if (countEyes >= 2){
+			eye2.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}else if( countEyes == 3){
+			eye3.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
 		}
 	}
 		
@@ -175,12 +200,34 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	public void spawnEye(){
+		if(countEyes == 0){
+			StartCoroutine(growEye(eye1));
+			countEyes++;
+		}else if (countEyes == 1){
+			StartCoroutine(growEye(eye2));
+			countEyes++;
+		}else if( countEyes == 2){
+			StartCoroutine(growEye(eye3));
+			countEyes++;
+		}
+	}
+
 	private IEnumerator growTenta (GameObject tenta) {
 		float scale = 0;
 		while(scale < 1){
 			yield return new WaitForSeconds(1/100);
 			scale += 0.01f;
 			tenta.transform.localScale = new Vector3(scale,scale,1);
+		}
+	}
+
+	private IEnumerator growEye (GameObject eye) {
+		float scale = 0;
+		while(scale < 1){
+			yield return new WaitForSeconds(1/100);
+			scale += 0.01f;
+			eye.transform.localScale = new Vector3(scale,scale,1);
 		}
 	}
 

@@ -7,9 +7,13 @@ public class Spawn : MonoBehaviour {
 	public Transform northSpawn;
 	public Transform eastSpawn;
 	public Transform southSpawn;
+
+	
 	// Use this for initialization
 	void Start () {
 		GameManager.instance.initPlayerPosition(adjustPlayerEntrancePostion());
+		Collider2D cod = GetComponent<Collider2D>();
+		GameManager.instance.cameraBound = (cod == null)? null : cod.bounds;
 	}
 	
 	
@@ -18,16 +22,12 @@ public class Spawn : MonoBehaviour {
 		Debug.Log(playerExit);
 		switch(playerExit){
 		case PlayerExit.North: 
-			Debug.Log("S");
 			return southSpawn;
 		case PlayerExit.East:
-			Debug.Log("W");
 			return westSpawn;
 		case PlayerExit.South:
-			Debug.Log("N");
 			return northSpawn;
 		case PlayerExit.West:
-			Debug.Log("E");
 			return eastSpawn;
 		}
 		return southSpawn;

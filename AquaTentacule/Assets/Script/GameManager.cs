@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour {
 	
 	public static GameManager instance = null;
 
-
 	public float life;
 	public float starving = 2.0f;
 	public Transform startPosition;
@@ -18,12 +17,11 @@ public class GameManager : MonoBehaviour {
 	public int limiteVieHeartbeat;
 
 	public PlayerInfo playerInfo = new PlayerInfo();
-
+	public Bounds cameraBound;
 	public GameObject[] foods;
 	public GameObject Octopus;
 	public GameObject FishEye;
 	public GameObject bubbleExplosionPlop;
-	public PlayerExit playerExit;
 	private Player player;
 	private List<GameObject> instanciatesGameObjects = new List<GameObject>();
 
@@ -32,19 +30,17 @@ public class GameManager : MonoBehaviour {
 
 	void Awake () {
 		if (instance == null){
+			Debug.Log ("New Instance GM");
 			instance = this;
 		}
 		else if(instance != this)
 		{
 			Destroy(gameObject);
 		}
-		
 		DontDestroyOnLoad(gameObject);
-
 	}
 
 	public void Start(){
-
 		isPlayingSound = false;
 		initGame();
 	}
@@ -186,7 +182,6 @@ public class GameManager : MonoBehaviour {
 		GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
 		playerGO.SetActive(true);
 		playerGO.transform.localScale = new Vector3(2.3f,2.3f,2.3f);
-		//MusicManager.instance.resetM();
 		player.transform.position = startPosition.position;
 		yield return new WaitForSeconds(0.5f);
 		player.resetPlayer();
@@ -196,5 +191,4 @@ public class GameManager : MonoBehaviour {
 		}
 		initGame();
 	}
-
 }

@@ -15,28 +15,24 @@ public class Octopus : MonoBehaviour {
 
 	public AudioClip[] crySounds;
 	public AudioClip[] deadSounds;
-
 	
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		debugSprite.enabled = false;
 		float scale = (float) (Random.Range(50,130)/100);
 		speedDamp = 0;
-		//transform.localScale = new Vector3(scale,scale,scale);
 	}
 
 	void Update () {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
-
 		if (Vector3.Distance (transform.position, player.transform.position) < range) {
 			transform.LookAt (player.transform.position);
 			transform.Rotate (new Vector3 (0, 90, 0), Space.Self);
 			transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 			speedDamp = speed;
 		}else{
-		rb.angularVelocity = 0.0f;
-		rb.velocity = Vector2.zero;
-
+			rb.angularVelocity = 0.0f;
+			rb.velocity = Vector2.zero;
 		}
 	}
 
@@ -51,10 +47,6 @@ public class Octopus : MonoBehaviour {
 				ink();
 			}
 		}
-		if(coll.gameObject.tag == "InhertElement"){
-			Vector2 randomVector = Random.insideUnitCircle;
-			//rb.velocity = new Vector2(randomVector.x*speed,randomVector.y*speed);
-		}
 	}
 
 	private bool randomStat(int percent){
@@ -66,7 +58,6 @@ public class Octopus : MonoBehaviour {
 		transform.Translate (new Vector3 (speed * 4 * Time.deltaTime, 0, 0));
 		GameObject particules = Instantiate(inkParticule, new Vector3(transform.position.x,transform.position.y,-5f), Quaternion.identity) as GameObject;
 		StartCoroutine(DestroyLater(particules));
-
 	}
 
 	public IEnumerator DestroyLater(GameObject particules){

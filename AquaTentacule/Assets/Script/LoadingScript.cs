@@ -10,8 +10,10 @@ public class LoadingScript : MonoBehaviour {
 	private float yVelocity = 0.0F;
 	public float paralaxRatio;
 
+
 	public GameObject background;
 	public GameObject gameManager;	
+	public GameObject labyManager;
 
 	public float scaleRatio;
 	private float startScale; 
@@ -22,6 +24,8 @@ public class LoadingScript : MonoBehaviour {
 	void Awake () {
 		if (GameManager.instance == null)
 			Instantiate(gameManager);
+		if(LabyrinthManager.instance == null)
+			Instantiate(labyManager);
 
 	}
 
@@ -36,12 +40,27 @@ public class LoadingScript : MonoBehaviour {
 		if (target)
 		{
 			Vector3 point = GetComponent<UnityEngine.Camera>().WorldToViewportPoint(target.position);
+
+
+			float height = (2*Camera.main.orthographicSize)/2;
+			float width = (height*Camera.main.aspect)/2;
+
+			Vector2 max = new Vector2(transform.position.x+width,transform.position.y+height);
+			Vector2 min = new Vector2(transform.position.x-width,transform.position.y-height);
+
+
+			Debug.Log(max.x+" - "+max.y);
+			Debug.Log(min.x+" - "+min.y);
 			Vector3 delta = target.position - GetComponent<UnityEngine.Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
 			Vector3 destination = transform.position + delta;
 			if(Mathf.Abs(delta.x) >= 15 || Mathf.Abs(delta.y) >= 15){
 				teleportToTarget();
 			}
-			destination = new Vector3(Mathf.Clamp(destination.x,-61f,61),Mathf.Clamp(destination.y,-52,52),destination.z);
+
+			Bounds bound = GameManager.instance.cameraBound;
+
+			if(bound != null)
+				destination = new Vector3(Mathf.Clamp(destination.x,bound.min.x+width,bound.max.x-width),Mathf.Clamp(destination.y,bound.min.y+height,bound.max.y-height),destination.z);
 			//transform.position = new Vector3(destination.x, destination.y,transform.position.z);
 			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
 

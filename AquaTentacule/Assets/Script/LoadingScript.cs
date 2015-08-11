@@ -43,7 +43,7 @@ public class LoadingScript : MonoBehaviour {
 
 
 			float height = (2*Camera.main.orthographicSize)/2;
-			float width = (height*Camera.main.aspect)/2;
+			float width = (height*Camera.main.aspect);
 
 			Vector2 max = new Vector2(transform.position.x+width,transform.position.y+height);
 			Vector2 min = new Vector2(transform.position.x-width,transform.position.y-height);
@@ -53,8 +53,9 @@ public class LoadingScript : MonoBehaviour {
 			Debug.Log(min.x+" - "+min.y);
 			Vector3 delta = target.position - GetComponent<UnityEngine.Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
 			Vector3 destination = transform.position + delta;
-			if(Mathf.Abs(delta.x) >= 15 || Mathf.Abs(delta.y) >= 15){
+			if(Mathf.Abs(delta.x) >= width || Mathf.Abs(delta.y) >= width){
 				teleportToTarget();
+				Debug.Log("TP");
 			}
 
 			Bounds bound = GameManager.instance.cameraBound;

@@ -59,15 +59,19 @@ public class GameManager : MonoBehaviour {
 		playerInfo.playerHasTenta = false;
 		canDie = true;
 		playerInfo.tentaCount = 0;
+		initAntagonist();
+	}
+
+	public void initAntagonist(){
 		int foodNumber = Random.Range(minFood,maxFood);
 		for(int i = 0 ; i<foodNumber; i++){
 			AddFood();
 		}
-
+		
 		for(int i = 0 ; i<octopus; i++){
 			RespawnOctopus();
 		}
-
+		
 		for(int i = 0 ; i<FishCount; i++){
 			RespawnFishEye();
 		}

@@ -42,38 +42,17 @@ MonoBehaviour:
   life: 100
   starving: .100000001
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
-  minFood: 50
-  maxFood: 50
-  octopus: 6
+  minFood: 11
+  maxFood: 40
+  octopus: 3
   FishCount: 2
   maxRange: 40
   limiteVieHeartbeat: 20
-  eatSounds:
-  - {fileID: 8300000, guid: 93dcc28e6f93e1946bdb98173f64cf40, type: 3}
-  - {fileID: 8300000, guid: 8c39a10e0b8e0734292721de97d069f9, type: 3}
-  - {fileID: 8300000, guid: 43d450c335018914e85a7342d82d0d30, type: 3}
-  - {fileID: 8300000, guid: c756efa81de905a42a9691f4c36f8936, type: 3}
-  deadSounds:
-  - {fileID: 8300000, guid: 2db853350f599344dac8f540955201f8, type: 3}
-  - {fileID: 8300000, guid: c6b86e11163149348928918885fe2c09, type: 3}
-  - {fileID: 8300000, guid: a11c4caafcec56b43af85ea28e706121, type: 3}
-  - {fileID: 8300000, guid: 647e2d6e871240a49b54cdb860f4baad, type: 3}
-  - {fileID: 8300000, guid: c2db9a6c426427649afff1025221cf83, type: 3}
-  meduseSounds:
-  - {fileID: 8300000, guid: 71601c3d37383ba4ba9eb287a4be5ab9, type: 3}
-  - {fileID: 8300000, guid: 00de2b5d70226a6448fb24baf777bd8e, type: 3}
-  - {fileID: 8300000, guid: 7026c77e2d4ae5247b4f30f123309adb, type: 3}
-  - {fileID: 8300000, guid: 2464925f09a975e4c9a09c7b6b294932, type: 3}
-  - {fileID: 8300000, guid: 467237c50d7821a46b5070d5f4a8e6f2, type: 3}
-  callGeorgeSounds:
-  - {fileID: 8300000, guid: 4e300ee43e1c5ed45ac7a633932cbbe2, type: 3}
-  - {fileID: 8300000, guid: f24a46e8f239d24488872ff29d07c9a2, type: 3}
-  - {fileID: 8300000, guid: 6a1e2118aa2d1cf4983bb6c50104c8ae, type: 3}
-  - {fileID: 8300000, guid: 21ed1d0d17f574443a9ad55817c476e1, type: 3}
-  - {fileID: 8300000, guid: 61493f55a03d56241a9a9446000f351b, type: 3}
-  heartbeatSound: {fileID: 8300000, guid: 3101cbcb05b2cad40a9c511904a9635d, type: 3}
+  cameraBound:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
   foods:
-  - {fileID: 146090, guid: ea77601987b052e4fa4d27f64d12a13e, type: 2}
+  - {fileID: 134022, guid: 5524679d881c02c46b5053fa2bd9fad2, type: 2}
   - {fileID: 157490, guid: 4b9fa89205d39364b8f161d2850f74ae, type: 2}
   - {fileID: 107486, guid: 865e059f11228f042b381f939632adf0, type: 2}
   Octopus: {fileID: 150962, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
@@ -96,11 +75,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: minFood
-      value: 50
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxFood
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: starving
@@ -154,6 +133,14 @@ Prefab:
       propertyPath: callGeorgeSounds.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 61493f55a03d56241a9a9446000f351b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: octopus
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: foods.Array.data[0]
+      value: 
+      objectReference: {fileID: 134022, guid: 5524679d881c02c46b5053fa2bd9fad2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197372}

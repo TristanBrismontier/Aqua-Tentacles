@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 9208924ae4d9c67459e6d97b0fef5c89
+timeCreated: 1440617987
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheet1eye_0
+    21300002: spritesheet1eye_1
+    21300004: spritesheet1eye_2
+    21300006: spritesheet1eye_3
+    21300008: spritesheet1eye_4
+    21300010: spritesheet1eye_5
+    21300012: spritesheet1eye_6
+    21300014: spritesheet1eye_7
+    21300016: spritesheet1eye_8
+    21300018: spritesheet1eye_9
+    21300020: spritesheet1eye_10
+    21300022: spritesheet1eye_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spritesheet1eye_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 71
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 0
+        width: 69
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 82
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 85
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_4
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 0
+        width: 71
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_5
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 71
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_6
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 0
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_7
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 69
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_8
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 0
+        width: 83
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_9
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 2
+        width: 82
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_10
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 0
+        width: 71
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet1eye_11
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

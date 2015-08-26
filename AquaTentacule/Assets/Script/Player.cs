@@ -75,6 +75,30 @@ public class Player : MonoBehaviour
 			tentacool3.transform.localScale = new Vector3(1,1,1);
 		}
 	}
+	public void restoreEvolution(int tenta){
+		countTenta = tenta;
+		if(countTenta >= 1){
+			tentacool1.transform.localScale = new Vector3(1,1,1);
+		}if (countTenta >= 2){
+			tentacool2.transform.localScale = new Vector3(1,1,1);
+		} if( countTenta == 3){
+			tentacool3.transform.localScale = new Vector3(1,1,1);
+		}
+	}
+
+	public void restoreEvolutionEye(int eye){
+		countEyes = eye;
+		if(countEyes >= 1){
+			eye1.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		} if (countEyes >= 2){
+			eye2.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		} if( countEyes == 3){
+			eye3.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}
+	}
 
 	public void setEvolutionEye(int eye){
 		countEyes = eye;

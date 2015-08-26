@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 49234704}
   - 212: {fileID: 49234705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: robotGuetteHaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 75410466}
   - 60: {fileID: 75410467}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CollideRobotGuetteGauche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 203190488}
   - 212: {fileID: 203190489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RobotGuetteBordGauche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 204919470}
   - 60: {fileID: 204919471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CollideRobotGuetteHaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 527670372}
   - 60: {fileID: 527670373}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CollideRobotGuetteBas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,11 +466,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22459394, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .660000026
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22459394, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5029364, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_Mass
@@ -484,6 +484,18 @@ Prefab:
       propertyPath: background
       value: 
       objectReference: {fileID: 1009827376}
+    - target: {fileID: 424828, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: -10.5600004
+      objectReference: {fileID: 0}
+    - target: {fileID: 421428, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.86999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 480862, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
   m_IsPrefabParent: 0
@@ -594,7 +606,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1009827377}
   - 212: {fileID: 1009827378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: brouillon-fond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +659,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1467723047}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +673,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467723046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 22.0799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1009827377}
@@ -779,7 +791,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1961284031}
   - 212: {fileID: 1961284032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: robotGuette
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,14 +11,16 @@ public class PlayerInfo  {
 	public bool playerHasEye;
 
 	public void restorePlayerInfo(Player player){
-		player.setEvolution(tentaCount);
-		player.setEvolutionEye(eyeCount);
+		player.restoreEvolution(tentaCount);
+		player.restoreEvolutionEye(eyeCount);
 		player.transform.rotation = playerRotation;
 		player.transform.position = new Vector3(startDeltaPosition.x,startDeltaPosition.y,player.transform.position.z);
 		player.setVelocity(velocity);
+		Debug.Log(tentaCount+"## tenta "+player.countTenta);
 	}
 
 	public void saveInfo(Player player){
+		Debug.Log("## Save tenta "+player.countTenta);
 		playerRotation = player.transform.rotation;
 		tentaCount = player.countTenta;
 		eyeCount = player.countEyes;

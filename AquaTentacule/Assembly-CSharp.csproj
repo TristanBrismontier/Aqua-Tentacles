@@ -56,6 +56,7 @@
      <Compile Include="Assets\Script\Ennemy\Oursins.cs" />
      <Compile Include="Assets\Script\Ennemy\Scaphandre.cs" />
      <Compile Include="Assets\Script\Ennemy\Tonneau.cs" />
+     <Compile Include="Assets\Script\Ennemy\fish.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\GeogeCalling.cs" />
      <Compile Include="Assets\Script\Labyrinth\LabyConfigTiles.cs" />

@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+
+
 
 
 public class LabyrinthManager : MonoBehaviour {
@@ -42,17 +45,10 @@ public class LabyrinthManager : MonoBehaviour {
 
 	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
 		if(lastVisitedTile != null && lastPlayerExit.Equals(lastVisitedTile.getOppositeOf(playerExitTaken))){
-			Debug.Log ("Yes Man LastTiles FTW " + lastVisitedTile.sceneName);
 			return lastVisitedTile;
 		}
-		List<LabyTiles> tilestmp = new List<LabyTiles>();
-		tilestmp.AddRange(tilesParam);
+		List<LabyTiles> tilestmp = tilesParam.Where( x => x.canFitWithThisExit(playerExitTaken)).ToList();
 		LabyTiles tile = tilestmp[UnityEngine.Random.Range(0,tilestmp.Count)] ;
-		if(tile.canFitWithThisExit(playerExitTaken)){
-			return tile;
-		}else{
-			tilestmp.Remove(tile);
-			return getRandomFittingTile(tilestmp);
-		}
+		return tile;
 	}
 }

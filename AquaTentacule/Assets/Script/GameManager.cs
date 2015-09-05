@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
 	public int FishCount;
 	public int maxRange;
 	public int limiteVieHeartbeat;
+	public bool debug;
 
 	public PlayerInfo playerInfo = new PlayerInfo();
 	public Bounds cameraBound;
@@ -59,7 +60,11 @@ public class GameManager : MonoBehaviour {
 		playerInfo.playerHasTenta = false;
 		canDie = true;
 		playerInfo.tentaCount = 0;
-		initAntagonist();
+		if(!debug){
+			Debug.Log("Deb "+debug);
+			initAntagonist();
+		}
+			
 	}
 
 	public void initAntagonist(){

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\BubblesFollower.cs" />
+     <Compile Include="Assets\Script\Ennemy\DogSeaMeat.cs" />
      <Compile Include="Assets\Script\Ennemy\Enemys.cs" />
      <Compile Include="Assets\Script\Ennemy\Fastfish.cs" />
      <Compile Include="Assets\Script\Ennemy\FishEye.cs" />

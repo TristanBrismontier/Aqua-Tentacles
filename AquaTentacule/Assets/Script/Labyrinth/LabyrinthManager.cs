@@ -35,7 +35,6 @@ public class LabyrinthManager : MonoBehaviour {
 		LabyTiles nextTile = getRandomFittingTile(tiles);
 		lastVisitedTile = anteVisited;
 		anteVisited = nextTile;
-		Debug.Log(nextTile.sceneName);
 		GameManager.instance.loadLevel(nextTile.sceneName);
 	}
 
@@ -45,11 +44,17 @@ public class LabyrinthManager : MonoBehaviour {
 
 	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
 		if(lastVisitedTile != null && lastPlayerExit.Equals(lastVisitedTile.getOppositeOf(playerExitTaken))){
-			Debug.Log("FTW");
 			return lastVisitedTile;
 		}
 		List<LabyTiles> tilestmp = tilesParam.Where( x => x.canFitWithThisExit(playerExitTaken)).ToList();
+		if(tilestmp.Count>1){
+			tilestmp.Remove(anteVisited);
+			Debug.Log("Remove last " +anteVisited);
+		}
 		LabyTiles tile = tilestmp[UnityEngine.Random.Range(0,tilestmp.Count)] ;
+
+
+
 		return tile;
 	}
 }

@@ -51,12 +51,16 @@ public class LoadingScript : MonoBehaviour {
 		
 			Vector3 delta = target.position - GetComponent<UnityEngine.Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
 			Vector3 destination = transform.position + delta;
+			Bounds bound = GameManager.instance.cameraBound;
+
 			if(Mathf.Abs(delta.x) >= width || Mathf.Abs(delta.y) >= width){
-				teleportToTarget();
+				destination = new Vector3(Mathf.Clamp(destination.x,bound.min.x+width,bound.max.x-width),Mathf.Clamp(destination.y,bound.min.y+height,bound.max.y-height),destination.z);
+
+				transform.position = destination;
 				Debug.Log("TP");
 			}
 
-			Bounds bound = GameManager.instance.cameraBound;
+
 
 			if(bound != null)
 				destination = new Vector3(Mathf.Clamp(destination.x,bound.min.x+width,bound.max.x-width),Mathf.Clamp(destination.y,bound.min.y+height,bound.max.y-height),destination.z);
@@ -74,9 +78,6 @@ if(background != null)
 		}
 	}
 
-	private void teleportToTarget(){
-		transform.position = new Vector3(target.position.x,target.position.y,transform.position.z);
-	}
 
 	public void setScale(float adj){
 		scaleRatio = Mathf.SmoothDamp(scaleRatio,adj,ref yVelocity, smoothTime);

@@ -720,7 +720,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.7001228, y: -51.56007, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421428}
@@ -1060,7 +1060,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176102}
-  m_Mass: 100
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
@@ -2056,7 +2056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb19a3782884e23489bde50c949e7fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRotation: 100
+  speedRotation: 120
   force: 10
   pushForce: 2.5
   slowDown: .980000019

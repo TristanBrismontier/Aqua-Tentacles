@@ -48,7 +48,7 @@ MonoBehaviour:
   FishCount: 2
   maxRange: 40
   limiteVieHeartbeat: 20
-  debug: 1
+  debug: 0
   cameraBound:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
@@ -144,7 +144,7 @@ Prefab:
       objectReference: {fileID: 134022, guid: 5524679d881c02c46b5053fa2bd9fad2, type: 2}
     - target: {fileID: 0}
       propertyPath: debug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

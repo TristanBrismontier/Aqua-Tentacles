@@ -8,14 +8,13 @@ using System.Collections.Generic;
 
 
 public class LabyrinthManager : MonoBehaviour {
-
-
+	
 	public static LabyrinthManager instance = null;
 	private List<LabyTiles> tiles = new List<LabyTiles>();
 	private PlayerExit playerExitTaken;
 	private PlayerExit lastPlayerExit;
 	private LabyTiles lastVisitedTile;
-
+	private LabyTiles anteVisited;
 	void Awake () {
 		if (instance == null){
 			Debug.Log ("New Instance Laby");
@@ -34,7 +33,8 @@ public class LabyrinthManager : MonoBehaviour {
 		lastPlayerExit = playerExitTaken;
 		playerExitTaken = (PlayerExit)Enum.Parse(typeof(PlayerExit), exitTag);
 		LabyTiles nextTile = getRandomFittingTile(tiles);
-		lastVisitedTile = nextTile;
+		lastVisitedTile = anteVisited;
+		anteVisited = nextTile;
 		Debug.Log(nextTile.sceneName);
 		GameManager.instance.loadLevel(nextTile.sceneName);
 	}
@@ -45,6 +45,7 @@ public class LabyrinthManager : MonoBehaviour {
 
 	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
 		if(lastVisitedTile != null && lastPlayerExit.Equals(lastVisitedTile.getOppositeOf(playerExitTaken))){
+			Debug.Log("FTW");
 			return lastVisitedTile;
 		}
 		List<LabyTiles> tilestmp = tilesParam.Where( x => x.canFitWithThisExit(playerExitTaken)).ToList();

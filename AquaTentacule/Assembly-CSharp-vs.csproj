@@ -64,6 +64,7 @@
      <Compile Include="Assets\Script\Labyrinth\LabyrinthManager.cs" />
      <Compile Include="Assets\Script\Labyrinth\PlayerExit.cs" />
      <Compile Include="Assets\Script\Labyrinth\Spawn.cs" />
+     <Compile Include="Assets\Script\Labyrinth\spawnPos.cs" />
      <Compile Include="Assets\Script\LoadingScript.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\PlayerInfo.cs" />

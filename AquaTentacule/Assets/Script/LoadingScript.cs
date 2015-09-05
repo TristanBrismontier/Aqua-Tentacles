@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LoadingScript : MonoBehaviour {
+public class LoadingScript : MonoBehaviour
+{
 
 	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
@@ -21,68 +22,62 @@ public class LoadingScript : MonoBehaviour {
 	public Camera camera;
 
 	private Vector3 startPosition;
-	void Awake () {
+	void Awake ()
+	{
 		if (GameManager.instance == null)
-			Instantiate(gameManager);
-		if(LabyrinthManager.instance == null)
-			Instantiate(labyManager);
+			Instantiate (gameManager);
+		if (LabyrinthManager.instance == null)
+			Instantiate (labyManager);
 
 	}
 
-	void Start () {
+	void Start ()
+	{
 		scaleRatio = 1;
 		startScale = camera.orthographicSize;
-		startPosition = new Vector3(0,0,20);
+		startPosition = new Vector3 (0, 0, 20);
 	}
 
-	void Update () 
+	void Update ()
 	{
-		if (target)
-		{
-			Vector3 point = GetComponent<UnityEngine.Camera>().WorldToViewportPoint(target.position);
+		if (target) {
+			Vector3 point = GetComponent<UnityEngine.Camera> ().WorldToViewportPoint (target.position);
 
+			//Get Camera Size
+			float height = (2 * Camera.main.orthographicSize) / 2;
+			float width = (height * Camera.main.aspect);
 
-			float height = (2*Camera.main.orthographicSize)/2;
-			float width = (height*Camera.main.aspect);
-
-			Vector2 max = new Vector2(transform.position.x+width,transform.position.y+height);
-			Vector2 min = new Vector2(transform.position.x-width,transform.position.y-height);
-
-		
-			Vector3 delta = target.position - GetComponent<UnityEngine.Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
+			Vector3 delta = target.position - GetComponent<UnityEngine.Camera> ().ViewportToWorldPoint (new Vector3 (0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
 			Vector3 destination = transform.position + delta;
 			Bounds bound = GameManager.instance.cameraBound;
 
-			if(Mathf.Abs(delta.x) >= width || Mathf.Abs(delta.y) >= width){
-				destination = new Vector3(Mathf.Clamp(destination.x,bound.min.x+width,bound.max.x-width),Mathf.Clamp(destination.y,bound.min.y+height,bound.max.y-height),destination.z);
-
+			if (Mathf.Abs (delta.x) >= width || Mathf.Abs (delta.y) >= width) {
+				destination = new Vector3 (Mathf.Clamp (destination.x, bound.min.x + width, bound.max.x - width), Mathf.Clamp (destination.y, bound.min.y + height, bound.max.y - height), destination.z);
 				transform.position = destination;
-				Debug.Log("TP");
 			}
 
+			//Limit camera movement to scene Bound
+			if (bound != null){
+				destination = new Vector3 (Mathf.Clamp (destination.x, bound.min.x + width, bound.max.x - width), Mathf.Clamp (destination.y, bound.min.y + height, bound.max.y - height), destination.z);
+			}
+			//Smooth transform to player position
+			transform.position = Vector3.SmoothDamp (transform.position, destination, ref velocity, dampTime);
 
-
-			if(bound != null)
-				destination = new Vector3(Mathf.Clamp(destination.x,bound.min.x+width,bound.max.x-width),Mathf.Clamp(destination.y,bound.min.y+height,bound.max.y-height),destination.z);
-			//transform.position = new Vector3(destination.x, destination.y,transform.position.z);
-			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
-
-
-
-if(background != null)
-				background.transform.position = new Vector3(
-				startPosition.x - (float)(transform.position.x/paralaxRatio),
-				startPosition.y - (float)(transform.position.y/paralaxRatio),
+			//Paralax Gestion
+			if (background != null)
+				background.transform.position = new Vector3 (
+				startPosition.x - (float)(transform.position.x / paralaxRatio),
+				startPosition.y - (float)(transform.position.y / paralaxRatio),
 				startPosition.z
 				);
 		}
 	}
 
-
-	public void setScale(float adj){
-		scaleRatio = Mathf.SmoothDamp(scaleRatio,adj,ref yVelocity, smoothTime);
+	//Zoom or UnZoom camera
+	public void setScale (float adj)
+	{
+		scaleRatio = Mathf.SmoothDamp (scaleRatio, adj, ref yVelocity, smoothTime);
 		camera.orthographicSize = startScale * scaleRatio;
 	}
-
-
+	
 }

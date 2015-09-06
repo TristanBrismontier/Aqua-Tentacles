@@ -464,6 +464,7 @@ GameObject:
   - 50: {fileID: 572451289}
   - 58: {fileID: 572451288}
   - 61: {fileID: 572451287}
+  - 114: {fileID: 572451292}
   m_Layer: 0
   m_Name: DogSeaMeat
   m_TagString: Untagged
@@ -569,6 +570,20 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &572451292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572451285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025ae19e3a3e1fb47b40473e8e2fdbe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMax: 0
+  speedRotationMax: 0
+  fireRate: .5
 --- !u!1001 &962711908
 Prefab:
   m_ObjectHideFlags: 0
@@ -1054,11 +1069,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22459394, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: .660000026
       objectReference: {fileID: 0}
     - target: {fileID: 22459394, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5029364, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_Mass

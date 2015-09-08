@@ -208,6 +208,8 @@ public class Player : MonoBehaviour
 	}
 
 	public void  Hurt(){
+		Debug.Log("HURT PLAYER");
+		SoundManager.instance.RandomizeSfx (SoundManager.instance.efxSource, SoundManager.instance.deadSounds);
 		animator.SetTrigger("hurt");
 	}
 

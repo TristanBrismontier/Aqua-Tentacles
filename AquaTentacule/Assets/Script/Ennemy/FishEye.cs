@@ -54,7 +54,7 @@ public class FishEye : MonoBehaviour {
 				//PlayerController.score++;
 				Destroy (gameObject);
 			}else{
-				GameManager.instance.death();
+				GameManager.instance.looseLife(damage);
 			}
 		} else {
 			animator.SetBool ("Attack", false);

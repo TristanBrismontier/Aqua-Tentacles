@@ -39,8 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e9adb4e6e8604ca7ecdf90712c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
-  starving: .100000001
+  life: 200
+  maxLife: 200
+  starving: 2
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
   minFood: 11
   maxFood: 40
@@ -59,6 +60,7 @@ MonoBehaviour:
   Octopus: {fileID: 150962, guid: b1c5950ea3d82384cb5759e5b7203bcb, type: 2}
   FishEye: {fileID: 167046, guid: 985efc834ea5df34bb26c65760e66699, type: 2}
   bubbleExplosionPlop: {fileID: 126194, guid: 18d6a99e8749ec244a178be91bace456, type: 2}
+  hurtRate: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -84,7 +86,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: starving
-      value: .100000001
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: heartbeatSound
@@ -145,6 +147,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: debug
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxLife
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: life
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

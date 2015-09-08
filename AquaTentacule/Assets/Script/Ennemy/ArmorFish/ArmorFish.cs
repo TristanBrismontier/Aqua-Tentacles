@@ -7,6 +7,7 @@ public class ArmorFish : MonoBehaviour {
 	public float rangeDash;
 	public float speed;
 
+
 	private Rigidbody2D rb;
 	private Vector3 velocity = Vector3.zero;
 	public float dampTime ;

@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 	
 	public static GameManager instance = null;
 	public float life;
-	public float starving = 2.0f;
+	public float maxLife;
+	public float starving;
 	public Transform startPosition;
 	public int minFood;
 	public int maxFood;
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
 	private List<GameObject> instanciatesGameObjects = new List<GameObject> ();
 	private bool canDie;
 	private bool isPlayingSound;
+
+	public float hurtRate = 3.0F;
+	private float nextHurt = 0.0F;
 
 	void Awake ()
 	{
@@ -144,8 +148,14 @@ public class GameManager : MonoBehaviour
 
 	public void looseLife (int damage)
 	{
-		eat (damage * -1);
-		player.Hurt ();
+		if ( (Time.time > nextHurt) ) {
+			nextHurt = Time.time + hurtRate;
+			eat (damage * -1);
+			player.Hurt ();
+			if(life<=0){
+				death();
+			}
+		}
 	}
 
 	private void eat (int nutritionFact)
@@ -159,11 +169,12 @@ public class GameManager : MonoBehaviour
 	void Update ()
 	{
 		//Life max = 150 pv
-		if (life > 150) {
-			//life = 150;
+		if (life > maxLife) {
+			life = maxLife;
 		}
 		//Each seconds = -2 pv
 		life -= starving * Time.deltaTime;
+
 		if (life <= 0) {
 			death ();
 		}
@@ -188,7 +199,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (canDie) {
 			canDie = false;
-			life = 100000;
+			life = maxLife;
 			SoundManager.instance.RandomizeSfx (SoundManager.instance.efxSource, SoundManager.instance.deadSounds);
 			GameObject playerGO = GameObject.FindGameObjectWithTag ("Player");
 			playerGO.transform.localScale = new Vector3 (0f, 0f, 0f);

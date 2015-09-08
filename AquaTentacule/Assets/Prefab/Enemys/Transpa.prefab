@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235ec32913942084e9b7dceb9efe5d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nutritionFact: 3
+  nutritionFact: 12
   speedMax: 6
   speedRotationMax: 42.5999985
 --- !u!212 &21206248
@@ -190,7 +190,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: nutritionFact
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x

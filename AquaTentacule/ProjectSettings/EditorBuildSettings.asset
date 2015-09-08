@@ -6,10 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scene/second2.unity
+  - enabled: 0
     path: Assets/_Scene/Main.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scene/Labyrinth/FourDir.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scene/Labyrinth/EW.unity
   - enabled: 1
     path: Assets/_Scene/Labyrinth/EWN.unity
@@ -21,3 +23,9 @@ EditorBuildSettings:
     path: Assets/_Scene/Labyrinth/NSE.unity
   - enabled: 1
     path: Assets/_Scene/Labyrinth/NE.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/WMachinesLumBleues.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/NSE2.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/NWEfondMachines.unity

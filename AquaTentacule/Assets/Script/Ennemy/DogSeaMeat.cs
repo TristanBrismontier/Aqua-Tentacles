@@ -14,7 +14,7 @@ public class DogSeaMeat : MonoBehaviour {
 	private float lastX;
 	private int jumpCount=0;
 
-	private float fireJump = 3.0F;
+	private float fireJump = 1.0F;
 	private float nextFire = 0.0F;
 	
 	

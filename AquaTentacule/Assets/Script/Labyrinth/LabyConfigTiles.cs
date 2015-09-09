@@ -14,6 +14,14 @@ public class LabyConfigTiles{
 		tiles.Add( new LabyTiles("NSE2",PlayerExit.North,PlayerExit.East,PlayerExit.South));
 		tiles.Add( new LabyTiles("NWEfondMachines",PlayerExit.North,PlayerExit.East,PlayerExit.West));
 		return tiles;
-		
+	}
+
+	public LabyTiles getLastTile(){
+		// Todo : Configure the right tile.
+		return new LabyTiles("NSE2");
+	} 
+
+	public int getCorrectExitNeeded(){
+		return 5;
 	}
 }

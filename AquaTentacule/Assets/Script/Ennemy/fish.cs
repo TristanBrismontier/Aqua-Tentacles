@@ -46,10 +46,8 @@ public class fish : MonoBehaviour {
 		}
 		if ( Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Debug.Log("Colision : " + face);
 			speed  = (float)(Random.Range(2,speedMax*12)/10);
 			face = !face;
-			Debug.Log("Colision : " + face);
 		}
 
 		if(coll.gameObject.tag == "Octo"){

@@ -38,7 +38,6 @@ public class DogSeaMeat : MonoBehaviour {
 			nextFire = Time.time + fireJump;
 			//Jump Script      
 			rb.AddForce (Vector2.up * 7, ForceMode2D.Impulse);
-			Debug.Log("#####Jump : + JumpCount : "+jumpCount+" Time.time ! "+Time.time+" > "+nextFire+" "+fireJump);
 			if(jumpCount>4){
 				face =!face;
 				jumpCount=0;

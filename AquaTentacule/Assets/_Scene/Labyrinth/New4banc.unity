@@ -791,7 +791,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435180, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22459394, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_AnchorMax.x
@@ -874,7 +874,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477008, guid: 46a0c6856d3c67a43ab3011fd5c12a53, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 431358, guid: 46a0c6856d3c67a43ab3011fd5c12a53, type: 2}
       propertyPath: m_LocalPosition.x

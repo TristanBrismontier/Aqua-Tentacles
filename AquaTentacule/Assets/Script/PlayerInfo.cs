@@ -14,13 +14,13 @@ public class PlayerInfo  {
 		player.restoreEvolution(tentaCount);
 		player.restoreEvolutionEye(eyeCount);
 		player.transform.rotation = playerRotation;
+		Debug.Log("## StartPosition : " + startDeltaPosition);
 		player.transform.position = new Vector3(startDeltaPosition.x,startDeltaPosition.y,player.transform.position.z);
 		player.setVelocity(velocity);
-		Debug.Log(tentaCount+"## tenta "+player.countTenta);
+		Debug.Log ("## Player "+player.transform.position);
 	}
 
 	public void saveInfo(Player player){
-		Debug.Log("## Save tenta "+player.countTenta);
 		playerRotation = player.transform.rotation;
 		tentaCount = player.countTenta;
 		eyeCount = player.countEyes;

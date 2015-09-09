@@ -26,8 +26,6 @@ public class MusicManager : MonoBehaviour {
 	private IEnumerator fadeOutZone4;
 	private IEnumerator fadeOutZone5;
 
-
-
 	private float privateTimeFade
 	{
 		get

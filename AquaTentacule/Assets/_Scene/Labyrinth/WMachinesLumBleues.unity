@@ -168,7 +168,7 @@ Transform:
   - {fileID: 988805741}
   - {fileID: 1885672756}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &305656179 stripped
 Transform:
   m_PrefabParentObject: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
@@ -399,7 +399,7 @@ Transform:
   - {fileID: 1436091640}
   - {fileID: 67891705}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!1 &854722026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435180, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22459394, guid: d5a5327a2d5a27b428aba16cd8c38da8, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1164,7 +1164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477008, guid: 46a0c6856d3c67a43ab3011fd5c12a53, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 431358, guid: 46a0c6856d3c67a43ab3011fd5c12a53, type: 2}
       propertyPath: m_LocalPosition.x

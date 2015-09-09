@@ -12,7 +12,6 @@ public class HitPlayer : MonoBehaviour {
 		checkCollision(other);
 	}
 	void checkCollision(Collision2D other){
-		Debug.Log("COLLISION");
 		if (other.gameObject.tag == "Player") {
 			GameManager.instance.looseLife(damage);
 		}

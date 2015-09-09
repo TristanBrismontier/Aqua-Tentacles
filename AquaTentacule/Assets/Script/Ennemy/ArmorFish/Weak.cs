@@ -17,7 +17,6 @@ public class Weak : MonoBehaviour {
 	}
 
 	void checkCollision(Collision2D other){
-		Debug.Log("COLLISION");
 		if (other.gameObject.tag == "Player") {
 			Instantiate (bubbleExplosion, transform.position, transform.rotation);
 			GameManager.instance.eatFishEye(nutritionFact);

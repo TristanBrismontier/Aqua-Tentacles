@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
 	void Awake ()
 	{
 		if (instance == null) {
-			Debug.Log ("New Instance GM");
 			instance = this;
 		} else if (instance != this) {
 			Destroy (gameObject);
@@ -50,6 +49,7 @@ public class GameManager : MonoBehaviour
 
 	public void setPlayer (Player _player)
 	{
+		Debug.Log ("SetPlayer Pos");
 		player = _player;
 		playerInfo.restorePlayerInfo (player);
 		startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
@@ -57,7 +57,12 @@ public class GameManager : MonoBehaviour
 
 	public void initPlayerPosition (Transform position)
 	{
+
+		Debug.Log("!initiate  : "+ position.position);
 		playerInfo.startDeltaPosition = position.position;
+		playerInfo.restorePlayerInfo(player);
+		startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
+
 	}
 
 	public void initGame ()
@@ -72,7 +77,6 @@ public class GameManager : MonoBehaviour
 	public void initAntagonist ()
 	{
 		if (!debug) {
-			Debug.Log ("Deb " + debug);
 			int foodNumber = Random.Range (minFood, maxFood);
 			for (int i = 0; i<foodNumber; i++) {
 				AddFood ();

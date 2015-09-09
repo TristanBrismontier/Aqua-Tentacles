@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
 
 	public void setPlayer (Player _player)
 	{
-		Debug.Log ("SetPlayer Pos");
 		player = _player;
 		playerInfo.restorePlayerInfo (player);
 		startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
@@ -57,12 +56,11 @@ public class GameManager : MonoBehaviour
 
 	public void initPlayerPosition (Transform position)
 	{
-
-		Debug.Log("!initiate  : "+ position.position);
 		playerInfo.startDeltaPosition = position.position;
-		playerInfo.restorePlayerInfo(player);
-		startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
-
+		if(player != null){
+			playerInfo.restorePlayerInfo(player);
+			startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
+		}
 	}
 
 	public void initGame ()
@@ -176,9 +174,10 @@ public class GameManager : MonoBehaviour
 		if (life > maxLife) {
 			life = maxLife;
 		}
+		if(!debug){
 		//Each seconds = -2 pv
-		life -= starving * Time.deltaTime;
-
+			life -= starving * Time.deltaTime;
+		}
 		if (life <= 0) {
 			death ();
 		}

@@ -14,10 +14,8 @@ public class PlayerInfo  {
 		player.restoreEvolution(tentaCount);
 		player.restoreEvolutionEye(eyeCount);
 		player.transform.rotation = playerRotation;
-		Debug.Log("## StartPosition : " + startDeltaPosition);
 		player.transform.position = new Vector3(startDeltaPosition.x,startDeltaPosition.y,player.transform.position.z);
 		player.setVelocity(velocity);
-		Debug.Log ("## Player "+player.transform.position);
 	}
 
 	public void saveInfo(Player player){

@@ -21,7 +21,6 @@ public class Spawn : MonoBehaviour {
 	
 	private Transform adjustPlayerEntrancePostion() {
 		PlayerExit playerExit = LabyrinthManager.instance.getplayerExit() ; 
-		Debug.Log("adjustPlayerEntrancePostion "+playerExit);
 		switch(playerExit){
 		case PlayerExit.North: 
 			return southSpawn;

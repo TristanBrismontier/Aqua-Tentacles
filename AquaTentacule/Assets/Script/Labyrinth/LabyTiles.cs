@@ -19,7 +19,7 @@ public class LabyTiles {
 		PlayerExit entrance = getOppositeOf(exit);
 		return exitList.Contains(entrance);
 	}
-	public PlayerExit getOppositeOf(PlayerExit exit){
+	public static PlayerExit getOppositeOf(PlayerExit exit){
 		switch(exit){
 			case PlayerExit.North: 
 				return PlayerExit.South;

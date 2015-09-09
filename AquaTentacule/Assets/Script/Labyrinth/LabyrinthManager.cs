@@ -46,23 +46,24 @@ public class LabyrinthManager : MonoBehaviour {
 			correctExitTakes = 0;
 
 		LabyTiles nextTile;
-		if(correctExitTakes == correctExitNeed)
+		if(correctExitTakes == correctExitNeed){
+			Debug.Log("FINISH HIM");
 			nextTile = lastTiles;
-		else
+		}else
 			nextTile = getRandomFittingTile(tiles);
 
 		try{
 			next = nextTile.exitList
 				.OrderBy(e => Guid.NewGuid())
-					.Where(e => e != playerExitTaken)
+					.Where(e => e != LabyTiles.getOppositeOf(playerExitTaken))
 					.First();
 		}catch(InvalidOperationException e){
 			Debug.LogError("### Have to Catch");
-			next= playerExitTaken;
+			next= LabyTiles.getOppositeOf(playerExitTaken);
 		}
 
 
-		Debug.Log ("#### NEXT "+ next);
+		Debug.Log ("#### NEXT "+ next +" comeFrom "+ LabyTiles.getOppositeOf(playerExitTaken) +" CorrectHit : "+ correctExitTakes );
 		lastVisitedTile = anteVisited;
 		anteVisited = nextTile;
 		GameManager.instance.loadLevel(nextTile.sceneName);
@@ -74,7 +75,7 @@ public class LabyrinthManager : MonoBehaviour {
 	}
 
 	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
-		if(lastVisitedTile != null && lastPlayerExit.Equals(lastVisitedTile.getOppositeOf(playerExitTaken))){
+		if(lastVisitedTile != null && lastPlayerExit.Equals(LabyTiles.getOppositeOf(playerExitTaken))){
 			return lastVisitedTile;
 		}
 		List<LabyTiles> tilestmp = tilesParam.Where( x => x.canFitWithThisExit(playerExitTaken)).ToList();

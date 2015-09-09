@@ -62,7 +62,6 @@ public class LabyrinthManager : MonoBehaviour {
 			next= LabyTiles.getOppositeOf(playerExitTaken);
 		}
 
-
 		Debug.Log ("#### NEXT "+ next +" comeFrom "+ LabyTiles.getOppositeOf(playerExitTaken) +" CorrectHit : "+ correctExitTakes );
 		lastVisitedTile = anteVisited;
 		anteVisited = nextTile;

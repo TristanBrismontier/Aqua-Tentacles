@@ -61,6 +61,10 @@ public class GameManager : MonoBehaviour
 				life+=10;
 			if (Input.GetKeyDown(KeyCode.K))
 				life-=10;
+			if (Input.GetKeyDown(KeyCode.U))
+				player.spawnTenta();
+			if (Input.GetKeyDown(KeyCode.I))
+				player.spawnEye();
 
 		if(life>=normalSizeLimite){
 			player.bigSize();

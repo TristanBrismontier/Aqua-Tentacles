@@ -720,7 +720,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -32.7001228, y: -51.56007, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421428}
@@ -2060,7 +2060,6 @@ MonoBehaviour:
   force: 10
   pushForce: 2.5
   slowDown: .980000019
-  dampTime: .200000003
   timetoInverteBack: 5
   debugSprite: {fileID: 21251760}
   tentacool1: {fileID: 163904}
@@ -2069,7 +2068,7 @@ MonoBehaviour:
   eye1: {fileID: 159632}
   eye2: {fileID: 110886}
   eye3: {fileID: 104830}
-  scaleRatio: 0
+  scaleRatio: .200000003
   countTenta: 0
   countEyes: 0
 --- !u!114 &11442088
@@ -3841,7 +3840,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 184.100006, y: 10}
+  m_AnchoredPosition: {x: 184.100006, y: -41}
   m_SizeDelta: {x: 162, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22459394
@@ -3875,7 +3874,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 212.100006, y: 11.5}
+  m_AnchoredPosition: {x: 212.100006, y: -40}
   m_SizeDelta: {x: 7.20001221, y: .899993896}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

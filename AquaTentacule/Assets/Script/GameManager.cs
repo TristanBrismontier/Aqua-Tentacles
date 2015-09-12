@@ -227,4 +227,7 @@ public class GameManager : MonoBehaviour
 		}
 		initGame ();
 	}
+	public Vector2 getPlayerPosition(){
+		return new Vector2(player.transform.position.x,player.transform.position.y);
+	}
 }

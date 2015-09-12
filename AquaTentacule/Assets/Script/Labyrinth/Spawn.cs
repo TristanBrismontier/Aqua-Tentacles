@@ -17,8 +17,7 @@ public class Spawn : MonoBehaviour {
 		if(cod !=null)
 			GameManager.instance.cameraBound = cod.bounds;
 	}
-	
-	
+		
 	private Transform adjustPlayerEntrancePostion() {
 		PlayerExit playerExit = LabyrinthManager.instance.getplayerExit() ; 
 		switch(playerExit){

@@ -4,88 +4,98 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-public class LabyrinthManager : MonoBehaviour {
+public class LabyrinthManager : MonoBehaviour
+{
 	
 	public static LabyrinthManager instance = null;
-	private List<LabyTiles> tiles = new List<LabyTiles>();
+	private List<LabyTiles> tiles = new List<LabyTiles> ();
 	private LabyTiles lastTiles;
 	private PlayerExit playerExitTaken;
 	private PlayerExit lastPlayerExit;
 	private LabyTiles lastVisitedTile;
 	private LabyTiles anteVisited;
-
 	private int correctExitNeed;
 	private int correctExitTakes;
 	private PlayerExit next;
 
-	void Awake () {
-		if (instance == null){
-			Debug.Log ("New Instance Laby");
+	void Awake ()
+	{
+		if (instance == null) {
 			instance = this;
-			LabyConfigTiles labyConfig = new LabyConfigTiles();
-			tiles.AddRange(labyConfig.getPreConfigTiles());
-			correctExitNeed = labyConfig.getCorrectExitNeeded();
-			lastTiles = labyConfig.getLastTile();
+			LabyConfigTiles labyConfig = new LabyConfigTiles ();
+			tiles.AddRange (labyConfig.getPreConfigTiles ());
+			correctExitNeed = labyConfig.getCorrectExitNeeded ();
+			lastTiles = labyConfig.getLastTile ();
 			correctExitTakes = 0;
+		} else if (instance != this) {
+			Destroy (gameObject);
 		}
-		else if(instance != this)
-		{
-			Destroy(gameObject);
-		}
-		
-		DontDestroyOnLoad(gameObject);
+		DontDestroyOnLoad (gameObject);
 	}
 
-	public void loadNextTile(string exitTag){
-
+	public void loadNextTile (string exitTag)
+	{
 		lastPlayerExit = playerExitTaken;
-		playerExitTaken = (PlayerExit)Enum.Parse(typeof(PlayerExit), exitTag);
-		if(playerExitTaken == next)
+		playerExitTaken = (PlayerExit)Enum.Parse (typeof(PlayerExit), exitTag);
+		if (playerExitTaken == next)
 			correctExitTakes++;
 		else
 			correctExitTakes = 0;
 
-		LabyTiles nextTile;
-		if(correctExitTakes == correctExitNeed){
-			Debug.Log("FINISH HIM");
-			nextTile = lastTiles;
-		}else
-			nextTile = getRandomFittingTile(tiles);
-
-		try{
+		LabyTiles nextTile = (correctExitTakes == correctExitNeed)?lastTiles:getRandomFittingTile (tiles);
+		if (correctExitTakes == correctExitNeed) 
+			Debug.Log ("FINISH HIM");
+	
+		try {
 			next = nextTile.exitList
-				.OrderBy(e => Guid.NewGuid())
-					.Where(e => e != LabyTiles.getOppositeOf(playerExitTaken))
-					.First();
-		}catch(InvalidOperationException e){
-			Debug.LogError("### Have to Catch");
-			next= LabyTiles.getOppositeOf(playerExitTaken);
+				.OrderBy (e => Guid.NewGuid ())
+					.Where (e => e != LabyTiles.getOppositeOf (playerExitTaken))
+					.First ();
+		} catch (InvalidOperationException e) {
+			Debug.LogError ("### Have to Catch");
+			next = LabyTiles.getOppositeOf (playerExitTaken);
 		}
 
-		Debug.Log ("#### NEXT "+ next +" comeFrom "+ LabyTiles.getOppositeOf(playerExitTaken) +" CorrectHit : "+ correctExitTakes );
+		Debug.Log ("#### NEXT " + next + " comeFrom " + LabyTiles.getOppositeOf (playerExitTaken) + " CorrectHit : " + correctExitTakes);
 		lastVisitedTile = anteVisited;
 		anteVisited = nextTile;
-		GameManager.instance.loadLevel(nextTile.sceneName);
-
+		GameManager.instance.loadLevel (nextTile.sceneName);
 	}
 
-	public PlayerExit getplayerExit(){
+	public PlayerExit getplayerExit ()
+	{
 		return playerExitTaken;
 	}
 
-	private LabyTiles getRandomFittingTile(List<LabyTiles> tilesParam){
-		if(lastVisitedTile != null && lastPlayerExit.Equals(LabyTiles.getOppositeOf(playerExitTaken))){
+	private LabyTiles getRandomFittingTile (List<LabyTiles> tilesParam)
+	{
+		if (lastVisitedTile != null && lastPlayerExit.Equals (LabyTiles.getOppositeOf (playerExitTaken))) {
 			return lastVisitedTile;
 		}
-		List<LabyTiles> tilestmp = tilesParam.Where( x => x.canFitWithThisExit(playerExitTaken)).ToList();
-		if(tilestmp.Count>1){
-			tilestmp.Remove(anteVisited);
-			Debug.Log("Remove last " +anteVisited);
+		List<LabyTiles> tilestmp = tilesParam.Where (x => x.canFitWithThisExit (playerExitTaken)).ToList ();
+		if (tilestmp.Count > 1) {
+			tilestmp.Remove (anteVisited);
+			Debug.Log ("Remove last " + anteVisited);
 		}
-		LabyTiles tile = tilestmp[UnityEngine.Random.Range(0,tilestmp.Count)] ;
-
-
-
+		LabyTiles tile = tilestmp [UnityEngine.Random.Range (0, tilestmp.Count)];
 		return tile;
+	}
+
+	void Update(){
+		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"");
+		Vector2 nex = new Vector2(nextExit.transform.position.x,nextExit.transform.position.y);
+		Vector2 player = GameManager.instance.getPlayerPosition();
+		Debug.Log(next+"Spawn : "
+		          +nex 
+		          +" Distance with Player : "
+		          + Vector2.Distance(player,nex));
+	}
+
+	public void OnDrawGizmos(){
+		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"");
+
+		Gizmos.color = Color.blue;
+		Gizmos.DrawLine(nextExit.transform.position, GameManager.instance.getPlayerPosition());
+		
 	}
 }

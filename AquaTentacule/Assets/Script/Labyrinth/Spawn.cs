@@ -19,15 +19,15 @@ public class Spawn : MonoBehaviour {
 	}
 		
 	private Transform adjustPlayerEntrancePostion() {
-		PlayerExit playerExit = LabyrinthManager.instance.getplayerExit() ; 
+		ExitEnum playerExit = LabyrinthManager.instance.getplayerExit() ; 
 		switch(playerExit){
-		case PlayerExit.North: 
+		case ExitEnum.North: 
 			return southSpawn;
-		case PlayerExit.East:
+		case ExitEnum.East:
 			return westSpawn;
-		case PlayerExit.South:
+		case ExitEnum.South:
 			return northSpawn;
-		case PlayerExit.West:
+		case ExitEnum.West:
 			return eastSpawn;
 		}
 		return southSpawn;

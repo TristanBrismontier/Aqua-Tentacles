@@ -41,6 +41,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 200
   maxLife: 200
+  smallSizeLimite: 50
+  normalSize: 70
   starving: 2
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
   minFood: 11
@@ -155,6 +157,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: life
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: smallSizeLimite
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: normalSize
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

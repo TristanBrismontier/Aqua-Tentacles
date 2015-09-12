@@ -11,9 +11,7 @@ public class Player : MonoBehaviour
 	private float forceRatio;
 
 	private Animator animator;
-	public float dampTime = 0.2f;
 	private Vector3 velocity = Vector3.zero;
-
 
 	public int timetoInverteBack = 10;
 
@@ -53,8 +51,7 @@ public class Player : MonoBehaviour
 	public void resetPlayer(){
 		currentZone = 1;
 		leftZone = 0;
-		//MusicManager.instance.resetMusique();
-
+	
 		countTenta = 0;
 		tentacool1.transform.localScale = Vector3.zero;
 		tentacool2.transform.localScale = Vector3.zero;
@@ -65,55 +62,7 @@ public class Player : MonoBehaviour
 		eye2.transform.localScale = Vector3.zero;
 		eye3.transform.localScale = Vector3.zero;
 	}
-	public void setEvolution(int tenta){
-		countTenta = tenta;
-		if(countTenta >= 1){
-			tentacool1.transform.localScale = new Vector3(1,1,1);
-		}else if (countTenta >= 2){
-			tentacool2.transform.localScale = new Vector3(1,1,1);
-		}else if( countTenta == 3){
-			tentacool3.transform.localScale = new Vector3(1,1,1);
-		}
-	}
-	public void restoreEvolution(int tenta){
-		countTenta = tenta;
-		if(countTenta >= 1){
-			tentacool1.transform.localScale = new Vector3(1,1,1);
-		}if (countTenta >= 2){
-			tentacool2.transform.localScale = new Vector3(1,1,1);
-		} if( countTenta == 3){
-			tentacool3.transform.localScale = new Vector3(1,1,1);
-		}
-	}
 
-	public void restoreEvolutionEye(int eye){
-		countEyes = eye;
-		if(countEyes >= 1){
-			eye1.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		} if (countEyes >= 2){
-			eye2.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		} if( countEyes == 3){
-			eye3.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}
-	}
-
-	public void setEvolutionEye(int eye){
-		countEyes = eye;
-		if(countEyes >= 1){
-			eye1.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}else if (countEyes >= 2){
-			eye2.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}else if( countEyes == 3){
-			eye3.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}
-	}
-		
 	void FixedUpdate ()
 	{
 		float rotation = Input.GetAxis("Horizontal");
@@ -164,8 +113,6 @@ public class Player : MonoBehaviour
 		default:
 			break;
 		}
-
-
 		MusicManager.instance.exitZone(leftZone);
 	}
 
@@ -212,6 +159,14 @@ public class Player : MonoBehaviour
 		animator.SetTrigger("hurt");
 	}
 
+	public void bigSize(){
+		Debug.Log("BigSize");
+	}
+
+	public void smallSize(){
+		Debug.Log("smallSize");
+	}
+
 	public void spawnTenta(){
 		if(countTenta == 0){
 			StartCoroutine(growTenta(tentacool1));
@@ -237,7 +192,53 @@ public class Player : MonoBehaviour
 			countEyes++;
 		}
 	}
-
+	public void setEvolution(int tenta){
+		countTenta = tenta;
+		if(countTenta >= 1){
+			tentacool1.transform.localScale = new Vector3(1,1,1);
+		}else if (countTenta >= 2){
+			tentacool2.transform.localScale = new Vector3(1,1,1);
+		}else if( countTenta == 3){
+			tentacool3.transform.localScale = new Vector3(1,1,1);
+		}
+	}
+	public void restoreEvolution(int tenta){
+		countTenta = tenta;
+		if(countTenta >= 1){
+			tentacool1.transform.localScale = new Vector3(1,1,1);
+		}if (countTenta >= 2){
+			tentacool2.transform.localScale = new Vector3(1,1,1);
+		} if( countTenta == 3){
+			tentacool3.transform.localScale = new Vector3(1,1,1);
+		}
+	}
+	public void restoreEvolutionEye(int eye){
+		countEyes = eye;
+		if(countEyes >= 1){
+			eye1.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		} if (countEyes >= 2){
+			eye2.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		} if( countEyes == 3){
+			eye3.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}
+	}
+	
+	public void setEvolutionEye(int eye){
+		countEyes = eye;
+		if(countEyes >= 1){
+			eye1.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}else if (countEyes >= 2){
+			eye2.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}else if( countEyes == 3){
+			eye3.transform.localScale = new Vector3(1,1,1);
+			//changer scale hole
+		}
+	}
 	private IEnumerator growTenta (GameObject tenta) {
 		float scale = 0;
 		while(scale < 1){

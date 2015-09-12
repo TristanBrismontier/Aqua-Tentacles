@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance = null;
 	public float life;
 	public float maxLife;
+	public float smallSizeLimite;
+	public float normalSize;
 	public float starving;
 	public Transform startPosition;
 	public int minFood;
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
 	private bool canDie;
 	private bool isPlayingSound;
 
+
 	public float hurtRate = 3.0F;
 	private float nextHurt = 0.0F;
 
@@ -46,6 +49,35 @@ public class GameManager : MonoBehaviour
 		isPlayingSound = false;
 		initGame ();
 	}
+
+	void Update ()
+	{
+		if(!debug){
+			//Each seconds = -2 pv
+			life -= starving * Time.deltaTime;
+			Debug.Log ("life : "+life);
+		}
+		
+		if (life <= 0) 
+			death ();
+
+		
+		if (life <= limiteVieHeartbeat && !isPlayingSound) {
+			isPlayingSound = true;
+			SoundManager.instance.PlaySingleLoop (SoundManager.instance.heartbeatSound, SoundManager.instance.interfaceSource, 0.3f);
+			StartCoroutine (SoundManager.instance.FadeIn (SoundManager.instance.interfaceSource, 0.3f));
+		} else if (life > limiteVieHeartbeat && isPlayingSound) {
+			isPlayingSound = false;
+			StartCoroutine (SoundManager.instance.FadeOut (SoundManager.instance.interfaceSource, 0.3f));
+		}
+	}
+	
+	public void loadLevel (string name)
+	{
+		playerInfo.saveInfo (player);
+		Application.LoadLevel (name);
+	}
+
 
 	public void setPlayer (Player _player)
 	{
@@ -162,40 +194,10 @@ public class GameManager : MonoBehaviour
 
 	private void eat (int nutritionFact)
 	{
-		life = life + nutritionFact;
+		life =(life < maxLife)? life + nutritionFact:life;
 		if (nutritionFact > 0) {
 			player.Eat ();
 		}
-	}
-
-	void Update ()
-	{
-		//Life max = 150 pv
-		if (life > maxLife) {
-			life = maxLife;
-		}
-		if(!debug){
-		//Each seconds = -2 pv
-			life -= starving * Time.deltaTime;
-		}
-		if (life <= 0) {
-			death ();
-		}
-
-		if (life <= limiteVieHeartbeat && !isPlayingSound) {
-			isPlayingSound = true;
-			SoundManager.instance.PlaySingleLoop (SoundManager.instance.heartbeatSound, SoundManager.instance.interfaceSource, 0.3f);
-			StartCoroutine (SoundManager.instance.FadeIn (SoundManager.instance.interfaceSource, 0.3f));
-		} else if (life > limiteVieHeartbeat && isPlayingSound) {
-			isPlayingSound = false;
-			StartCoroutine (SoundManager.instance.FadeOut (SoundManager.instance.interfaceSource, 0.3f));
-		}
-	}
-	
-	public void loadLevel (string name)
-	{
-		playerInfo.saveInfo (player);
-		Application.LoadLevel (name);
 	}
 
 	public void death ()
@@ -214,7 +216,6 @@ public class GameManager : MonoBehaviour
 	public IEnumerator deadPlayer (GameObject buble)
 	{
 		yield return new WaitForSeconds (2);
-	
 		Destroy (buble);
 		GameObject playerGO = GameObject.FindGameObjectWithTag ("Player");
 		playerGO.SetActive (true);
@@ -227,6 +228,7 @@ public class GameManager : MonoBehaviour
 		}
 		initGame ();
 	}
+
 	public Vector2 getPlayerPosition(){
 		return new Vector2(player.transform.position.x,player.transform.position.y);
 	}

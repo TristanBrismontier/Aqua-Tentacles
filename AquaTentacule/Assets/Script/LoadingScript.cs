@@ -11,7 +11,6 @@ public class LoadingScript : MonoBehaviour
 	private float yVelocity = 0.0F;
 	public float paralaxRatio;
 
-
 	public GameObject background;
 	public GameObject gameManager;	
 	public GameObject labyManager;

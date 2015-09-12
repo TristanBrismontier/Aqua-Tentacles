@@ -63,11 +63,11 @@
      <Compile Include="Assets\Script\Ennemy\fish.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\GeogeCalling.cs" />
+     <Compile Include="Assets\Script\Labyrinth\ExitEnum.cs" />
      <Compile Include="Assets\Script\Labyrinth\LabyConfigTiles.cs" />
      <Compile Include="Assets\Script\Labyrinth\LabyTileExitCheck.cs" />
      <Compile Include="Assets\Script\Labyrinth\LabyTiles.cs" />
      <Compile Include="Assets\Script\Labyrinth\LabyrinthManager.cs" />
-     <Compile Include="Assets\Script\Labyrinth\PlayerExit.cs" />
      <Compile Include="Assets\Script\Labyrinth\Spawn.cs" />
      <Compile Include="Assets\Script\Labyrinth\spawnPos.cs" />
      <Compile Include="Assets\Script\LoadingScript.cs" />

@@ -6,17 +6,16 @@ using System.Collections.Generic;
 
 public class LabyrinthManager : MonoBehaviour
 {
-	
 	public static LabyrinthManager instance = null;
 	private List<LabyTiles> tiles = new List<LabyTiles> ();
 	private LabyTiles lastTiles;
-	private PlayerExit playerExitTaken;
-	private PlayerExit lastPlayerExit;
+	private ExitEnum playerExitTaken;
+	private ExitEnum lastPlayerExit;
 	private LabyTiles lastVisitedTile;
 	private LabyTiles anteVisited;
 	private int correctExitNeed;
 	private int correctExitTakes;
-	private PlayerExit next;
+	private ExitEnum next;
 
 	void Awake ()
 	{
@@ -36,7 +35,7 @@ public class LabyrinthManager : MonoBehaviour
 	public void loadNextTile (string exitTag)
 	{
 		lastPlayerExit = playerExitTaken;
-		playerExitTaken = (PlayerExit)Enum.Parse (typeof(PlayerExit), exitTag);
+		playerExitTaken = (ExitEnum)Enum.Parse (typeof(ExitEnum), exitTag);
 		if (playerExitTaken == next)
 			correctExitTakes++;
 		else
@@ -52,7 +51,6 @@ public class LabyrinthManager : MonoBehaviour
 					.Where (e => e != LabyTiles.getOppositeOf (playerExitTaken))
 					.First ();
 		} catch (InvalidOperationException e) {
-			Debug.LogError ("### Have to Catch");
 			next = LabyTiles.getOppositeOf (playerExitTaken);
 		}
 
@@ -62,7 +60,7 @@ public class LabyrinthManager : MonoBehaviour
 		GameManager.instance.loadLevel (nextTile.sceneName);
 	}
 
-	public PlayerExit getplayerExit ()
+	public ExitEnum getplayerExit ()
 	{
 		return playerExitTaken;
 	}
@@ -85,17 +83,15 @@ public class LabyrinthManager : MonoBehaviour
 		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"");
 		Vector2 nex = new Vector2(nextExit.transform.position.x,nextExit.transform.position.y);
 		Vector2 player = GameManager.instance.getPlayerPosition();
-		Debug.Log(next+"Spawn : "
-		          +nex 
-		          +" Distance with Player : "
-		          + Vector2.Distance(player,nex));
+	//	Debug.Log(next+"Spawn : "
+	//	          +nex 
+	//	          +" Distance with Player : "
+	//	          + Vector2.Distance(player,nex));
 	}
 
 	public void OnDrawGizmos(){
 		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"");
-
 		Gizmos.color = Color.blue;
 		Gizmos.DrawLine(nextExit.transform.position, GameManager.instance.getPlayerPosition());
-		
 	}
 }

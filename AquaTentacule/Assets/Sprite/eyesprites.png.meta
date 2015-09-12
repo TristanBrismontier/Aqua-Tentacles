@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 8699264d959157143bcc1c097ba9e5df
-timeCreated: 1438851127
+guid: d214fdae8e217e043b1ce60534619914
+timeCreated: 1442060989
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: eyesprites_0
-    21300002: eyesprites_1
+    21300000: eyesprites 1_0
+    21300002: eyesprites 1_1
+    21300004: eyesprites_0
+    21300006: eyesprites_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -56,18 +58,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 242
-        height: 180
+        width: 74
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: eyesprites_1
       rect:
         serializedVersion: 2
-        x: 242
+        x: 74
         y: 0
-        width: 242
-        height: 180
+        width: 74
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

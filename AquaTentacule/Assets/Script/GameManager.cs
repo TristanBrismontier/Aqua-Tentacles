@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
 			//Each seconds = -2 pv
 			life -= starving * Time.deltaTime;
 		}
-		Debug.Log ("Life : " + life);
 		if (Input.GetKeyDown (KeyCode.J))
 			life += 10;
 		if (Input.GetKeyDown (KeyCode.K))

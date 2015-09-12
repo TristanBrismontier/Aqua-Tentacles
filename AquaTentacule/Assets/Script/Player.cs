@@ -164,12 +164,10 @@ public class Player : MonoBehaviour
 
 	public void bigSize(){
 		transform.localScale = normaleScale;
-		Debug.Log("BigSize"+ normaleScale);
 	}
 
 	public void smallSize(){
 		transform.localScale = smallScale;
-		Debug.Log("smallSize"+smallScale);
 	}
 
 	public void spawnTenta(){

@@ -5,7 +5,11 @@ using System.Collections;
 public class health : MonoBehaviour {
 
 	public Slider Health;
-	public float HP;
+	private float HP;
+
+	void Start () {
+		Health.value = GameManager.instance.life;
+	}
 
 	void Update ()
 	{

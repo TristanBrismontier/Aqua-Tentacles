@@ -93,8 +93,7 @@ public class GameManager : MonoBehaviour
 	{
 		player = _player;
 		playerInfo.restorePlayerInfo (player);
-		if(startPosition == null)
-		  startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
+		startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
 	}
 
 	public void initPlayerPosition (Transform position)

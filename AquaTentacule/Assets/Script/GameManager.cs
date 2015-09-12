@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 	public float life;
 	public float maxLife;
 	public float smallSizeLimite;
-	public float normalSize;
+	public float normalSizeLimite;
 	public float starving;
 	public Transform startPosition;
 	public int minFood;
@@ -55,8 +55,19 @@ public class GameManager : MonoBehaviour
 		if(!debug){
 			//Each seconds = -2 pv
 			life -= starving * Time.deltaTime;
-			Debug.Log ("life : "+life);
 		}
+			Debug.Log("Life : "+life);
+			if (Input.GetKeyDown(KeyCode.J))
+				life+=10;
+			if (Input.GetKeyDown(KeyCode.K))
+				life-=10;
+
+		if(life>=normalSizeLimite){
+			player.bigSize();
+		}else if(life<=smallSizeLimite){
+			player.smallSize();
+		}
+
 		
 		if (life <= 0) 
 			death ();

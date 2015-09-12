@@ -490,7 +490,6 @@ MonoBehaviour:
   force: 10
   pushForce: 2.5
   slowDown: .980000019
-  dampTime: .200000003
   timetoInverteBack: 5
   debugSprite: {fileID: 21214214}
   tentacool1: {fileID: 128422}
@@ -499,7 +498,7 @@ MonoBehaviour:
   eye1: {fileID: 0}
   eye2: {fileID: 0}
   eye3: {fileID: 0}
-  scaleRatio: 0
+  scaleRatio: .25
   countTenta: 0
   countEyes: 0
 --- !u!212 &21214214
@@ -728,6 +727,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speedRotation
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scaleRatio
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

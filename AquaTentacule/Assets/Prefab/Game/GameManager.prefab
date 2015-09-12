@@ -42,7 +42,7 @@ MonoBehaviour:
   life: 200
   maxLife: 200
   smallSizeLimite: 50
-  normalSize: 70
+  normalSizeLimite: 70
   starving: 2
   startPosition: {fileID: 410232, guid: b390bc15b281ad442bd13e9c8febd57a, type: 2}
   minFood: 11
@@ -164,6 +164,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: normalSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: normalSizeLimite
       value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []

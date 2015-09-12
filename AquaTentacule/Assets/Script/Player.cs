@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
 
 	private Rigidbody2D rb;
 	public float scaleRatio;
-	private Vector3 startScale; 
+	private Vector3 normaleScale; 
+	private Vector3 smallScale;
 	
 	public int countTenta;
 	public int countEyes;
@@ -45,8 +46,10 @@ public class Player : MonoBehaviour
 		resetPlayer();
 		debugSprite.enabled = false;
 		GameManager.instance.setPlayer(this);
-		scaleRatio = 1;
-		startScale = new Vector3(transform.localScale.x,transform.localScale.y,transform.localScale.z);
+		float nScal = (1+scaleRatio);
+		normaleScale = new Vector3(transform.localScale.x * nScal,transform.localScale.y * nScal,transform.localScale.z);
+		float sScal = (1-scaleRatio);
+		smallScale = new Vector3(transform.localScale.x * sScal,transform.localScale.y * sScal,transform.localScale.z);
 	}
 	public void resetPlayer(){
 		currentZone = 1;
@@ -160,11 +163,13 @@ public class Player : MonoBehaviour
 	}
 
 	public void bigSize(){
-		Debug.Log("BigSize");
+		transform.localScale = normaleScale;
+		Debug.Log("BigSize"+ normaleScale);
 	}
 
 	public void smallSize(){
-		Debug.Log("smallSize");
+		transform.localScale = smallScale;
+		Debug.Log("smallSize"+smallScale);
 	}
 
 	public void spawnTenta(){

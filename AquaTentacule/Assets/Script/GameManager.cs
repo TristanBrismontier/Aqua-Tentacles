@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 	public float smallSizeLimite;
 	public float normalSizeLimite;
 	public float starving;
-	public Transform startPosition;
+	public Transform startPosition ;
 	public int minFood;
 	public int maxFood;
 	public int octopus;
@@ -29,8 +29,6 @@ public class GameManager : MonoBehaviour
 	private List<GameObject> instanciatesGameObjects = new List<GameObject> ();
 	private bool canDie;
 	private bool isPlayingSound;
-
-
 	public float hurtRate = 3.0F;
 	private float nextHurt = 0.0F;
 
@@ -52,30 +50,28 @@ public class GameManager : MonoBehaviour
 
 	void Update ()
 	{
-		if(!debug){
+		if (!debug) {
 			//Each seconds = -2 pv
 			life -= starving * Time.deltaTime;
 		}
-			Debug.Log("Life : "+life);
-			if (Input.GetKeyDown(KeyCode.J))
-				life+=10;
-			if (Input.GetKeyDown(KeyCode.K))
-				life-=10;
-			if (Input.GetKeyDown(KeyCode.U))
-				player.spawnTenta();
-			if (Input.GetKeyDown(KeyCode.I))
-				player.spawnEye();
+		Debug.Log ("Life : " + life);
+		if (Input.GetKeyDown (KeyCode.J))
+			life += 10;
+		if (Input.GetKeyDown (KeyCode.K))
+			life -= 10;
+		if (Input.GetKeyDown (KeyCode.U))
+			player.spawnTenta ();
+		if (Input.GetKeyDown (KeyCode.I))
+			player.spawnEye ();
 
-		if(life>=normalSizeLimite){
-			player.bigSize();
-		}else if(life<=smallSizeLimite){
-			player.smallSize();
+		if (life >= normalSizeLimite && canDie) {
+			player.bigSize ();
+		} else if (life <= smallSizeLimite && canDie) {
+			player.smallSize ();
 		}
-
 		
 		if (life <= 0) 
 			death ();
-
 		
 		if (life <= limiteVieHeartbeat && !isPlayingSound) {
 			isPlayingSound = true;
@@ -93,19 +89,19 @@ public class GameManager : MonoBehaviour
 		Application.LoadLevel (name);
 	}
 
-
 	public void setPlayer (Player _player)
 	{
 		player = _player;
 		playerInfo.restorePlayerInfo (player);
-		startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
+		if(startPosition == null)
+		  startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
 	}
 
 	public void initPlayerPosition (Transform position)
 	{
 		playerInfo.startDeltaPosition = position.position;
-		if(player != null){
-			playerInfo.restorePlayerInfo(player);
+		if (player != null) {
+			playerInfo.restorePlayerInfo (player);
 			startPosition.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z);
 		}
 	}
@@ -197,19 +193,19 @@ public class GameManager : MonoBehaviour
 
 	public void looseLife (int damage)
 	{
-		if ( (Time.time > nextHurt) ) {
+		if ((Time.time > nextHurt)) {
 			nextHurt = Time.time + hurtRate;
 			eat (damage * -1);
 			player.Hurt ();
-			if(life<=0){
-				death();
+			if (life <= 0) {
+				death ();
 			}
 		}
 	}
 
 	private void eat (int nutritionFact)
 	{
-		life =(life < maxLife)? life + nutritionFact:life;
+		life = (life < maxLife) ? life + nutritionFact : life;
 		if (nutritionFact > 0) {
 			player.Eat ();
 		}
@@ -244,7 +240,8 @@ public class GameManager : MonoBehaviour
 		initGame ();
 	}
 
-	public Vector2 getPlayerPosition(){
-		return new Vector2(player.transform.position.x,player.transform.position.y);
+	public Vector2 getPlayerPosition ()
+	{
+		return new Vector2 (player.transform.position.x, player.transform.position.y);
 	}
 }

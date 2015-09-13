@@ -71,6 +71,8 @@ public class GameManager : MonoBehaviour
 			looseLife(50);
 		if (Input.GetKeyDown (KeyCode.P))
 			looseLife(5);
+		if (Input.GetKeyDown (KeyCode.B))
+			debug =!debug;
 
 		if (life >= normalSizeLimite && canDie) {
 			player.bigSize ();

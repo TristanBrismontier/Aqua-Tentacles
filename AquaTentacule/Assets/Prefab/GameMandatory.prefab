@@ -2072,7 +2072,7 @@ MonoBehaviour:
   - {fileID: 104830}
   countTenta: 0
   countEyes: 0
-  dashRate: 1
+  dashRate: 1.5
 --- !u!114 &11442088
 MonoBehaviour:
   m_ObjectHideFlags: 1

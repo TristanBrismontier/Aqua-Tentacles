@@ -17,7 +17,6 @@ public class DogSeaMeat : MonoBehaviour {
 	private float fireJump = 1.0F;
 	private float nextFire = 0.0F;
 	
-	
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();	
@@ -33,7 +32,6 @@ public class DogSeaMeat : MonoBehaviour {
 	}
 	
 	void FixedUpdate (){
-	
 		if ( (Time.time > nextFire) && Mathf.Abs(transform.position.x - lastX)<0.003f){
 			jumpCount++;
 			nextFire = Time.time + fireJump;
@@ -50,9 +48,7 @@ public class DogSeaMeat : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("contact");
 		if ( (Time.time > nextFire)){
-			Debug.Log("JUMP MF*CKr Jump");
 			nextFire = Time.time + fireJump;
 			//Jump Script      
 			rb.AddForce (Vector2.up * 10, ForceMode2D.Impulse);
@@ -60,18 +56,15 @@ public class DogSeaMeat : MonoBehaviour {
 
 		}
 	}
-
 	
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player"){
 			GameManager.instance.death();
 			animator.SetTrigger("att");
-			
 		}
 		
 		if(coll.gameObject.tag == "Octo"){
 			Destroy(this.gameObject);
 		}
-		
 	}
 }

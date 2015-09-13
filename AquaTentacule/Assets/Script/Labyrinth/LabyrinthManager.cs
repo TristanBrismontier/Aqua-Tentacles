@@ -73,7 +73,6 @@ public class LabyrinthManager : MonoBehaviour
 		List<LabyTiles> tilestmp = tilesParam.Where (x => x.canFitWithThisExit (playerExitTaken)).ToList ();
 		if (tilestmp.Count > 1) {
 			tilestmp.Remove (anteVisited);
-			Debug.Log ("Remove last " + anteVisited);
 		}
 		LabyTiles tile = tilestmp [UnityEngine.Random.Range (0, tilestmp.Count)];
 		return tile;

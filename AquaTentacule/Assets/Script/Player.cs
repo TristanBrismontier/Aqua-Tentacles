@@ -8,33 +8,22 @@ public class Player : MonoBehaviour
 	public float force;
 	public float pushForce;
 	public float slowDown;	
-	private float forceRatio;
-
-	private Animator animator;
-	private Vector3 velocity = Vector3.zero;
-
-	public int timetoInverteBack = 10;
-
-	public SpriteRenderer debugSprite;
-	private int currentZone;
-	private int leftZone;
-		
-	public GameObject tentacool1;
-	public GameObject tentacool2;
-	public GameObject tentacool3;
-
-	public GameObject eye1;
-	public GameObject eye2;
-	public GameObject eye3;
-
-	private Rigidbody2D rb;
 	public float scaleRatio;
-	private Vector3 normaleScale; 
-	private Vector3 smallScale;
-	
+	public int timetoInverteBack;
+	public SpriteRenderer debugSprite;
+
+	public GameObject[] tentacools;
+	public GameObject[] eyes;
 	public int countTenta;
 	public int countEyes;
 
+	private int currentZone;
+	private int leftZone;
+	private Rigidbody2D rb;
+	private Animator animator;
+	private Vector3 normaleScale; 
+	private Vector3 smallScale;
+	private float forceRatio;
 	private float inverted = 1.0f;
 
 	void Start()
@@ -47,23 +36,28 @@ public class Player : MonoBehaviour
 		debugSprite.enabled = false;
 		GameManager.instance.setPlayer(this);
 		float nScal = (1+scaleRatio);
-		normaleScale = new Vector3(transform.localScale.x * nScal,transform.localScale.y * nScal,transform.localScale.z);
+		normaleScale = new Vector3(transform.localScale.x * nScal
+		                           ,transform.localScale.y * nScal
+		                           ,transform.localScale.z);
 		float sScal = (1-scaleRatio);
-		smallScale = new Vector3(transform.localScale.x * sScal,transform.localScale.y * sScal,transform.localScale.z);
+		smallScale = new Vector3(transform.localScale.x * sScal
+		                         ,transform.localScale.y * sScal
+		                         ,transform.localScale.z);
 	}
+
 	public void resetPlayer(){
 		currentZone = 1;
 		leftZone = 0;
 	
 		countTenta = 0;
-		tentacool1.transform.localScale = Vector3.zero;
-		tentacool2.transform.localScale = Vector3.zero;
-		tentacool3.transform.localScale = Vector3.zero;
+		foreach(GameObject tenta in tentacools){
+			tenta.transform.localScale = Vector3.zero;
+		}
 
 		countEyes = 0;
-		eye1.transform.localScale = Vector3.zero;
-		eye2.transform.localScale = Vector3.zero;
-		eye3.transform.localScale = Vector3.zero;
+		foreach(GameObject eye in eyes){
+			eye.transform.localScale = Vector3.zero;
+		}
 	}
 
 	void FixedUpdate ()
@@ -84,6 +78,7 @@ public class Player : MonoBehaviour
 			animator.SetBool ("swim", false);
 		}
 	}
+
 	public IEnumerator timer(){
 		yield return new WaitForSeconds(timetoInverteBack);
 		inverted = 1.0f;
@@ -170,101 +165,62 @@ public class Player : MonoBehaviour
 		transform.localScale = smallScale;
 	}
 
-	public void spawnTenta(){
-		if(countTenta == 0){
-			StartCoroutine(growTenta(tentacool1));
-			countTenta++;
-		}else if (countTenta == 1){
-			StartCoroutine(growTenta(tentacool2));
-			countTenta++;
-		}else if( countTenta == 2){
-			StartCoroutine(growTenta(tentacool3));
-			countTenta++;
-		}
-	}
-
-	public void spawnEye(){
-		if(countEyes == 0){
-			StartCoroutine(growEye(eye1));
-			countEyes++;
-		}else if (countEyes == 1){
-			StartCoroutine(growEye(eye2));
-			countEyes++;
-		}else if( countEyes == 2){
-			StartCoroutine(growEye(eye3));
-			countEyes++;
-		}
-	}
-	public void setEvolution(int tenta){
-		countTenta = tenta;
-		if(countTenta >= 1){
-			tentacool1.transform.localScale = new Vector3(1,1,1);
-		}else if (countTenta >= 2){
-			tentacool2.transform.localScale = new Vector3(1,1,1);
-		}else if( countTenta == 3){
-			tentacool3.transform.localScale = new Vector3(1,1,1);
-		}
-	}
-	public void restoreEvolution(int tenta){
-		countTenta = tenta;
-		if(countTenta >= 1){
-			tentacool1.transform.localScale = new Vector3(1,1,1);
-		}if (countTenta >= 2){
-			tentacool2.transform.localScale = new Vector3(1,1,1);
-		} if( countTenta == 3){
-			tentacool3.transform.localScale = new Vector3(1,1,1);
-		}
-	}
-	public void restoreEvolutionEye(int eye){
-		countEyes = eye;
-		if(countEyes >= 1){
-			eye1.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		} if (countEyes >= 2){
-			eye2.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		} if( countEyes == 3){
-			eye3.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}
-	}
-	
-	public void setEvolutionEye(int eye){
-		countEyes = eye;
-		if(countEyes >= 1){
-			eye1.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}else if (countEyes >= 2){
-			eye2.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}else if( countEyes == 3){
-			eye3.transform.localScale = new Vector3(1,1,1);
-			//changer scale hole
-		}
-	}
-	private IEnumerator growTenta (GameObject tenta) {
-		float scale = 0;
-		while(scale < 1){
-			yield return new WaitForSeconds(1/100);
-			scale += 0.01f;
-			tenta.transform.localScale = new Vector3(scale,scale,1);
-		}
-	}
-
-	private IEnumerator growEye (GameObject eye) {
-		float scale = 0;
-		while(scale < 1){
-			yield return new WaitForSeconds(1/100);
-			scale += 0.01f;
-			eye.transform.localScale = new Vector3(scale,scale,1);
-		}
-	}
-
 	public void setVelocity(Vector2 velo){
 		rb.velocity = velo;
 	}
-
+	
 	public Vector2 getVelocity(){
 		return rb.velocity;
 	}
+
+	public void spawnTenta(){
+		if(countTenta >= tentacools.Length)
+			return;
+		StartCoroutine(growMutation(tentacools[countTenta]));
+		countTenta++;
+	}
+
+	public void spawnEye(){
+		if(countEyes >= eyes.Length)
+			return;
+		StartCoroutine(growMutation(eyes[countEyes]));
+		countEyes++;
+	}
+
+	public void restoreEvolutionEye(int eye){
+		countEyes = eye;
+		displayMut (eye ,eyes);
+	}
+
+	public void restoreEvolutionTenta(int tenta){
+		countTenta = tenta;
+		displayMut (tenta ,tentacools);
+	}
+
+	private void displayMut (int count,GameObject[]  muts)
+	{
+		for (int i = 0; i < count ; i++) {
+			muts [i].transform.localScale = new Vector3 (1, 1, 1);
+		}
+	}
+
+	private IEnumerator growMutation(GameObject mut) {
+		float scale = 0;
+		while(scale < 1){
+			yield return new WaitForSeconds(1/100);
+			scale += 0.01f;
+			mut.transform.localScale = new Vector3(scale,scale,1);
+		}
+	}
+
+	private IEnumerator reduceMutation(GameObject mut) {
+		float scale = 1;
+		while(scale > 0){
+			yield return new WaitForSeconds(1/100);
+			scale -= 0.01f;
+			mut.transform.localScale = new Vector3(scale,scale,1);
+		}
+	}
+
+
 }

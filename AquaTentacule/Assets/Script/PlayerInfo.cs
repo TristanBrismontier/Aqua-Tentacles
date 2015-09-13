@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerInfo  {
@@ -11,7 +11,7 @@ public class PlayerInfo  {
 	public bool playerHasEye;
 
 	public void restorePlayerInfo(Player player){
-		player.restoreEvolution(tentaCount);
+		player.restoreEvolutionTenta(tentaCount);
 		player.restoreEvolutionEye(eyeCount);
 		player.transform.rotation = playerRotation;
 		player.transform.position = new Vector3(startDeltaPosition.x,startDeltaPosition.y,player.transform.position.z);

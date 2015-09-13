@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ModuleManager">
+    <modules>
+      <module name="AquaTentacule" dirurl="file://$PROJECT_DIR$" current-layer="Editor">
+        <module-layer name="Editor">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="Editor" file-name="$ModuleName$">
+            <define>UNITY_EDITOR</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="Linux (32 bit)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="Linux32" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_LINUX</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="Linux (64 bit)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="Linux64" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_LINUX</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="Linux (any)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="LinuxUniversal" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_LINUX</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="MacOS (32 bit)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="OSX" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_OSX</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="MacOS (64 bit)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="OSX64" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_OSX</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="MacOS (any)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="OSXUniversal" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_OSX</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="Windows (32 bit)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="Windows" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_WIN</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+        <module-layer name="Windows (64 bit)">
+          <extension id="unity3d" sdk-module-name="" sdk-name="Unity3D 5.1.0 (predefined)" output-dir="$ModuleProductionOutputDirPath$" build-target="Windows64" file-name="$ModuleName$">
+            <define>UNITY_STANDALONE_WIN</define>
+            <define>UNITY_5</define>
+            <define>UNITY_5_1</define>
+          </extension>
+          <content url="file://$MODULE_DIR$">
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/.consulo" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Library" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/Temp" />
+            <content-folder type="EXCLUDED" url="file://$MODULE_DIR$/test_Data" />
+          </content>
+          <orderEntry type="sourceFolder" />
+        </module-layer>
+      </module>
+      <module name="Assembly-CSharp-firstpass" current-layer="Editor">
+        <module-layer name="Editor">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+      </module>
+      <module name="Assembly-UnityScript-firstpass" current-layer="Editor">
+        <module-layer name="Editor">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-unityscript-child" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+      </module>
+      <module name="Assembly-CSharp-Editor" current-layer="Editor">
+        <module-layer name="Editor">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp" />
+          <orderEntry type="dot-net-library" name="UnityEditor.Graphs" />
+          <orderEntry type="dot-net-library" name="UnityEditor.UI" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+      </module>
+      <module name="Assembly-CSharp" current-layer="Editor">
+        <module-layer name="Editor">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Linux (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="MacOS (any)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (32 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+        <module-layer name="Windows (64 bit)">
+          <extension id="unity3d-child" />
+          <extension id="unity3d-csharp-child" unsafe-code="false" language-version-module-name="" language-version-name="" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/BubblesFollower.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/ArmorFish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/HitPlayer.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/ArmorFish/Weak.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/DogSeaMeat.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Enemys.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Fastfish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/FishEye.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Food.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Meduse.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Octopus.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Oursins.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Scaphandre.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/Tonneau.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Ennemy/fish.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GameManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/GeogeCalling.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/ExitEnum.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyConfigTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTileExitCheck.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyTiles.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/LabyrinthManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/Spawn.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Labyrinth/spawnPos.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/LoadingScript.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Mine.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Player.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/PlayerInfo.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/MusicManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/Sound/SoundManager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/UImanager.cs" />
+          <content url="file://$USER_HOME$/Documents/GitHub/GAME-JAM-8/AquaTentacule/Assets/Script/health.cs" />
+          <orderEntry type="sourceFolder" />
+          <orderEntry type="module" module-name="Assembly-UnityScript-firstpass" />
+          <orderEntry type="module" module-name="Assembly-CSharp-firstpass" />
+          <orderEntry type="dot-net-library" name="mscorlib" />
+          <orderEntry type="dot-net-library" name="UnityEditor" />
+          <orderEntry type="dot-net-library" name="UnityEngine" />
+          <orderEntry type="dot-net-library" name="UnityEngine.UI" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Networking" />
+          <orderEntry type="dot-net-library" name="UnityEngine.Analytics" />
+          <orderEntry type="dot-net-library" name="System" />
+          <orderEntry type="dot-net-library" name="System.Core" />
+          <orderEntry type="dot-net-library" name="System.Xml" />
+          <orderEntry type="dot-net-library" name="System.Xml.Linq" />
+        </module-layer>
+      </module>
+    </modules>
+  </component>
+</project>

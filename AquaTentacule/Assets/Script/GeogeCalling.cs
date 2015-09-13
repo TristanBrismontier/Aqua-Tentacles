@@ -9,6 +9,7 @@ public class GeogeCalling : MonoBehaviour {
 		void Start(){
 			bubble.enabled = false;
 		}
+
 		// Update is called once per frame
 		void Update () {
 			transform.position = target.position;

@@ -2059,17 +2059,20 @@ MonoBehaviour:
   force: 10
   pushForce: 2.5
   slowDown: .980000019
+  scaleRatio: .200000003
   timetoInverteBack: 5
   debugSprite: {fileID: 21251760}
-  tentacool1: {fileID: 163904}
-  tentacool2: {fileID: 166666}
-  tentacool3: {fileID: 158988}
-  eye1: {fileID: 159632}
-  eye2: {fileID: 110886}
-  eye3: {fileID: 104830}
-  scaleRatio: .200000003
+  tentacools:
+  - {fileID: 163904}
+  - {fileID: 166666}
+  - {fileID: 158988}
+  eyes:
+  - {fileID: 159632}
+  - {fileID: 110886}
+  - {fileID: 104830}
   countTenta: 0
   countEyes: 0
+  dashRate: 1
 --- !u!114 &11442088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2173,7 +2176,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 200
   m_WholeNumbers: 1
-  m_Value: 79
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

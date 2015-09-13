@@ -74,7 +74,7 @@ public class LabyrinthManager : MonoBehaviour
 		if (tilestmp.Count > 1) {
 			tilestmp.Remove (anteVisited);
 		}
-		LabyTiles tile = tilestmp [UnityEngine.Random.Range (0, tilestmp.Count)];
+		LabyTiles tile = tilestmp [UnityEngine.Random.Range (0, (int) tilestmp.Count)];
 		return tile;
 	}
 

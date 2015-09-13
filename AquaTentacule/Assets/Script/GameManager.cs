@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Mono.Xml.Xsl;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
 	public float maxLife;
 	public float smallSizeLimite;
 	public float normalSizeLimite;
+	public float looseMutationLimite;
 	public float starving;
 	public Transform startPosition ;
 	public int minFood;
@@ -53,7 +55,10 @@ public class GameManager : MonoBehaviour
 		if (!debug) {
 			//Each seconds = -2 pv
 			life -= starving * Time.deltaTime;
+		}else{
+			//Debug.Log(life);
 		}
+
 		if (Input.GetKeyDown (KeyCode.J))
 			life += 10;
 		if (Input.GetKeyDown (KeyCode.K))
@@ -62,6 +67,10 @@ public class GameManager : MonoBehaviour
 			player.spawnTenta ();
 		if (Input.GetKeyDown (KeyCode.I))
 			player.spawnEye ();
+		if (Input.GetKeyDown (KeyCode.O))
+			looseLife(50);
+		if (Input.GetKeyDown (KeyCode.P))
+			looseLife(5);
 
 		if (life >= normalSizeLimite && canDie) {
 			player.bigSize ();
@@ -194,7 +203,10 @@ public class GameManager : MonoBehaviour
 		if ((Time.time > nextHurt)) {
 			nextHurt = Time.time + hurtRate;
 			eat (damage * -1);
-			player.Hurt ();
+			bool loosemuta = false;
+			if(damage >=looseMutationLimite )
+				loosemuta = true;
+			player.Hurt (loosemuta);
 			if (life <= 0) {
 				death ();
 			}

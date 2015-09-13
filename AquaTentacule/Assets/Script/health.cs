@@ -3,9 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class health : MonoBehaviour {
-
 	public Slider Health;
-	private float HP;
 
 	void Start () {
 		Health.value = GameManager.instance.life;
@@ -13,7 +11,6 @@ public class health : MonoBehaviour {
 
 	void Update ()
 	{
-		HP = GameManager.instance.life;
-		Health.value = Mathf.MoveTowards(Health.value, HP, 1.0f);
+		Health.value = Mathf.MoveTowards(Health.value,  GameManager.instance.life, 1.0f);
 	}
 }

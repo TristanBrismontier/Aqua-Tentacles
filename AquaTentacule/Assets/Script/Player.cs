@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+﻿using Mono.Xml.Xsl;
 using System.Collections;
+using UnityEngine;
 
 
 public class Player : MonoBehaviour
@@ -17,6 +18,9 @@ public class Player : MonoBehaviour
 	public int countTenta;
 	public int countEyes;
 
+	public float dashRate = 1.0F;
+	private float nextDash = 0.0F;
+
 	private int currentZone;
 	private int leftZone;
 	private Rigidbody2D rb;
@@ -28,6 +32,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
+		nextDash = Time.time;
 		animator = GetComponent<Animator> ();	
 		speedRotation = speedRotation*-1;
 		forceRatio = Mathf.Pow (force, pushForce);
@@ -48,7 +53,6 @@ public class Player : MonoBehaviour
 	public void resetPlayer(){
 		currentZone = 1;
 		leftZone = 0;
-	
 		countTenta = 0;
 		foreach(GameObject tenta in tentacools){
 			tenta.transform.localScale = Vector3.zero;
@@ -77,6 +81,13 @@ public class Player : MonoBehaviour
 			rb.velocity = rb.velocity * slowDown;
 			animator.SetBool ("swim", false);
 		}
+
+		if (Input.GetKeyDown (KeyCode.LeftShift) &&(Time.time > nextDash) ){
+			nextDash = Time.time + dashRate;
+			Debug.Log("Dash");
+			rb.AddForce (transform.up *(100 + (100*countTenta)), ForceMode2D.Impulse);
+		}
+
 	}
 
 	public IEnumerator timer(){
@@ -152,9 +163,11 @@ public class Player : MonoBehaviour
 		animator.SetTrigger("eat");
 	}
 
-	public void  Hurt(){
+	public void  Hurt(bool looseMuta){
 		SoundManager.instance.RandomizeSfx (SoundManager.instance.efxSource, SoundManager.instance.deadSounds);
 		animator.SetTrigger("hurt");
+		if(looseMuta)
+			looseMutation();
 	}
 
 	public void bigSize(){
@@ -197,6 +210,21 @@ public class Player : MonoBehaviour
 		displayMut (tenta ,tentacools);
 	}
 
+	private void looseMutation(){
+
+		int random = Random.Range(0,100);
+		Debug.Log("looseMutation " + random);
+		if(countEyes > 0 && (random >= 50 || countTenta == 0)){
+			Debug.Log("looseMutation EYES");
+			countEyes--;
+			StartCoroutine(reduceMutation(eyes[countEyes]));
+		} else if (countTenta >0){
+			Debug.Log("looseMutation TENTA");
+			countTenta--;
+			StartCoroutine(reduceMutation(tentacools[countTenta]));
+		}
+	}
+
 	private void displayMut (int count,GameObject[]  muts)
 	{
 		for (int i = 0; i < count ; i++) {
@@ -218,9 +246,7 @@ public class Player : MonoBehaviour
 		while(scale > 0){
 			yield return new WaitForSeconds(1/100);
 			scale -= 0.01f;
-			mut.transform.localScale = new Vector3(scale,scale,1);
+			mut.transform.localScale = new Vector3(scale,scale,scale);
 		}
 	}
-
-
 }

@@ -15,6 +15,7 @@ public class LabyConfigTiles{
 		tiles.Add( new LabyTiles("NWEfondMachines",ExitEnum.North,ExitEnum.East,ExitEnum.West));
 		tiles.Add( new LabyTiles("ESWPhareRuine",ExitEnum.East,ExitEnum.South,ExitEnum.West));
 		tiles.Add( new LabyTiles("NSERobotFleurRouge",ExitEnum.North,ExitEnum.East,ExitEnum.South));
+		tiles.Add( new LabyTiles("FourDirTuyaux",ExitEnum.North,ExitEnum.East,ExitEnum.South,ExitEnum.West));
 		return tiles;
 	}
 

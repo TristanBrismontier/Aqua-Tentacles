@@ -29,5 +29,11 @@ EditorBuildSettings:
     path: Assets/_Scene/Labyrinth/NSE2.unity
   - enabled: 1
     path: Assets/_Scene/Labyrinth/NWEfondMachines.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scene/Labyrinth/NWEfondMachines.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/FourDirTuyaux.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/WSEPhareEnRuine.unity
+  - enabled: 1
+    path: Assets/_Scene/Labyrinth/NSERobotFleurRouge.unity

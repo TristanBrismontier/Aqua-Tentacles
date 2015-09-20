@@ -443,48 +443,6 @@ PolygonCollider2D:
       - {x: -.150000006, y: .600000024}
       - {x: -.140000001, y: .560000002}
       - {x: -.150000006, y: .569999993}
---- !u!1001 &254954760
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -21.7434158
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.66045189
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 491790, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9fb134e3ee5435848b90e70006c63a3c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &409871509
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +686,7 @@ Transform:
   - {fileID: 145222142}
   - {fileID: 1389188619}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1023308787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1096,7 @@ Transform:
   - {fileID: 1537855048}
   - {fileID: 426509074}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1001 &2008805124
 Prefab:
   m_ObjectHideFlags: 0

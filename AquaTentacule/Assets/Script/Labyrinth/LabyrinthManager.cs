@@ -79,17 +79,32 @@ public class LabyrinthManager : MonoBehaviour
 	}
 
 	void Update(){
-		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"");
+		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"V");
+		foreach (ExitEnum suit in Enum.GetValues(typeof(ExitEnum)))
+		{
+			if(suit != next){
+				GameObject hide = GameObject.FindGameObjectWithTag(suit+"V");
+				if(hide != null)
+					hide.SetActive(false) ;
+			}
+		}
 		Vector2 nex = new Vector2(nextExit.transform.position.x,nextExit.transform.position.y);
 		Vector2 player = GameManager.instance.getPlayerPosition();
+		float dist = Vector2.Distance(player,nex);
+		float alpha = Mathf.Max(0, 1-(dist/10));
 	//	Debug.Log(next+"Spawn : "
 	//	          +nex 
 	//	          +" Distance with Player : "
-	//	          + Vector2.Distance(player,nex));
+	//	          + alpha);
+		Renderer renderer = nextExit.GetComponentInChildren< Renderer >();
+		Color dropColor = renderer.material.color;
+		dropColor.a = alpha;
+		renderer.material.color = dropColor;
+
 	}
 
 	public void OnDrawGizmos(){
-		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"");
+		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"V");
 		Gizmos.color = Color.blue;
 		Gizmos.DrawLine(nextExit.transform.position, GameManager.instance.getPlayerPosition());
 	}

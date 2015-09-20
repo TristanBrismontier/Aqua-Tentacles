@@ -24,6 +24,10 @@ TagManager:
   - NorthSpawn
   - EastSpawn
   - SouthSpawn
+  - NorthV
+  - EastV
+  - SouthV
+  - WestV
   layers:
   - Default
   - TransparentFX

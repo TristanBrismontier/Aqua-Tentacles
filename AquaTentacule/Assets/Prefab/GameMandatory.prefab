@@ -1921,6 +1921,7 @@ MonoBehaviour:
   - tentacool
   - lpop
   target: {fileID: 473914}
+  width: .800000012
 --- !u!114 &11416126
 MonoBehaviour:
   m_ObjectHideFlags: 1

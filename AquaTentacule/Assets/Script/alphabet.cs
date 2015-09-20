@@ -9,11 +9,10 @@ public class alphabet : MonoBehaviour {
 	public Transform target;
 	private Dictionary<char,GameObject> alphaDictionary = new Dictionary<char,GameObject>();
 	private List<GameObject> instanciatesGameObjects = new List<GameObject> ();
-	private float width;
+	public float width;
 	private bool next = true;
 	
 	void Start () {
-		float width = 1.0f;
 		int i = 0;
 		foreach (char c in "abcdefghijklmnopqrstuvwxyz.?!: ".ToCharArray()) {
 			alphaDictionary.Add(c,alpha[i]);
@@ -29,7 +28,7 @@ public class alphabet : MonoBehaviour {
 		foreach (GameObject gobj in instanciatesGameObjects) {
 			float xy= target.position.x+x;
 			gobj.transform.position = new Vector3(xy,target.position.y,target.position.z+1);
-			x = 0.6f+x;
+			x = width+x;
 		}
 	}
 	

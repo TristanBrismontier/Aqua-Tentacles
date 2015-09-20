@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 	public GameObject Octopus;
 	public GameObject FishEye;
 	public GameObject bubbleExplosionPlop;
-	private Player player;
+	[HideInInspector]public Player player;
 	private List<GameObject> instanciatesGameObjects = new List<GameObject> ();
 	private bool canDie;
 	private bool isPlayingSound;

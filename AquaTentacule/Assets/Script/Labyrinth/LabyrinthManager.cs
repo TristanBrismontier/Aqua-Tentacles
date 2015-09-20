@@ -91,7 +91,8 @@ public class LabyrinthManager : MonoBehaviour
 		Vector2 nex = new Vector2(nextExit.transform.position.x,nextExit.transform.position.y);
 		Vector2 player = GameManager.instance.getPlayerPosition();
 		float dist = Vector2.Distance(player,nex);
-		float alpha = Mathf.Max(0, 1-(dist/10));
+		float alpha = Mathf.Max(0, 1-(dist/(10+(5*GameManager.instance.player.countEyes))));
+		Debug.Log(alpha+ " " +(10+(5*GameManager.instance.player.countEyes)));
 	//	Debug.Log(next+"Spawn : "
 	//	          +nex 
 	//	          +" Distance with Player : "

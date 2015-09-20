@@ -9,8 +9,11 @@ public class PlayerInfo  {
 	public Vector2 velocity;
 	public bool playerHasTenta;
 	public bool playerHasEye;
+	public bool armor;
+
 
 	public void restorePlayerInfo(Player player){
+		player.armor = armor;
 		player.restoreEvolutionTenta(tentaCount);
 		player.restoreEvolutionEye(eyeCount);
 		player.transform.rotation = playerRotation;
@@ -24,5 +27,6 @@ public class PlayerInfo  {
 		eyeCount = player.countEyes;
 		startDeltaPosition = Vector3.zero;
 		velocity = player.getVelocity();
+		armor = player.armor;
 	}
 }

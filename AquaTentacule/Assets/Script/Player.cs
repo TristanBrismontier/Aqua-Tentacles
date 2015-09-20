@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 	public GameObject[] eyes;
 	public int countTenta;
 	public int countEyes;
+	public bool armor;
 
 	public float dashRate = 1.0F;
 	private float nextDash = 0.0F;
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate ()
 	{
+		animator.SetBool("armor",armor);
 		float rotation = Input.GetAxis("Horizontal");
 		if(Mathf.Abs(rotation)>= 0.1f){
 			rb.angularVelocity = rotation * inverted * speedRotation;
@@ -224,6 +226,7 @@ public class Player : MonoBehaviour
 			StartCoroutine(reduceMutation(tentacools[countTenta]));
 		}
 	}
+
 
 	private void displayMut (int count,GameObject[]  muts)
 	{

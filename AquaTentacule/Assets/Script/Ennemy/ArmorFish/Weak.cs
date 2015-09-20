@@ -19,7 +19,7 @@ public class Weak : MonoBehaviour {
 	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
 			Instantiate (bubbleExplosion, transform.position, transform.rotation);
-			GameManager.instance.eatFishEye(nutritionFact);
+			GameManager.instance.eatArmorFish(nutritionFact);
 			SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource ,deaths);
 
 			Destroy (parent);

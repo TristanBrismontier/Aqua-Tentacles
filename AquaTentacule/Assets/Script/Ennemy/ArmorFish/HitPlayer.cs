@@ -13,6 +13,7 @@ public class HitPlayer : MonoBehaviour {
 	}
 	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
+			GameManager.instance.playerLooseArmor();
 			GameManager.instance.looseLife(damage);
 		}
 	}

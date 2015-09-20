@@ -73,6 +73,12 @@ public class GameManager : MonoBehaviour
 			looseLife(5);
 		if (Input.GetKeyDown (KeyCode.B))
 			debug =!debug;
+		if (Input.GetKeyDown (KeyCode.L)){
+			if(player.armor)
+				playerLooseArmor();
+			else
+				eatArmorFish(0);
+		}
 
 		if (life >= normalSizeLimite && canDie) {
 			player.bigSize ();
@@ -200,10 +206,24 @@ public class GameManager : MonoBehaviour
 		eat (nutritionFact);
 	}
 
+	public void eatArmorFish (int nutritionFact){
+		player.armor = true;
+		playerInfo.armor = true;
+		eat(nutritionFact);
+	}
+
+	public void playerLooseArmor(){
+		player.armor = false;
+	}
+
 	public void looseLife (int damage)
 	{
 		if ((Time.time > nextHurt)) {
 			nextHurt = Time.time + hurtRate;
+			if(player.armor){
+				Debug.Log("Armor");
+				damage = damage/2;
+			}
 			eat (damage * -1);
 			bool loosemuta = false;
 			if(damage >=looseMutationLimite )

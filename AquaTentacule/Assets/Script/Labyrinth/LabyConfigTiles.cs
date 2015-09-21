@@ -25,6 +25,6 @@ public class LabyConfigTiles{
 	} 
 
 	public int getCorrectExitNeeded(){
-		return 5;
+		return 6;
 	}
 }

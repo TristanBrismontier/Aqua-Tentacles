@@ -35,9 +35,11 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	void Awake () {
-		if (instance == null)
+		if (instance == null){
+
+			Debug.Log("INSTANTTMUSIC");
 			instance = this;
-		else if (instance != this)
+		}else if (instance != this)
 			Destroy (gameObject);
 		
 		DontDestroyOnLoad (gameObject);
@@ -101,6 +103,15 @@ public class MusicManager : MonoBehaviour {
 	}
 	public void enterZone(int zone)
 	{
+		if(zone == 0){
+			StopCoroutine(fadeOutZone1);
+			fadeOutZone1 = FadeOutEqualGain(musicSource1);
+			StartCoroutine (fadeInZone1);
+			musicSource2.volume = 0;
+			musicSource3.volume = 0;
+			musicSource4.volume = 0;
+			musicSource5.volume = 0;
+		}
 
 		switch (zone)
 		{

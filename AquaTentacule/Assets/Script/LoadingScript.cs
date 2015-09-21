@@ -14,6 +14,7 @@ public class LoadingScript : MonoBehaviour
 	public GameObject background;
 	public GameObject gameManager;	
 	public GameObject labyManager;
+	public GameObject musicManager;
 
 	public float scaleRatio;
 	private float startScale; 
@@ -27,6 +28,12 @@ public class LoadingScript : MonoBehaviour
 			Instantiate (gameManager);
 		if (LabyrinthManager.instance == null)
 			Instantiate (labyManager);
+		if (MusicManager.instance == null){
+			Instantiate (musicManager);
+			MusicManager.instance.resetMusique();
+		}
+			
+
 
 	}
 

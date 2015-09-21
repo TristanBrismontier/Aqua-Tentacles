@@ -30,7 +30,6 @@ public class LabyTiles {
 			case ExitEnum.West: 
 				return ExitEnum.East;
 		}
-		Debug.LogError("WTF! Enum Reverse ERROR " + exit);
 		return ExitEnum.East;
 
 	}

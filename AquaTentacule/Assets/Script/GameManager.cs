@@ -221,7 +221,6 @@ public class GameManager : MonoBehaviour
 		if ((Time.time > nextHurt)) {
 			nextHurt = Time.time + hurtRate;
 			if(player.armor){
-				Debug.Log("Armor");
 				damage = damage/2;
 			}
 			eat (damage * -1);

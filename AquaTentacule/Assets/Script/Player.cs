@@ -86,7 +86,6 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.LeftShift) &&(Time.time > nextDash) ){
 			nextDash = Time.time + dashRate;
-			Debug.Log("Dash");
 			rb.AddForce (transform.up *(100 + (100*countTenta)), ForceMode2D.Impulse);
 		}
 
@@ -215,13 +214,10 @@ public class Player : MonoBehaviour
 	private void looseMutation(){
 
 		int random = Random.Range(0,100);
-		Debug.Log("looseMutation " + random);
 		if(countEyes > 0 && (random >= 50 || countTenta == 0)){
-			Debug.Log("looseMutation EYES");
 			countEyes--;
 			StartCoroutine(reduceMutation(eyes[countEyes]));
 		} else if (countTenta >0){
-			Debug.Log("looseMutation TENTA");
 			countTenta--;
 			StartCoroutine(reduceMutation(tentacools[countTenta]));
 		}

@@ -58,6 +58,8 @@ public class LabyrinthManager : MonoBehaviour
 		lastVisitedTile = anteVisited;
 		anteVisited = nextTile;
 		GameManager.instance.loadLevel (nextTile.sceneName);
+		MusicManager.instance.enterZone(correctExitTakes);
+		MusicManager.instance.exitZone(correctExitTakes-1);
 	}
 
 	public ExitEnum getplayerExit ()
@@ -84,15 +86,18 @@ public class LabyrinthManager : MonoBehaviour
 		{
 			if(suit != next){
 				GameObject hide = GameObject.FindGameObjectWithTag(suit+"V");
-				if(hide != null)
-					hide.SetActive(false) ;
+				if(hide!=null){
+					Renderer rendererhide = hide.GetComponentInChildren< Renderer >();
+					Color dropColorhide = rendererhide.material.color;
+					dropColorhide.a = 0;
+					rendererhide.material.color = dropColorhide;
+				}
 			}
 		}
 		Vector2 nex = new Vector2(nextExit.transform.position.x,nextExit.transform.position.y);
 		Vector2 player = GameManager.instance.getPlayerPosition();
 		float dist = Vector2.Distance(player,nex);
 		float alpha = Mathf.Max(0, 1-(dist/(10+(5*GameManager.instance.player.countEyes))));
-		Debug.Log(alpha+ " " +(10+(5*GameManager.instance.player.countEyes)));
 	//	Debug.Log(next+"Spawn : "
 	//	          +nex 
 	//	          +" Distance with Player : "

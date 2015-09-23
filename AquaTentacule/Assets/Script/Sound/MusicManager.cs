@@ -36,8 +36,6 @@ public class MusicManager : MonoBehaviour {
 
 	void Awake () {
 		if (instance == null){
-
-			Debug.Log("INSTANTTMUSIC");
 			instance = this;
 		}else if (instance != this)
 			Destroy (gameObject);
@@ -74,6 +72,57 @@ public class MusicManager : MonoBehaviour {
 		activateMusique = false;
 	}
 
+	public void swithMusic(int zone){
+		
+		switch (zone)
+		{
+		case 0:
+			musicSource1.volume = 1;
+			musicSource2.volume = 0;
+			musicSource3.volume = 0;
+			musicSource4.volume = 0;
+			musicSource5.volume = 0;
+			break;
+
+		case 1:
+			musicSource1.volume = 1;
+			musicSource2.volume = 0;
+			musicSource3.volume = 0;
+			musicSource4.volume = 0;
+			musicSource5.volume = 0;
+			break;
+			
+		case 2:
+			musicSource1.volume = 0;
+			musicSource2.volume = 1;
+			musicSource3.volume = 0;
+			musicSource4.volume = 0;
+			musicSource5.volume = 0;
+			break;
+		case 3:
+			musicSource1.volume = 0;
+			musicSource2.volume = 0;
+			musicSource3.volume = 1;
+			musicSource4.volume = 0;
+			musicSource5.volume = 0;
+			break;
+		case 4:
+			musicSource1.volume = 0;
+			musicSource2.volume = 0;
+			musicSource3.volume = 0;
+			musicSource4.volume = 1;
+			musicSource5.volume = 0;
+			break;
+		case 5:
+			musicSource1.volume = 0;
+			musicSource2.volume = 0;
+			musicSource3.volume = 0;
+			musicSource4.volume = 0;
+			musicSource5.volume = 1;
+			break;
+		}
+	}
+
 	public void exitZone(int zone)
 	{
 
@@ -103,15 +152,6 @@ public class MusicManager : MonoBehaviour {
 	}
 	public void enterZone(int zone)
 	{
-		if(zone == 0){
-			StopCoroutine(fadeOutZone1);
-			fadeOutZone1 = FadeOutEqualGain(musicSource1);
-			StartCoroutine (fadeInZone1);
-			musicSource2.volume = 0;
-			musicSource3.volume = 0;
-			musicSource4.volume = 0;
-			musicSource5.volume = 0;
-		}
 
 		switch (zone)
 		{

@@ -58,8 +58,7 @@ public class LabyrinthManager : MonoBehaviour
 		lastVisitedTile = anteVisited;
 		anteVisited = nextTile;
 		GameManager.instance.loadLevel (nextTile.sceneName);
-		MusicManager.instance.enterZone(correctExitTakes);
-		MusicManager.instance.exitZone(correctExitTakes-1);
+		MusicManager.instance.swithMusic(correctExitTakes);
 	}
 
 	public ExitEnum getplayerExit ()

@@ -21,7 +21,7 @@ public class LabyConfigTiles{
 
 	public LabyTiles getLastTile(){
 		// Todo : Configure the right tile.
-		return new LabyTiles("NSE2");
+		return new LabyTiles("NSE2",ExitEnum.North,ExitEnum.East,ExitEnum.South);
 	} 
 
 	public int getCorrectExitNeeded(){

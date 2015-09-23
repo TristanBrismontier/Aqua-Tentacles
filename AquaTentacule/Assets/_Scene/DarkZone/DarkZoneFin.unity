@@ -115,6 +115,51 @@ Transform:
   - {fileID: 1678568346}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &384197626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 187680, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1678568346}
+  - 114: {fileID: 384197628}
+  - 61: {fileID: 384197627}
+  m_Layer: 0
+  m_Name: South (1)
+  m_TagString: South
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &384197627
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6138378, guid: 5752d25a350ed2d4796134f55cbc9d7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384197626}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 52.2299995, y: 3.24000001}
+--- !u!114 &384197628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11456724, guid: 5752d25a350ed2d4796134f55cbc9d7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384197626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b98280f1014a4379b52645d2aca29cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: DarkZone2
+  spawnTo: South
 --- !u!1 &966677424
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,60 +298,18 @@ Transform:
   - {fileID: 966677426}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1001 &1678568345
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 164722527}
-    m_Modifications:
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 25.8999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -38.7999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187680, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_Name
-      value: South (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.69175005
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1678568346 stripped
+--- !u!4 &1678568346
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 476154, guid: 5752d25a350ed2d4796134f55cbc9d7c, type: 2}
-  m_PrefabInternal: {fileID: 1678568345}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384197626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.8999996, y: -38.7999992, z: 0}
+  m_LocalScale: {x: 1.69175005, y: 2.4000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 164722527}
+  m_RootOrder: 0
 --- !u!1 &1720202269
 GameObject:
   m_ObjectHideFlags: 0

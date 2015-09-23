@@ -67,6 +67,11 @@ public class LabyrinthManager : MonoBehaviour
 		return playerExitTaken;
 	}
 
+	public void SetplayerExitTaken(string exitTag) {
+		playerExitTaken = (ExitEnum)Enum.Parse (typeof(ExitEnum), exitTag); 
+		Debug.Log (exitTag);
+	}
+
 	private LabyTiles getRandomFittingTile (List<LabyTiles> tilesParam)
 	{
 		if (lastVisitedTile != null && lastPlayerExit.Equals (LabyTiles.getOppositeOf (playerExitTaken))) {

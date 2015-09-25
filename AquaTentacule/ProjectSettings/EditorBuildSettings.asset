@@ -39,3 +39,9 @@ EditorBuildSettings:
     path: Assets/_Scene/Labyrinth/NSERobotFleurRouge.unity
   - enabled: 1
     path: Assets/_Scene/Labyrinth/ESWPhareRuine.unity
+  - enabled: 1
+    path: Assets/_Scene/DarkZone/DarkZone1.unity
+  - enabled: 1
+    path: Assets/_Scene/DarkZone/DarkZone2.unity
+  - enabled: 1
+    path: Assets/_Scene/DarkZone/DarkZoneFin.unity

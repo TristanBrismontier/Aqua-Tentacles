@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 		}else{
 			//Debug.Log(life);
 		}
-
+		if(debug){
 		if (Input.GetKeyDown (KeyCode.J))
 			life += 10;
 		if (Input.GetKeyDown (KeyCode.K))
@@ -79,6 +79,13 @@ public class GameManager : MonoBehaviour
 			else
 				eatArmorFish(0);
 		}
+		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)){
+			Debug.Log("Escape");
+			Application.Quit();
+		}
+
 
 		if (life >= normalSizeLimite && canDie) {
 			player.bigSize ();

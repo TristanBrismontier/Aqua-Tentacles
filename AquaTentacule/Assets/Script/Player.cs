@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
 	private Vector3 smallScale;
 	private float forceRatio;
 	private float inverted = 1.0f;
+	public bool canMove = true;
 
 	void Start()
 	{
@@ -67,6 +68,12 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate ()
 	{
+		if(!canMove){
+			animator.SetBool ("swim", false);
+			rb.angularVelocity = 0;
+			rb.velocity = rb.velocity * slowDown;
+			return;
+		}
 		animator.SetBool("armor",armor);
 		float rotation = Input.GetAxis("Horizontal");
 		if(Mathf.Abs(rotation)>= 0.1f){
@@ -96,62 +103,9 @@ public class Player : MonoBehaviour
 		inverted = 1.0f;
 	}
 
-	void OnTriggerExit2D(Collider2D other)
-	{	
-		switch(other.gameObject.tag)
-		{
-		case "Zone1":
-			leftZone = 1;
-			break;
-
-		case "Zone2":
-			leftZone = 2;
-			break;
-
-		case "Zone3":
-			leftZone = 3;
-			break;
-
-		case "Zone4":
-			leftZone = 4;
-			break;
-
-		case "Zone5":
-			leftZone = 5;
-			break;
-
-		default:
-			break;
-		}
-		MusicManager.instance.exitZone(leftZone);
-	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-
-		switch(other.gameObject.tag)
-		{
-		case "Zone1":
-			currentZone = 1;
-			break;
-		case "Zone2":
-			currentZone = 2;
-			break;
-		case "Zone3":
-			currentZone = 3;
-			break;
-		case "Zone4":
-			currentZone = 4;
-			break;
-		case "Zone5":
-			currentZone = 5;
-			break;
-		default:
-			break;
-		}
-
-		MusicManager.instance.enterZone(currentZone);
-
 		if (other.gameObject.tag == "Meduse")
 		{
 			inverted = -1.0f;

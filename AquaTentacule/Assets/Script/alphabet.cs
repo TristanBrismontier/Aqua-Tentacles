@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class alphabet : MonoBehaviour {
 
+	public static alphabet instance = null;
 	public GameObject[] alpha;
 	public List<string> speech;
 	public Transform target;
@@ -11,7 +12,18 @@ public class alphabet : MonoBehaviour {
 	private List<GameObject> instanciatesGameObjects = new List<GameObject> ();
 	public float width;
 	private bool next = true;
-	
+
+	void Awake ()
+	{
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
+		DontDestroyOnLoad (gameObject);
+	}
+
+
 	void Start () {
 		int i = 0;
 		foreach (char c in "abcdefghijklmnopqrstuvwxyz.?!: ".ToCharArray()) {
@@ -43,6 +55,8 @@ public class alphabet : MonoBehaviour {
 		instanciatesGameObjects.Clear();
 		next =true;
 	}
+
+
 
 	private void displayString(string sentence){
 		foreach (char c in sentence.ToCharArray()){

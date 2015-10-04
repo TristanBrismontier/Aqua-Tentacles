@@ -10,6 +10,7 @@ public class FishEye : MonoBehaviour {
 	public int nutritionFact;
 	public GameObject bubbleExplosion;
 	private Rigidbody2D rb;
+	public bool invi;
 
 	public AudioClip[] deaths;
 	public Animator animator;
@@ -23,7 +24,7 @@ public class FishEye : MonoBehaviour {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		
 		if (Vector3.Distance (transform.position, player.transform.position) < rangeDash) {
-			int eatable = (GameManager.instance.playerInfo.playerHasTenta)?-1:1;
+			int eatable = (GameManager.instance.playerInfo.playerHasTenta && !invi)?-1:1;
 			animator.SetBool ("Dash", true);
 			speed = 4;
 			transform.LookAt (player.transform.position);
@@ -47,7 +48,7 @@ public class FishEye : MonoBehaviour {
 	void checkCollision(Collision2D other){
 		if (other.gameObject.tag == "Player") {
 			animator.SetBool ("Attack", true);
-			if (GameManager.instance.playerInfo.playerHasTenta) {
+			if (GameManager.instance.playerInfo.playerHasTenta && !invi) {
 				Instantiate (bubbleExplosion, transform.position, transform.rotation);
 				GameManager.instance.eatFishEye(nutritionFact);
 				SoundManager.instance.RandomizeSfx(SoundManager.instance.efxSource ,deaths);

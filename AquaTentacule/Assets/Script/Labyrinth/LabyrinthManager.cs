@@ -98,6 +98,7 @@ public class LabyrinthManager : MonoBehaviour
 				}
 			}
 		}
+		if(nextExit == null)return;
 		Vector2 nex = new Vector2(nextExit.transform.position.x,nextExit.transform.position.y);
 		Vector2 player = GameManager.instance.getPlayerPosition();
 		float dist = Vector2.Distance(player,nex);
@@ -115,6 +116,7 @@ public class LabyrinthManager : MonoBehaviour
 
 	public void OnDrawGizmos(){
 		GameObject nextExit = GameObject.FindGameObjectWithTag(next+"V");
+		if(nextExit == null)return;
 		Gizmos.color = Color.blue;
 		Gizmos.DrawLine(nextExit.transform.position, GameManager.instance.getPlayerPosition());
 	}

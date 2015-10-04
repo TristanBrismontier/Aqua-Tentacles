@@ -61,7 +61,7 @@ public class MusicManager : MonoBehaviour {
 
 	public void resetMusique(){
 		activateMusique = true;
-		musicSource1.volume = 0;
+		musicSource1.volume = 1;
 		musicSource2.volume = 0;
 		musicSource3.volume = 0;
 		musicSource4.volume = 0;

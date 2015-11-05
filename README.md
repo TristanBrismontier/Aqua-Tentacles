@@ -6,6 +6,10 @@ This game was develop as part of GameDevParty # 8 . 72h to develop a video game.
 The project was realized with Unity can be imported directly.<br />
 ![preview](https://github.com/TristanBrismontier/TristanBrismontier.github.io/blob/master/images/aqua.jpg)
 
+GameJolt Link 
+---------
+http://gamejolt.com/games/aquatentacles/95208
+
 Credits
 ---------
 
